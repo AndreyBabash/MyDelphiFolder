@@ -1,0 +1,5063 @@
+object TLayout
+  Align = alClient
+  Position.Point = '(0,33)'
+  Width = 842.000000000000000000
+  Height = 1002.000000000000000000
+  object TEllipse
+    StyleName = 'transparentcirclebuttonstyle'
+    Position.Point = '(414,494)'
+    Width = 15.000000000000000000
+    Height = 15.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Color = x00808080
+    Stroke.Kind = bkNone
+    object TColorAnimation
+      Duration = 0.100000001490116100
+      Trigger = 'IsMouseOver=true'
+      StartValue = x00808080
+      StopValue = xAF808080
+      PropertyName = 'Fill.Color'
+    end
+    object TColorAnimation
+      Duration = 0.100000001490116100
+      Trigger = 'IsMouseOver=false'
+      StartValue = xAF808080
+      StopValue = x00808080
+      PropertyName = 'Fill.color'
+    end
+    object TFloatAnimation
+      Duration = 0.100000001490116100
+      Trigger = 'IsMouseOver=true'
+      StartValue = 1.000000000000000000
+      StopValue = 0.500000000000000000
+      PropertyName = 'Parent.Opacity'
+    end
+    object TFloatAnimation
+      Duration = 0.100000001490116100
+      Trigger = 'IsMouseOver=false'
+      StartValue = 0.500000000000000000
+      StopValue = 1.000000000000000000
+      PropertyName = 'Parent.Opacity'
+    end
+  end
+  object TLayout
+    StyleName = 'calendarstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    DesignVisible = False
+  end
+  object TLayout
+    StyleName = 'calendarlabelstyle'
+    Position.Point = '(396,491)'
+    Width = 49.000000000000000000
+    Height = 20.000000000000000000
+    DesignVisible = False
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Locked = True
+      Width = 49.000000000000000000
+      Height = 20.000000000000000000
+      HitTest = False
+      Text = 'label'
+    end
+  end
+  object TLayout
+    StyleName = 'imagecontrolstyle'
+    Position.Point = '(384,488)'
+    Width = 73.000000000000000000
+    Height = 26.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 73.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFE6E6E6
+        end
+        item
+          Color = claWhite
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFFA2A2A2
+      XRadius = 5.000000000000000000
+      YRadius = 5.000000000000000000
+      object TImage
+        StyleName = 'image'
+        Align = alClient
+        Position.Point = '(3,3)'
+        Locked = True
+        Width = 67.000000000000000000
+        Height = 20.000000000000000000
+        Padding.Rect = '(3,3,3,3)'
+        HitTest = False
+        Bitmap.PNG = {
+          89504E470D0A1A0A0000000D49484452000000010000000108060000001F15C4
+          89000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+          00097048597300000EC300000EC301C76FA8640000000B494441541857636000
+          020000050001AAD5C8510000000049454E44AE426082}
+      end
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'framedscrollboxstyle'
+    Position.Point = '(362,435)'
+    Width = 116.999992370605500000
+    Height = 131.000000000000000000
+    ClipChildren = True
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 116.999992370605500000
+      Height = 131.000000000000000000
+      Margins.Rect = '(1,1,1,1)'
+      HitTest = False
+      Fill.Color = xFFE6EDF7
+      Stroke.Color = xFF8E8E8E
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Position.Point = '(1,1)'
+        Width = 96.999992370605470000
+        Height = 111.000000000000000000
+        ClipChildren = True
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(99.9999923706055,1)'
+        Width = 16.000000000000000000
+        Height = 111.000000000000000000
+        Padding.Rect = '(2,0,0,0)'
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(1,114)'
+        Width = 114.999992370605500000
+        Height = 16.000000000000000000
+        Padding.Rect = '(0,2,0,0)'
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TLayout
+        Align = alContents
+        Width = 116.999992370605500000
+        Height = 131.000000000000000000
+        object TLayout
+          Align = alBottom
+          Position.Point = '(0,111)'
+          Width = 116.999992370605500000
+          Height = 20.000000000000000000
+          object TSizeGrip
+            StyleName = 'sizegrip'
+            Align = alRight
+            Position.Point = '(96.9999923706055,0)'
+            Locked = True
+            Width = 20.000000000000000000
+            Height = 20.000000000000000000
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  object TRectangle
+    StyleName = 'backgroundstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Color = xFFE6E6E6
+    Stroke.Kind = bkNone
+  end
+  object TRectangle
+    StyleName = 'panelstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkGradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFFAFAFA
+      end
+      item
+        Color = xFFF0F0F0
+        Offset = 0.165467619895935100
+      end
+      item
+        Color = xFFECECEC
+        Offset = 0.841726601123809800
+      end
+      item
+        Color = xFFD8D8D8
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.Style = gsLinear
+    Stroke.Color = xFF8E8E8E
+  end
+  object TCalloutRectangle
+    StyleName = 'calloutpanelstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkGradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFFAFAFA
+      end
+      item
+        Color = xFFF0F0F0
+        Offset = 0.165467619895935100
+      end
+      item
+        Color = xFFECECEC
+        Offset = 0.841726601123809800
+      end
+      item
+        Color = xFFD8D8D8
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.Style = gsLinear
+    Stroke.Color = xFF8E8E8E
+    CalloutWidth = 23.000000000000000000
+    CalloutLength = 11.000000000000000000
+  end
+  object TRectangle
+    StyleName = 'statusbarstyle'
+    Position.Point = '(370,488)'
+    Width = 101.000000000000000000
+    Height = 27.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkGradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFFAFAFA
+      end
+      item
+        Color = xFFFBFBFB
+        Offset = 0.498181819915771500
+      end
+      item
+        Color = xFFF0F0F0
+        Offset = 0.509090900421142600
+      end
+      item
+        Color = xFFF0F0F0
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.Style = gsLinear
+    Stroke.Color = xFF8E8E8E
+    Sides = [sdTop]
+    object TSizeGrip
+      StyleName = 'sizegrip'
+      Align = alRight
+      Position.Point = '(79,2)'
+      Locked = True
+      Width = 20.000000000000000000
+      Height = 23.000000000000000000
+      Padding.Rect = '(2,2,2,2)'
+      TabOrder = 0
+    end
+  end
+  object TRectangle
+    StyleName = 'toolbarstyle'
+    Position.Point = '(395,476)'
+    Width = 52.000000000000000000
+    Height = 51.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkGradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFD7D7D7
+      end
+      item
+        Color = xFF979797
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.Style = gsLinear
+    Stroke.Color = xFF515151
+    Sides = [sdBottom]
+  end
+  object TLayout
+    StyleName = 'expandercheckboxstyle'
+    Position.Point = '(355,484)'
+    Width = 132.000000000000000000
+    Height = 33.000000000000000000
+    DesignVisible = False
+    object TLayout
+      Align = alLeft
+      Width = 24.000000000000000000
+      Height = 33.000000000000000000
+      object TPath
+        Align = alClient
+        Position.Point = '(2,2)'
+        Width = 20.000000000000000000
+        Height = 29.000000000000000000
+        Padding.Rect = '(2,2,2,2)'
+        HitTest = False
+        Fill.Color = x60000000
+        Stroke.Kind = bkNone
+        Data.Path = {
+          2700000000000000FEC8BA4402E79244020000002592AD4402E7924402000000
+          6D5BA544FEB09E44020000006D5BA544FEB09E440200000093A4A4446A0C9F44
+          020000004A80AC44FC79AA4402000000046EBA44FC79AA44020000004A00C844
+          FC79AA44020000000080CF44FEB09E44020000000080CF44FEB09E4402000000
+          0080CF44FEB09E44020000004C5BC84402E7924402000000FEC8BA4402E79244
+          00000000FE88BA44FE30974402000000B876BF44FE309744020000000277C344
+          EEA09A44020000000277C34404DE9E44020000000277C344121BA34402000000
+          B876BF44008CA64402000000FE88BA44008CA644020000004C9BB544008CA644
+          02000000009CB144121BA34402000000009CB14404DE9E4402000000009CB144
+          EEA09A44020000004C9BB544FE30974402000000FE88BA44FE30974400000000
+          0080BA44045E9B4402000000146EB844045E9B440200000000C0B64454F79C44
+          0200000000C0B64400F09E440200000000C0B644ACE8A04402000000146EB844
+          FC81A244020000000080BA44FC81A24402000000EC91BC44FC81A24402000000
+          0040BE44ACE8A044020000000040BE4400F09E44020000000040BE4454F79C44
+          02000000EC91BC44045E9B44020000000080BA44045E9B44}
+        WrapMode = pwFit
+        object TColorAnimation
+          Duration = 0.100000001490116100
+          Trigger = 'IsChecked=true'
+          StartValue = x40313131
+          StopValue = xFF313131
+          PropertyName = 'Fill.Color'
+        end
+        object TColorAnimation
+          Duration = 0.100000001490116100
+          Trigger = 'IsChecked=false'
+          StartValue = xFF313131
+          StopValue = x40313131
+          PropertyName = 'Fill.Color'
+        end
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'expanderbuttonstyle'
+    Position.Point = '(410,490)'
+    Width = 22.000000000000000000
+    Height = 22.000000000000000000
+    Padding.Rect = '(0,1,0,0)'
+    DesignVisible = False
+    object TPath
+      Align = alCenter
+      Position.Point = '(7,6)'
+      Locked = True
+      Width = 8.000000000000000000
+      Height = 9.000000000000000000
+      HitTest = False
+      Fill.Color = claBlack
+      Stroke.Kind = bkNone
+      Data.Path = {
+        0500000000000000D36D3F431BEF4843010000001749E043BA09E54301000000
+        C9B63943C73B344401000000D36D3F431BEF4843030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsExpanded=false'
+        StartValue = x00313131
+        StopValue = xFF313131
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsExpanded=true'
+        StartValue = xFF313131
+        StopValue = x00313131
+        PropertyName = 'Fill.Color'
+      end
+    end
+    object TPath
+      Align = alCenter
+      Position.Point = '(7,7)'
+      Locked = True
+      Width = 8.000000000000000000
+      Height = 8.000000000000000000
+      HitTest = False
+      Fill.Color = claNull
+      Stroke.Kind = bkNone
+      Data.Path = {
+        0500000000000000CB11CF4379E93C4301000000DDB4CD4396230A4401000000
+        7DBF1E424871094401000000CB11CF4379E93C43030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsExpanded=true'
+        StartValue = x00313131
+        StopValue = xFF313131
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsExpanded=false'
+        StartValue = xFF313131
+        StopValue = x00313131
+        PropertyName = 'Fill.Color'
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'expanderstyle'
+    Position.Point = '(340,430)'
+    Width = 162.000000000000000000
+    Height = 141.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      Align = alContents
+      Width = 162.000000000000000000
+      Height = 141.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFAFAFA
+        end
+        item
+          Color = xFFF0F0F0
+          Offset = 0.165467619895935100
+        end
+        item
+          Color = xFFECECEC
+          Offset = 0.841726601123809800
+        end
+        item
+          Color = xFFD8D8D8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF8E8E8E
+    end
+    object TText
+      StyleName = 'text'
+      Align = alTop
+      Position.Point = '(50,0)'
+      Locked = True
+      Width = 112.000000000000000000
+      Height = 25.000000000000000000
+      Padding.Rect = '(50,0,0,0)'
+      HitTest = False
+      Fill.Color = xFF313131
+      Font.Style = [fsBold]
+      WordWrap = False
+      object TExpanderButton
+        StyleName = 'button'
+        Align = alLeft
+        Position.Point = '(-50,0)'
+        Locked = True
+        Width = 20.000000000000000000
+        Height = 25.000000000000000000
+        Padding.Rect = '(-50,0,0,0)'
+        TabOrder = 0
+        StaysPressed = False
+        IsPressed = False
+      end
+      object TCheckBox
+        StyleName = 'checkbox'
+        Align = alLeft
+        Position.Point = '(-30,0)'
+        Locked = True
+        Width = 30.000000000000000000
+        Height = 25.000000000000000000
+        Padding.Rect = '(0,0,-30,0)'
+        StyleLookup = 'expandercheckboxstyle'
+        TabOrder = 1
+        IsChecked = False
+        CanFocus = False
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'groupboxstyle'
+    Position.Point = '(353,450)'
+    Width = 135.000000000000000000
+    Height = 102.000000000000000000
+    Margins.Rect = '(2,8,2,2)'
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alClient
+      Position.Point = '(2,8)'
+      Locked = True
+      Width = 131.000000000000000000
+      Height = 92.000000000000000000
+      HitTest = False
+      Fill.Kind = bkNone
+      Stroke.Color = xFF909090
+      XRadius = 4.000000000000000000
+      YRadius = 4.000000000000000000
+      object TText
+        StyleName = 'text'
+        Position.Point = '(15,-8)'
+        Locked = True
+        Width = 50.927082061767580000
+        Height = 16.875000000000000000
+        Padding.Rect = '(1,2,1,0)'
+        ClipParent = True
+        HitTest = False
+        AutoSize = True
+        Fill.Color = xFF040404
+        WordWrap = False
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'speedbuttonstyle'
+    Position.Point = '(384,488)'
+    Width = 73.000000000000000000
+    Height = 26.000000000000000000
+    DesignVisible = False
+    object TRoundRect
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 73.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+      object TInnerGlowEffect
+        Trigger = 'IsPressed=true'
+        Enabled = False
+        Softness = 0.400000005960464400
+        GlowColor = xFF4F4848
+        Opacity = 0.899999976158142100
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(6,2)'
+      Locked = True
+      Width = 61.000000000000000000
+      Height = 22.000000000000000000
+      Padding.Rect = '(6,2,6,2)'
+      HitTest = False
+      Text = 'button'
+    end
+  end
+  object TLayout
+    StyleName = 'splitterstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    DesignVisible = False
+    object TEllipse
+      StyleName = 'background'
+      Align = alFit
+      Locked = True
+      Width = 50.000000000000000000
+      Height = 50.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF414141
+        end
+        item
+          Color = xFFECECEC
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Fill.Gradient.StopPosition.Point = '(1,1)'
+      Stroke.Color = xFFA0A0A0
+    end
+  end
+  object TLayout
+    StyleName = 'labelstyle'
+    Position.Point = '(396,491)'
+    Width = 49.000000000000000000
+    Height = 20.000000000000000000
+    DesignVisible = False
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Locked = True
+      Width = 49.000000000000000000
+      Height = 20.000000000000000000
+      HitTest = False
+      Text = 'label'
+    end
+  end
+  object TLayout
+    StyleName = 'valuelabelstyle'
+    Position.Point = '(373,489)'
+    Width = 95.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRoundRect
+      Align = alContents
+      Width = 95.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Color = xFFC7C7C7
+      Stroke.Kind = bkNone
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(1,1)'
+      Width = 93.000000000000000000
+      Height = 22.000000000000000000
+      Padding.Rect = '(1,1,1,1)'
+      HitTest = False
+      Font.Size = 10.000000000000000000
+      Text = 'Text'
+    end
+  end
+  object TLayout
+    StyleName = 'tabitemstyle'
+    Position.Point = '(398,491)'
+    Width = 46.000000000000000000
+    Height = 20.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      Align = alContents
+      Position.Point = '(0,2)'
+      Locked = True
+      Width = 49.000000000000000000
+      Height = 18.000000000000000000
+      Padding.Rect = '(0,2,-3,0)'
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC3C3C3
+        end
+        item
+          Color = claGainsboro
+          Offset = 0.471223026514053400
+        end
+        item
+          Color = xFFFAFAFA
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF767676
+      XRadius = 4.000000000000000000
+      YRadius = 4.000000000000000000
+      Corners = [crTopLeft, crTopRight]
+      Sides = [sdTop, sdLeft, sdRight]
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsMouseOver=true;IsSelected=false'
+        StartValue = xFFC3C3C3
+        StopValue = xFFE3E3E3
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsMouseOver=false;IsSelected=false'
+        StartValue = xFFE3E3E3
+        StopValue = xFFC3C3C3
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.000000999999997475
+        Trigger = 'IsSelected=false'
+        StartValue = xFFF3F3F3
+        StopValue = xFFC3C3C3
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.000009999999747379
+        Trigger = 'IsSelected=true'
+        StartValue = xFFC3C3C3
+        StopValue = xFFF3F3F3
+        PropertyName = 'Fill.Color'
+      end
+      object TRectAnimation
+        Duration = 0.000009999999747379
+        Trigger = 'IsSelected=true'
+        StartValue.Rect = '(0,1,-1,0)'
+        StopValue.Rect = '(0,0,-1,-1)'
+        PropertyName = 'Padding'
+      end
+      object TRectAnimation
+        Duration = 0.000009999999747379
+        Inverse = True
+        Trigger = 'IsSelected=false'
+        StartValue.Rect = '(0,1,-1,-1)'
+        StopValue.Rect = '(0,0,-1,0)'
+        PropertyName = 'Padding'
+      end
+      object TText
+        StyleName = 'text'
+        Align = alClient
+        Position.Point = '(3,3)'
+        Locked = True
+        Width = 43.000000000000000000
+        Height = 13.000000000000000000
+        Padding.Rect = '(3,3,3,2)'
+        HitTest = False
+        Text = 'item'
+        WordWrap = False
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'tabcontrolstyle'
+    Position.Point = '(350,451)'
+    Width = 142.000000000000000000
+    Height = 100.999992370605500000
+    DesignVisible = False
+    object TRectangle
+      Align = alContents
+      Width = 142.000000000000000000
+      Height = 100.999992370605500000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFAFAFA
+        end
+        item
+          Color = xFFF0F0F0
+          Offset = 0.165467619895935100
+        end
+        item
+          Color = xFFECECEC
+          Offset = 0.841726601123809800
+        end
+        item
+          Color = xFFD8D8D8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF8E8E8E
+    end
+  end
+  object TLayout
+    StyleName = 'checkboxstyle'
+    Position.Point = '(360,490)'
+    Width = 121.000000000000000000
+    Height = 21.000000000000000000
+    DesignVisible = False
+    object TLayout
+      Align = alLeft
+      Width = 20.000000000000000000
+      Height = 21.000000000000000000
+      object TRectangle
+        Align = alCenter
+        Position.Point = '(4,5)'
+        Locked = True
+        Width = 13.000000000000000000
+        Height = 13.000000000000000000
+        Padding.Rect = '(1,1,-1,-1)'
+        HitTest = False
+        Fill.Color = x35000000
+        Stroke.Kind = bkNone
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+      end
+      object TRectangle
+        StyleName = 'background'
+        Align = alCenter
+        Position.Point = '(3,4)'
+        Locked = True
+        Width = 13.000000000000000000
+        Height = 13.000000000000000000
+        HitTest = False
+        Fill.Kind = bkGradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFFE8ECF1
+          end
+          item
+            Color = xFF879BB1
+            Offset = 0.498181819915771500
+          end
+          item
+            Color = xFFE4E7ED
+            Offset = 0.956363618373870800
+          end
+          item
+            Color = xFF8793B1
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.Style = gsLinear
+        Stroke.Color = xFF6E7FAB
+        XRadius = 2.000000000000000000
+        YRadius = 2.000000000000000000
+        object TGlowEffect
+          Trigger = 'IsFocused=true'
+          Enabled = False
+          Softness = 0.200000002980232200
+          GlowColor = xFF2080E0
+          Opacity = 1.000000000000000000
+        end
+        object TPath
+          StyleName = 'checkmark'
+          Align = alCenter
+          Position.Point = '(2,-2)'
+          Locked = True
+          Width = 13.000000000000000000
+          Height = 13.000000000000000000
+          Padding.Rect = '(2,-3,-3,0)'
+          HitTest = False
+          Fill.Color = x00292929
+          Stroke.Kind = bkNone
+          Data.Path = {
+            2E00000000000000C73BB343505D8543010000003333B443FEB4864302000000
+            8941B0432B97894302000000D3DDAB4331088E4302000000D508A7436D079443
+            01000000D508A7436D079443020000001934A2432B079A4302000000B6839E43
+            68A19F430200000052F89B43C9D6A4430100000052F89B43C9D6A44301000000
+            08EC9943772EA643020000001D3A98435A54A74302000000F2129743D32DA843
+            02000000E9769643A6BBA84301000000E9769643A6BBA84302000000DB399643
+            BCE4A7430200000075B395439683A6430200000075E39443D598A44301000000
+            75E39443D598A44301000000501D9443FCD9A243020000002D029343F658A043
+            02000000C1FA9143987E9E43020000008D079143444B9D43010000008D079143
+            444B9D43020000005A14904373189C4302000000F8038F436A4C9B4302000000
+            E3D58D430AE79A4301000000E3D58D430AE79A4302000000F8D38F43EEDC9843
+            020000006DA79143AED7974302000000005093434CD797430100000000509343
+            4CD797430200000085BB9443AED79743020000005C4F9643C9B6994302000000
+            E10A984319749D4301000000E10A984319749D430100000066E6984360559F43
+            020000005A049C43853B9A4302000000BC04A04346469543020000008DE7A443
+            1F759043010000008DE7A4431F75904302000000C1CAA94339A48B4302000000
+            4891AE43AAF1874302000000C73BB343505D854301000000C73BB343505D8543
+            030000000000000000000000}
+          object TColorAnimation
+            Duration = 0.100000001490116100
+            Trigger = 'IsChecked=true'
+            StartValue = x00034E9E
+            StopValue = xFF111111
+            PropertyName = 'Fill.Color'
+          end
+          object TColorAnimation
+            Duration = 0.000100000004749745
+            Trigger = 'IsChecked=false'
+            StartValue = xFF111111
+            StopValue = x00034E9E
+            PropertyName = 'Fill.Color'
+          end
+        end
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(21,2)'
+      Locked = True
+      Width = 99.000000000000000000
+      Height = 19.000000000000000000
+      Padding.Rect = '(1,2,1,0)'
+      HitTest = False
+      Text = 'CheckBox'
+    end
+  end
+  object TLayout
+    StyleName = 'radiobuttonstyle'
+    Position.Point = '(360,490)'
+    Width = 121.000000000000000000
+    Height = 21.000000000000000000
+    DesignVisible = False
+    object TLayout
+      Align = alLeft
+      Width = 20.000000000000000000
+      Height = 21.000000000000000000
+      object TEllipse
+        Align = alCenter
+        Position.Point = '(4,5)'
+        Locked = True
+        Width = 13.000000000000000000
+        Height = 13.000000000000000000
+        Padding.Rect = '(1,1,-1,-1)'
+        HitTest = False
+        Fill.Color = x35000000
+        Stroke.Kind = bkNone
+      end
+      object TEllipse
+        StyleName = 'background'
+        Align = alCenter
+        Position.Point = '(3,4)'
+        Locked = True
+        Width = 13.000000000000000000
+        Height = 13.000000000000000000
+        HitTest = False
+        Fill.Kind = bkGradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFFF1F3F5
+          end
+          item
+            Color = xFF879BB1
+            Offset = 0.498181819915771500
+          end
+          item
+            Color = xFFEDEEF3
+            Offset = 0.956363618373870800
+          end
+          item
+            Color = xFF8793B1
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.Style = gsLinear
+        Stroke.Color = xFF6E7FAB
+        object TGlowEffect
+          Trigger = 'IsFocused=true'
+          Enabled = False
+          Softness = 0.200000002980232200
+          GlowColor = xFF2080E0
+          Opacity = 1.000000000000000000
+        end
+        object TEllipse
+          StyleName = 'checkmark'
+          Align = alClient
+          Position.Point = '(4,4)'
+          Locked = True
+          Width = 5.000000000000000000
+          Height = 5.000000000000000000
+          Padding.Rect = '(4,4,4,4)'
+          HitTest = False
+          Fill.Color = claNull
+          Stroke.Kind = bkNone
+          object TColorAnimation
+            Duration = 0.100000001490116100
+            Trigger = 'IsChecked=true'
+            StartValue = x00034E9E
+            StopValue = xFF111111
+            PropertyName = 'Fill.Color'
+          end
+          object TColorAnimation
+            Duration = 0.100000001490116100
+            Trigger = 'IsChecked=false'
+            StartValue = xFF111111
+            StopValue = x00034E9E
+            PropertyName = 'Fill.Color'
+          end
+        end
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(21,2)'
+      Locked = True
+      Width = 99.000000000000000000
+      Height = 19.000000000000000000
+      Padding.Rect = '(1,2,1,0)'
+      HitTest = False
+      Text = 'RadioButton'
+    end
+  end
+  object TLayout
+    StyleName = 'progressbarstyle'
+    Position.Point = '(385,470)'
+    Width = 72.000000000000000000
+    Height = 60.999996185302730000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'track'
+      Align = alContents
+      Locked = True
+      Width = 72.000000000000000000
+      Height = 60.999996185302730000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFF8F8F8
+        end
+        item
+          Color = xFFE7E7E7
+          Offset = 0.483636349439621000
+        end
+        item
+          Color = claWhite
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFFA2A2A2
+      object TRectangle
+        StyleName = 'hindicator'
+        Align = alLeft
+        Position.Point = '(1,1)'
+        Locked = True
+        Width = 50.000000000000000000
+        Height = 35.999996185302730000
+        Padding.Rect = '(1,1,1,1)'
+        HitTest = False
+        Fill.Kind = bkGradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFFB8BBC1
+          end
+          item
+            Color = xFFA0A7B1
+            Offset = 0.498181819915771500
+          end
+          item
+            Color = xFFDCE4ED
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.Style = gsLinear
+        Stroke.Kind = bkNone
+        object TLayout
+          Align = alClient
+          Position.Point = '(2,0)'
+          Locked = True
+          Width = 46.000000000000000000
+          Height = 35.999996185302730000
+          Padding.Rect = '(2,0,2,0)'
+          ClipChildren = True
+          object TRectangle
+            Align = alVertical
+            Locked = True
+            Width = 61.999996185302730000
+            Height = 35.999996185302730000
+            HitTest = False
+            Fill.Kind = bkGradient
+            Fill.Gradient.Points = <
+              item
+                Color = x002672B8
+              end
+              item
+                Color = x5A808080
+                Offset = 0.500000000000000000
+              end
+              item
+                Color = x00085188
+                Offset = 1.000000000000000000
+              end>
+            Fill.Gradient.Style = gsLinear
+            Fill.Gradient.StartPosition.Point = '(0,0.5)'
+            Fill.Gradient.StopPosition.Point = '(1,0.5)'
+            Stroke.Kind = bkNone
+            XRadius = 9.000000000000000000
+            YRadius = 9.000000000000000000
+            object TFloatAnimation
+              Duration = 4.000000000000000000
+              Loop = True
+              Trigger = 'IsVisible=true'
+              StartValue = -50.000000000000000000
+              StopValue = 800.000000000000000000
+              PropertyName = 'Position.x'
+            end
+          end
+        end
+      end
+      object TRectangle
+        StyleName = 'vindicator'
+        Align = alBottom
+        Position.Point = '(1,38.9999961853027)'
+        Locked = True
+        Width = 70.000000000000000000
+        Height = 21.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        HitTest = False
+        Fill.Kind = bkGradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFFC9CDD2
+          end
+          item
+            Color = xFFA0A7B1
+            Offset = 0.483636349439621000
+          end
+          item
+            Color = xFFDEE6EF
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.Style = gsLinear
+        Fill.Gradient.StartPosition.Point = '(0,0.5)'
+        Fill.Gradient.StopPosition.Point = '(1,0.5)'
+        Stroke.Kind = bkNone
+        object TLayout
+          Align = alClient
+          Position.Point = '(0,2)'
+          Locked = True
+          Width = 70.000000000000000000
+          Height = 17.000000000000000000
+          Padding.Rect = '(0,2,0,2)'
+          ClipChildren = True
+          object TRectangle
+            Align = alHorizontal
+            Position.Point = '(1,1084)'
+            Locked = True
+            Width = 68.000000000000000000
+            Height = 50.000000000000000000
+            Padding.Rect = '(1,1,1,1)'
+            HitTest = False
+            Fill.Kind = bkGradient
+            Fill.Gradient.Points = <
+              item
+                Color = x002672B8
+              end
+              item
+                Color = x5A808080
+                Offset = 0.500000000000000000
+              end
+              item
+                Color = x00085188
+                Offset = 1.000000000000000000
+              end>
+            Fill.Gradient.Style = gsLinear
+            Stroke.Kind = bkNone
+            XRadius = 9.000000000000000000
+            YRadius = 9.000000000000000000
+            object TFloatAnimation
+              Duration = 4.000000000000000000
+              Loop = True
+              Trigger = 'IsVisible=true'
+              StartValue = 800.000000000000000000
+              StopValue = -50.000000000000000000
+              PropertyName = 'Position.y'
+            end
+          end
+        end
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'sizegripstyle'
+    Position.Point = '(410,490)'
+    Width = 23.000000000000000000
+    Height = 23.000000000000000000
+    DesignVisible = False
+    object TImage
+      Align = alCenter
+      Position.Point = '(5,5)'
+      Locked = True
+      Width = 11.000000953674320000
+      Height = 11.000000953674320000
+      HitTest = False
+    Bitmap.PNG = {
+      89504E470D0A1A0A0000000D494844520000000F0000000F08060000003BD695
+      4A000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      003449444154384F63601812809F9FFF3F590E05699C3A752AE99A075E23D17E
+      46772AD14E1F7C1A71FA99905389F63359A988AE9A00160F3E3B7CCBF2530000
+      000049454E44AE426082}
+      WrapMode = iwOriginal
+    end
+  end
+  object TLayout
+    StyleName = 'combolistboxstyle'
+    Position.Point = '(375,472)'
+    Width = 92.000000000000000000
+    Height = 59.000000000000000000
+    Opacity = 0.949999988079071100
+    ClipChildren = True
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 92.000000000000000000
+      Height = 59.000000000000000000
+      Margins.Rect = '(1,1,1,1)'
+      HitTest = False
+      Fill.Color = xFFE6EDF7
+      Stroke.Color = xFF8E8E8E
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Position.Point = '(1,1)'
+        Width = 72.000000000000000000
+        Height = 39.000000000000000000
+        ClipChildren = True
+        object TRectangle
+          StyleName = 'selection'
+          Width = 50.000000000000000000
+          Height = 50.000000000000000000
+          HitTest = False
+          Fill.Color = x80879BB1
+          Stroke.Kind = bkNone
+        end
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(75,1)'
+        Width = 16.000000000000000000
+        Height = 39.000000000000000000
+        Padding.Rect = '(2,0,0,0)'
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(1,42)'
+        Width = 90.000000000000000000
+        Height = 16.000000000000000000
+        Padding.Rect = '(0,2,0,0)'
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+    end
+    object TFloatAnimation
+      Duration = 0.100000001490116100
+      Trigger = 'IsDropDown=true'
+      StopValue = 1.000000000000000000
+      PropertyName = 'Parent.Opacity'
+    end
+    object TFloatAnimation
+      Duration = 0.100000001490116100
+      Inverse = True
+      Trigger = 'IsDropDown=false'
+      StopValue = 1.000000000000000000
+      PropertyName = 'Parent.Opacity'
+    end
+  end
+  object TLayout
+    StyleName = 'combopopupstyle'
+    Position.Point = '(375,472)'
+    Width = 92.000000000000000000
+    Height = 59.000000000000000000
+    Opacity = 0.949999988079071100
+    ClipChildren = True
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 92.000000000000000000
+      Height = 59.000000000000000000
+      Margins.Rect = '(1,1,1,1)'
+      HitTest = False
+      Fill.Color = xFFE6EDF7
+      Stroke.Color = xFF8E8E8E
+    end
+    object TFloatAnimation
+      Duration = 0.100000001490116100
+      Trigger = 'IsDropDown=true'
+      StopValue = 1.000000000000000000
+      PropertyName = 'Parent.Opacity'
+    end
+    object TFloatAnimation
+      Duration = 0.100000001490116100
+      Inverse = True
+      Trigger = 'IsDropDown=false'
+      StopValue = 1.000000000000000000
+      PropertyName = 'Parent.Opacity'
+    end
+  end
+  object TLayout
+    StyleName = 'treeviewstyle'
+    Position.Point = '(362,431)'
+    Width = 116.999992370605500000
+    Height = 140.000000000000000000
+    DesignVisible = False
+    object TBrushObject
+      StyleName = 'AlternatingRowBackground'
+      Brush.Color = x20879BB1
+    end
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 116.999992370605500000
+      Height = 140.000000000000000000
+      Margins.Rect = '(1,1,1,1)'
+      HitTest = False
+      Fill.Color = xFFE6EDF7
+      Stroke.Color = xFF8E8E8E
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Position.Point = '(1,1)'
+        Width = 96.999992370605470000
+        Height = 120.000000000000000000
+        ClipChildren = True
+        object TRectangle
+          StyleName = 'selection'
+          Width = 50.000000000000000000
+          Height = 50.000000000000000000
+          HitTest = False
+          Fill.Color = x80879BB1
+          Stroke.Kind = bkNone
+        end
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(99.9999923706055,1)'
+        Width = 16.000000000000000000
+        Height = 120.000000000000000000
+        Padding.Rect = '(2,0,0,0)'
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(1,123)'
+        Width = 114.999992370605500000
+        Height = 16.000000000000000000
+        Padding.Rect = '(0,2,0,0)'
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TRectangle
+    StyleName = 'treeviewitemstyle'
+    Position.Point = '(377,481)'
+    Width = 87.000000000000000000
+    Height = 40.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkNone
+    Stroke.Kind = bkNone
+    object TSpeedButton
+      StyleName = 'button'
+      Align = alLeft
+      Position.Point = '(3,3)'
+      Width = 15.000000000000000000
+      Height = 34.000000000000000000
+      Padding.Rect = '(3,3,3,3)'
+      StyleLookup = 'treeviewexpanderbuttonstyle'
+      TabOrder = 0
+      StaysPressed = False
+      IsPressed = False
+    end
+    object TLayout
+      Align = alContents
+      Position.Point = '(20,0)'
+      Width = 67.000000000000000000
+      Height = 40.000000000000000000
+      Padding.Rect = '(20,0,0,0)'
+      object TCheckBox
+        StyleName = 'check'
+        Align = alLeft
+        Width = 20.000000000000000000
+        Height = 40.000000000000000000
+        TabOrder = 0
+        IsChecked = False
+        CanFocus = False
+        DisableFocusEffect = True
+      end
+      object TText
+        BindingName = 'text'
+        StyleName = 'text'
+        Align = alClient
+        Position.Point = '(20,0)'
+        Locked = True
+        Width = 47.000000000000000000
+        Height = 40.000000000000000000
+        HitTest = False
+        HorzTextAlign = taLeading
+        WordWrap = False
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'treeviewexpanderbuttonstyle'
+    Position.Point = '(410,490)'
+    Width = 22.000000000000000000
+    Height = 22.000000000000000000
+    Padding.Rect = '(0,1,0,0)'
+    DesignVisible = False
+    object TPath
+      Align = alCenter
+      Position.Point = '(7,6)'
+      Locked = True
+      Width = 8.000000000000000000
+      Height = 9.000000000000000000
+      HitTest = False
+      Fill.Color = claBlack
+      Stroke.Kind = bkNone
+      Data.Path = {
+        0500000000000000D36D3F431BEF4843010000001749E043BA09E54301000000
+        C9B63943C73B344401000000D36D3F431BEF4843030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsExpanded=false'
+        StartValue = claNull
+        StopValue = claBlack
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Inverse = True
+        Trigger = 'IsExpanded=true'
+        StartValue = claNull
+        StopValue = claBlack
+        PropertyName = 'Fill.Color'
+      end
+    end
+    object TPath
+      Align = alCenter
+      Position.Point = '(7,7)'
+      Locked = True
+      Width = 8.000000000000000000
+      Height = 8.000000000000000000
+      HitTest = False
+      Fill.Color = claNull
+      Stroke.Kind = bkNone
+      Data.Path = {
+        0500000000000000CB11CF4379E93C4301000000DDB4CD4396230A4401000000
+        7DBF1E424871094401000000CB11CF4379E93C43030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Trigger = 'IsExpanded=true'
+        StartValue = claNull
+        StopValue = claBlack
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.000099999997473788
+        Inverse = True
+        Trigger = 'IsExpanded=false'
+        StartValue = claNull
+        StopValue = claBlack
+        PropertyName = 'Fill.Color'
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'trackbarstyle'
+    Position.Point = '(356,494)'
+    Width = 130.000000000000000000
+    Height = 14.000000953674320000
+    DesignVisible = False
+    object TRoundRect
+      StyleName = 'htrack'
+      Align = alVertCenter
+      Position.Point = '(4,4)'
+      Locked = True
+      Width = 122.000000000000000000
+      Height = 6.000000953674317000
+      Padding.Rect = '(4,4,4,4)'
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF666666
+        end
+        item
+          Color = xFF4D4D4D
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF101010
+      object TGlowEffect
+        Trigger = 'IsFocused=true'
+        Enabled = False
+        Softness = 0.200000002980232200
+        GlowColor = xFF2080E0
+        Opacity = 1.000000000000000000
+      end
+    end
+    object TRoundRect
+      StyleName = 'vtrack'
+      Align = alHorzCenter
+      Position.Point = '(61,4)'
+      Locked = True
+      Width = 6.000000953674317000
+      Height = 6.000000953674317000
+      Padding.Rect = '(4,4,4,4)'
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF666666
+        end
+        item
+          Color = xFF4D4D4D
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF101010
+      object TGlowEffect
+        Trigger = 'IsFocused=true'
+        Enabled = False
+        Softness = 0.200000002980232200
+        GlowColor = xFF2080E0
+        Opacity = 1.000000000000000000
+      end
+    end
+    object TThumb
+      StyleName = 'thumb'
+      Position.Point = '(3,1)'
+      Locked = True
+      Width = 15.000000000000000000
+      Height = 14.000000953674320000
+      Padding.Rect = '(-2,-2,-2,-2)'
+      StyleLookup = 'thumbbarstyle'
+      TabOrder = 1
+    end
+  end
+  object TLayout
+    StyleName = 'numberboxstyle'
+    Position.Point = '(375,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object TContent
+      StyleName = 'content'
+      Align = alContents
+      Position.Point = '(4,4)'
+      Locked = True
+      Width = 83.000000000000000000
+      Height = 16.000000000000000000
+      Padding.Rect = '(4,4,4,4)'
+      HitTest = False
+    end
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'editstyle'
+    Position.Point = '(375,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Color = claWhite
+      Stroke.Color = xFFC1C1C1
+    end
+    object TContent
+      StyleName = 'content'
+      Align = alContents
+      Position.Point = '(4,4)'
+      Locked = True
+      Width = 83.000000000000000000
+      Height = 16.000000000000000000
+      Padding.Rect = '(4,4,4,4)'
+      HitTest = False
+    end
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TBrushObject
+      StyleName = 'selection'
+      Brush.Color = x803870F7
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'spinboxstyle'
+    Position.Point = '(376,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRoundRect
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFE6E6E6
+        end
+        item
+          Color = claWhite
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFFA2A2A2
+      object TColorAnimation
+        Duration = 0.200000002980232200
+        StartValue = xFF505050
+        StopValue = xFF707070
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.200000002980232200
+        Inverse = True
+        StartValue = xFF505050
+        StopValue = xFF707070
+        PropertyName = 'Fill.Color'
+      end
+    end
+    object TContent
+      StyleName = 'content'
+      Align = alContents
+      Position.Point = '(23,4)'
+      Locked = True
+      Width = 45.000000000000000000
+      Height = 16.000000000000000000
+      Padding.Rect = '(23,4,23,4)'
+      HitTest = False
+    end
+    object TButton
+      StyleName = 'minusbutton'
+      Align = alFitLeft
+      Position.Point = '(2,2)'
+      Width = 20.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(2,2,2,2)'
+      StyleLookup = 'transparentcirclebuttonstyle'
+      TabOrder = 2
+      StaysPressed = False
+      IsPressed = False
+      CanFocus = False
+      object TPath
+        Align = alClient
+        Position.Point = '(6,6)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(6,6,6,6)'
+        HitTest = False
+        Fill.Color = xFF101010
+        Stroke.Kind = bkNone
+        Data.Path = {
+          05000000000000000000803F00000000010000000000803F0000803F01000000
+          000000000000003F010000000000803F00000000030000000000803F00000000}
+      end
+    end
+    object TButton
+      StyleName = 'plusbutton'
+      Align = alFitRight
+      Position.Point = '(69,2)'
+      Width = 20.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(2,2,2,2)'
+      StyleLookup = 'transparentcirclebuttonstyle'
+      TabOrder = 3
+      StaysPressed = False
+      IsPressed = False
+      CanFocus = False
+      object TPath
+        Align = alClient
+        Position.Point = '(6,6)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(6,6,6,6)'
+        HitTest = False
+        Fill.Color = xFF101010
+        Stroke.Kind = bkNone
+        Data.Path = {
+          0400000000000000000000000000000001000000000000000000803F01000000
+          0000803F0000003F030000000000000000000000}
+      end
+    end
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TBrushObject
+      StyleName = 'selection'
+      Brush.Color = x80879BB1
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'clearingeditstyle'
+    Position.Point = '(376,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFE6E6E6
+        end
+        item
+          Color = claWhite
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFFA2A2A2
+      object TColorAnimation
+        Duration = 0.200000002980232200
+        StartValue = xFF505050
+        StopValue = xFF707070
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.200000002980232200
+        Inverse = True
+        StartValue = xFF505050
+        StopValue = xFF707070
+        PropertyName = 'Fill.Color'
+      end
+    end
+    object TContent
+      StyleName = 'content'
+      Align = alContents
+      Position.Point = '(4,4)'
+      Locked = True
+      Width = 64.000000000000000000
+      Height = 16.000000000000000000
+      Padding.Rect = '(4,4,23,4)'
+      HitTest = False
+    end
+    object TButton
+      StyleName = 'clearbutton'
+      Align = alFitRight
+      Position.Point = '(69,2)'
+      Width = 20.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(2,2,2,2)'
+      StyleLookup = 'transparenTButtonstyle'
+      TabOrder = 2
+      StaysPressed = False
+      IsPressed = False
+      CanFocus = False
+      object TPath
+        Align = alFit
+        Position.Point = '(4,4)'
+        Locked = True
+        Width = 12.000000000000000000
+        Height = 12.000000000000000000
+        Padding.Rect = '(4,4,4,4)'
+        HitTest = False
+        Fill.Color = xFF101010
+        Stroke.Kind = bkNone
+        Data.Path = {
+          10000000000000000000A0C00000704101000000000070410000A0C001000000
+          000048420000F041010000000000AA420000A0C0010000000000D24200007041
+          0100000000008C4200004842010000000000D2420000B442010000000000AA42
+          0000DC42020000003BDF34429E6F8C4202000000FE547D427FAAB04202000000
+          000048420000964201000000000070410000DC42010000000000A0C00000B442
+          010000000000F04100005C42010000000000A0C0000070410300000000000000
+          00000000}
+      end
+    end
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TBrushObject
+      StyleName = 'selection'
+      Brush.Color = x80879BB1
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'memostyle'
+    Position.Point = '(362,435)'
+    Width = 116.999992370605500000
+    Height = 131.000000000000000000
+    ClipChildren = True
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 116.999992370605500000
+      Height = 131.000000000000000000
+      Margins.Rect = '(1,1,1,1)'
+      HitTest = False
+      Fill.Color = claWhite
+      Stroke.Color = xFFC1C1C1
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Position.Point = '(1,1)'
+        Width = 96.999992370605470000
+        Height = 111.000000000000000000
+        ClipChildren = True
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(99.9999923706055,1)'
+        Width = 16.000000000000000000
+        Height = 111.000000000000000000
+        Padding.Rect = '(2,0,0,0)'
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(1,114)'
+        Width = 114.999992370605500000
+        Height = 16.000000000000000000
+        Padding.Rect = '(0,2,0,0)'
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+    end
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TBrushObject
+      StyleName = 'selection'
+      Brush.Color = x803870F7
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'buttonstyle'
+    Position.Point = '(376,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      object TInnerGlowEffect
+        Trigger = 'IsPressed=true'
+        Enabled = False
+        Softness = 0.400000005960464400
+        GlowColor = xFF4F4848
+        Opacity = 0.899999976158142100
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(5,2)'
+      Locked = True
+      Width = 81.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(5,2,5,2)'
+      HitTest = False
+      Text = 'button'
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'colorbuttonstyle'
+    Position.Point = '(376,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      object TInnerGlowEffect
+        Trigger = 'IsPressed=true'
+        Enabled = False
+        Softness = 0.400000005960464400
+        GlowColor = xFF4F4848
+        Opacity = 0.899999976158142100
+      end
+    end
+    object TRectangle
+      StyleName = 'fill'
+      Align = alClient
+      Position.Point = '(6,5)'
+      Locked = True
+      Padding.Rect = '(6,5,6,5)'
+      HitTest = False
+      Fill.Color = xFF000000
+      Stroke.Color = xFF6A6A6A
+      xRadius = 3
+      yRadius = 3
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'cornerbuttonstyle'
+    Position.Point = '(376,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      object TInnerGlowEffect
+        Trigger = 'IsPressed=true'
+        Enabled = False
+        Softness = 0.400000005960464400
+        GlowColor = xFF4F4848
+        Opacity = 0.899999976158142100
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(5,2)'
+      Locked = True
+      Width = 81.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(5,2,5,2)'
+      HitTest = False
+      Text = 'button'
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'popupboxstyle'
+    Position.Point = '(368,490)'
+    Width = 107.000000000000000000
+    Height = 22.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 107.000000000000000000
+      Height = 22.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      object TInnerGlowEffect
+        Trigger = 'IsPressed=true'
+        Enabled = False
+        Softness = 0.400000005960464400
+        GlowColor = xFF4F4848
+        Opacity = 0.899999976158142100
+      end
+    end
+    object TLayout
+      Align = alRight
+      Position.Point = '(92,0)'
+      Width = 15.000000000000000000
+      Height = 22.000000000000000000
+      object TPath
+        Align = alCenter
+        Position.Point = '(3,4)'
+        Width = 8.000000000000000000
+        Height = 5.000000000000000000
+        Padding.Rect = '(0,-9,0,0)'
+        HitTest = False
+        Fill.Color = xFF040404
+        Stroke.Kind = bkNone
+        Data.Path = {
+          0500000000000000000000000000803F010000000000803F0000803F01000000
+          0000003F0000000001000000000000000000803F030000000000000000000000}
+      end
+      object TPath
+        Align = alCenter
+        Position.Point = '(3,12)'
+        Width = 8.000000000000000000
+        Height = 5.000000000000000000
+        Padding.Rect = '(0,7,0,0)'
+        HitTest = False
+        Fill.Color = claBlack
+        Stroke.Kind = bkNone
+        Data.Path = {
+          04000000000000000000000000000000010000000000803F0000000001000000
+          0000003F0000803F030000000000000000000000}
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(5,5)'
+      Locked = True
+      Width = 82.000000000000000000
+      Height = 12.000000000000000000
+      Padding.Rect = '(5,5,5,5)'
+      HitTest = False
+      Fill.Color = xFF050505
+      Text = 'button'
+      WordWrap = False
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'arcdialstyle'
+    Position.Point = '(384,488)'
+    Width = 73.000000000000000000
+    Height = 26.000000000000000000
+    DesignVisible = False
+    object TEllipse
+      StyleName = 'background'
+      Align = alFit
+      Position.Point = '(24,0)'
+      Locked = True
+      Width = 26.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+      object TInnerGlowEffect
+        Trigger = 'IsPressed=true'
+        Enabled = False
+        Softness = 0.400000005960464400
+        GlowColor = xFF4F4848
+        Opacity = 0.899999976158142100
+      end
+      object TLayout
+        StyleName = 'tick'
+        Align = alClient
+        Position.Point = '(2,2)'
+        Locked = True
+        Width = 22.000000000000000000
+        Height = 22.000000000000000000
+        Padding.Rect = '(2,2,2,2)'
+        object TLayout
+          Align = alRight
+          Position.Point = '(17,0)'
+          Width = 5.000000000000000000
+          Height = 22.000000000000000000
+          object TEllipse
+            Align = alCenter
+            Position.Point = '(0,8)'
+            Locked = True
+            Width = 5.000000000000000000
+            Height = 5.000000000000000000
+            HitTest = False
+            Fill.Color = xFF505050
+            Stroke.Color = claWhite
+          end
+        end
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Locked = True
+      Width = 73.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Color = xFF101010
+      Font.Size = 9.000000000000000000
+      Text = 'text'
+      WordWrap = False
+    end
+    object TText
+      StyleName = 'tracktext'
+      Align = alBottom
+      Position.Point = '(0,26)'
+      Locked = True
+      Width = 73.000000000000000000
+      Height = 10.000000000000000000
+      Padding.Rect = '(0,0,0,-10)'
+      HitTest = False
+      Fill.Color = xFF101010
+      Font.Size = 9.000000000000000000
+      Text = 'text'
+      WordWrap = False
+    end
+  end
+  object TLayout
+    StyleName = 'thumbbarstyle'
+    Position.Point = '(413,493)'
+    Width = 16.000000000000000000
+    Height = 16.000000000000000000
+    DesignVisible = False
+    object TEllipse
+      StyleName = 'background'
+      Align = alCenter
+      Position.Point = '(2,2)'
+      Locked = True
+      Width = 11.999999046325680000
+      Height = 11.999999046325680000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFAFAFA
+        end
+        item
+          Color = xFF8A8A8B
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF525252
+    end
+    object TEllipse
+      StyleName = 'background'
+      Align = alCenter
+      Position.Point = '(6,6)'
+      Locked = True
+      Width = 4.000000000000000000
+      Height = 4.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF3F3F3F
+        end
+        item
+          Color = xFF9C9C9C
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Kind = bkNone
+    end
+  end
+  object TRectangle
+    StyleName = 'scrollbarvtrackstyle'
+    Position.Point = '(411,469)'
+    Width = 19.000000000000000000
+    Height = 63.000003814697270000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkGradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFFAFAFA
+      end
+      item
+        Color = xFFDEDEDE
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.Style = gsLinear
+    Fill.Gradient.StartPosition.Point = '(0,0.5)'
+    Fill.Gradient.StopPosition.Point = '(1,0.5)'
+    Stroke.Kind = bkNone
+    object TRoundRect
+      Align = alClient
+      Position.Point = '(-1,0)'
+      Locked = True
+      Width = 21.000000000000000000
+      Height = 63.000003814697270000
+      Padding.Rect = '(-1,0,-1,0)'
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC5C5C5
+        end
+        item
+          Color = xFFF2F2F2
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Fill.Gradient.StartPosition.Point = '(0,0.5)'
+      Fill.Gradient.StopPosition.Point = '(1,0.5)'
+      Stroke.Color = xFFBCC0C5
+    end
+    object TThumb
+      StyleName = 'thumb'
+      Position.Point = '(5,5)'
+      Locked = True
+      Width = 10.000000000000000000
+      Height = 46.000000000000000000
+      StyleLookup = 'vthumbstyle'
+      TabOrder = 1
+    end
+  end
+  object TRectangle
+    StyleName = 'scrollbarhtrackstyle'
+    Position.Point = '(361,491)'
+    Width = 119.999992370605500000
+    Height = 19.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkGradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFFAFAFA
+      end
+      item
+        Color = xFFDEDEDE
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.Style = gsLinear
+    Stroke.Kind = bkNone
+    object TRoundRect
+      Align = alClient
+      Position.Point = '(0,-1)'
+      Locked = True
+      Width = 119.999992370605500000
+      Height = 21.000000000000000000
+      Padding.Rect = '(0,-1,0,-1)'
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC5C5C5
+        end
+        item
+          Color = xFFF2F2F2
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFFBCC0C5
+    end
+    object TThumb
+      StyleName = 'thumb'
+      Position.Point = '(4,4)'
+      Locked = True
+      Width = 51.000000000000000000
+      Height = 16.000000000000000000
+      StyleLookup = 'hthumbstyle'
+      TabOrder = 1
+    end
+  end
+  object TRectangle
+    StyleName = 'scrollbarleftbutton'
+    Position.Point = '(411,492)'
+    Width = 19.000000000000000000
+    Height = 18.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkResource
+    Fill.Resource.StyleLookup = 'scrollbtn'
+    Stroke.Kind = bkNone
+    object TPath
+      Align = alCenter
+      Position.Point = '(6,5)'
+      Locked = True
+      Width = 7.000000000000000000
+      Height = 8.000000000000000000
+      HitTest = False
+      Fill.Color = xFF5A5A5A
+      Stroke.Kind = bkNone
+      Data.Path = {
+        05000000000000000000803F00000000010000000000803F0000803F01000000
+        000000000000003F010000000000803F00000000030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = claWhite
+        StopValue = xFFCCCCCC
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = xFFCCCCCC
+        StopValue = claWhite
+        PropertyName = 'Fill.Color'
+      end
+    end
+  end
+  object TRectangle
+    StyleName = 'scrollbarrightbutton'
+    Position.Point = '(412,492)'
+    Width = 17.000000000000000000
+    Height = 18.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkResource
+    Fill.Resource.StyleLookup = 'scrollbtn'
+    Stroke.Kind = bkNone
+    object TPath
+      Align = alCenter
+      Position.Point = '(5,5)'
+      Locked = True
+      Width = 7.000000000000000000
+      Height = 8.000000000000000000
+      HitTest = False
+      Fill.Color = xFF5A5A5A
+      Stroke.Kind = bkNone
+      Data.Path = {
+        0400000000000000000000000000000001000000000000000000803F01000000
+        0000803F0000003F030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = claWhite
+        StopValue = xFFCCCCCC
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = xFFCCCCCC
+        StopValue = claWhite
+        PropertyName = 'Fill.Color'
+      end
+    end
+  end
+  object TRectangle
+    StyleName = 'scrollbartopbutton'
+    Position.Point = '(413,491)'
+    Width = 16.000000000000000000
+    Height = 19.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkResource
+    Fill.Resource.StyleLookup = 'vscroll'
+    Stroke.Kind = bkNone
+    object TPath
+      Align = alCenter
+      Position.Point = '(4,6)'
+      Locked = True
+      Width = 8.000000000000000000
+      Height = 7.000000000000000000
+      HitTest = False
+      Fill.Color = xFF5A5A5A
+      Stroke.Kind = bkNone
+      Data.Path = {
+        0500000000000000000000000000803F010000000000803F0000803F01000000
+        0000003F0000000001000000000000000000803F030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = claWhite
+        StopValue = xFFCCCCCC
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = xFFCCCCCC
+        StopValue = claWhite
+        PropertyName = 'Fill.Color'
+      end
+    end
+  end
+  object TRectangle
+    StyleName = 'scrollbarbottombutton'
+    Position.Point = '(412,492)'
+    Width = 17.000000000000000000
+    Height = 17.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkResource
+    Fill.Resource.StyleLookup = 'vscroll'
+    Stroke.Kind = bkNone
+    object TPath
+      Align = alCenter
+      Position.Point = '(4,5)'
+      Locked = True
+      Width = 8.000000000000000000
+      Height = 7.000000000000000000
+      HitTest = False
+      Fill.Color = xFF5A5A5A
+      Stroke.Kind = bkNone
+      Data.Path = {
+        04000000000000000000000000000000010000000000803F0000000001000000
+        0000003F0000803F030000000000000000000000}
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = claWhite
+        StopValue = xFFCCCCCC
+        PropertyName = 'Fill.Color'
+      end
+      object TColorAnimation
+        Duration = 0.100000001490116100
+        StartValue = claWhite
+        StopValue = claGray
+        PropertyName = 'Fill.Color'
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'hthumbstyle'
+    Position.Point = '(390,493)'
+    Width = 60.999996185302730000
+    Height = 14.000000953674320000
+    DesignVisible = False
+    object TRoundRect
+      StyleName = 'background'
+      Align = alClient
+      Width = 60.999996185302730000
+      Height = 14.000000953674320000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC1CCDA
+        end
+        item
+          Color = xFF8793B1
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF7A8593
+      object TFloatAnimation
+        Duration = 0.200000002980232200
+        Trigger = 'IsMouseOver=true'
+        StartValue = 1.000000000000000000
+        StopValue = 0.800000011920928900
+        PropertyName = 'Opacity'
+      end
+      object TFloatAnimation
+        Duration = 0.200000002980232200
+        Trigger = 'IsmouseOver=false'
+        StartValue = 0.800000011920928900
+        StopValue = 1.000000000000000000
+        PropertyName = 'Opacity'
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'vthumbstyle'
+    Position.Point = '(415,477)'
+    Width = 11.999999046325680000
+    Height = 47.000000000000000000
+    DesignVisible = False
+    object TRoundRect
+      StyleName = 'background'
+      Align = alClient
+      Locked = True
+      Width = 11.999999046325680000
+      Height = 47.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC1CCDA
+        end
+        item
+          Color = xFF8793B1
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Fill.Gradient.StartPosition.Point = '(0,0.5)'
+      Fill.Gradient.StopPosition.Point = '(1,0.5)'
+      Stroke.Color = xFF7A8593
+      object TFloatAnimation
+        Duration = 0.200000002980232200
+        Trigger = 'IsMouseOver=true'
+        StartValue = 1.000000000000000000
+        StopValue = 0.800000011920928900
+        PropertyName = 'Opacity'
+      end
+      object TFloatAnimation
+        Duration = 0.200000002980232200
+        Trigger = 'IsmouseOver=false'
+        StartValue = 0.800000011920928900
+        StopValue = 1.000000000000000000
+        PropertyName = 'Opacity'
+      end
+    end
+  end
+  object TRoundRect
+    StyleName = 'trackstyle'
+    Position.Point = '(361,492)'
+    Width = 119.999992370605500000
+    Height = 19.000000000000000000
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkGradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFC8C8C8
+      end
+      item
+        Color = xFF949494
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.Style = gsLinear
+    Stroke.Kind = bkNone
+    object TRoundRect
+      Align = alClient
+      Position.Point = '(2,2)'
+      Locked = True
+      Width = 115.999992370605500000
+      Height = 15.000000000000000000
+      Padding.Rect = '(2,2,2,2)'
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF878787
+        end
+        item
+          Color = xFFEFEFEF
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Kind = bkNone
+    end
+    object TThumb
+      StyleName = 'thumb'
+      Position.Point = '(4,4)'
+      Locked = True
+      Width = 51.000000000000000000
+      Height = 16.000000000000000000
+      Padding.Rect = '(2,2,2,2)'
+      StyleLookup = 'hthumbstyle'
+      TabOrder = 1
+    end
+  end
+  object TLayout
+    StyleName = 'scrollbarstyle'
+    Position.Point = '(333,474)'
+    Width = 176.000000000000000000
+    Height = 53.000000000000000000
+    Margins.Rect = '(1,1,1,1)'
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 176.000000000000000000
+      Height = 53.000000000000000000
+      HitTest = False
+      Fill.Kind = bkNone
+      Stroke.Color = xFFCFCFCF
+    end
+    object TSpeedButton
+      StyleName = 'leftbutton'
+      Align = alLeft
+      Position.Point = '(1,19)'
+      Locked = True
+      Width = 18.000000000000000000
+      Height = 15.000000000000000000
+      StyleLookup = 'scrollbarleftbutton'
+      TabOrder = 1
+      StaysPressed = False
+      IsPressed = False
+    end
+    object TTrack
+      StyleName = 'htrack'
+      Align = alClient
+      Position.Point = '(19,19)'
+      Locked = True
+      Width = 138.000000000000000000
+      Height = 15.000000000000000000
+      StyleLookup = 'scrollbarhtrackstyle'
+      TabOrder = 2
+      Max = 1.000000000000000000
+      Orientation = orHorizontal
+      ViewportSize = 0.100000001490116100
+    end
+    object TSpeedButton
+      StyleName = 'rightbutton'
+      Align = alRight
+      Position.Point = '(157,19)'
+      Locked = True
+      Width = 18.000000000000000000
+      Height = 15.000000000000000000
+      StyleLookup = 'scrollbarrightbutton'
+      TabOrder = 3
+      StaysPressed = False
+      IsPressed = False
+    end
+    object TTrack
+      StyleName = 'vtrack'
+      Align = alClient
+      Position.Point = '(19,19)'
+      Locked = True
+      Width = 138.000000000000000000
+      Height = 15.000000000000000000
+      StyleLookup = 'scrollbarvtrackstyle'
+      TabOrder = 4
+      Max = 1.000000000000000000
+      Orientation = orHorizontal
+      ViewportSize = 0.100000001490116100
+    end
+    object TSpeedButton
+      StyleName = 'topbutton'
+      Align = alTop
+      Position.Point = '(1,1)'
+      Locked = True
+      Width = 174.000000000000000000
+      Height = 18.000000000000000000
+      StyleLookup = 'scrollbartopbutton'
+      TabOrder = 5
+      StaysPressed = False
+      IsPressed = False
+    end
+    object TSpeedButton
+      StyleName = 'bottombutton'
+      Align = alBottom
+      Position.Point = '(1,34)'
+      Locked = True
+      Width = 174.000000000000000000
+      Height = 18.000000000000000000
+      StyleLookup = 'scrollbarbottombutton'
+      TabOrder = 6
+      StaysPressed = False
+      IsPressed = False
+    end
+  end
+  object TLayout
+    StyleName = 'smallscrollbarvtrackstyle'
+    Position.Point = '(411,469)'
+    Width = 19.000000000000000000
+    Height = 63.000003814697270000
+    DesignVisible = False
+    object TRoundRect
+      Align = alClient
+      Locked = True
+      Width = 19.000000000000000000
+      Height = 63.000003814697270000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF878787
+        end
+        item
+          Color = xFFEFEFEF
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Fill.Gradient.StopPosition.Point = '(1,0)'
+      Stroke.Kind = bkNone
+    end
+    object TThumb
+      StyleName = 'thumb'
+      Position.Point = '(5,5)'
+      Locked = True
+      Width = 10.000000000000000000
+      Height = 46.000000000000000000
+      StyleLookup = 'vthumbstyle'
+      TabOrder = 1
+    end
+  end
+  object TLayout
+    StyleName = 'smallscrollbarhtrackstyle'
+    Position.Point = '(361,492)'
+    Width = 119.999992370605500000
+    Height = 19.000000000000000000
+    DesignVisible = False
+    object TRoundRect
+      Align = alClient
+      Locked = True
+      Width = 119.999992370605500000
+      Height = 19.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF878787
+        end
+        item
+          Color = xFFEFEFEF
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Kind = bkNone
+    end
+    object TThumb
+      StyleName = 'thumb'
+      Position.Point = '(4,4)'
+      Locked = True
+      Width = 51.000000000000000000
+      Height = 16.000000000000000000
+      StyleLookup = 'hthumbstyle'
+      TabOrder = 1
+    end
+  end
+  object TLayout
+    StyleName = 'smallscrollbarstyle'
+    Position.Point = '(333,474)'
+    Width = 176.000000000000000000
+    Height = 53.000000000000000000
+    DesignVisible = False
+    object TTrack
+      StyleName = 'htrack'
+      Align = alClient
+      Locked = True
+      Width = 176.000000000000000000
+      Height = 53.000000000000000000
+      StyleLookup = 'smallscrollbarhtrackstyle'
+      TabOrder = 0
+      Max = 1.000000000000000000
+      Orientation = orHorizontal
+      ViewportSize = 0.100000001490116100
+    end
+    object TTrack
+      StyleName = 'vtrack'
+      Align = alClient
+      Locked = True
+      Width = 176.000000000000000000
+      Height = 53.000000000000000000
+      StyleLookup = 'smallscrollbarvtrackstyle'
+      TabOrder = 1
+      Max = 1.000000000000000000
+      Orientation = orHorizontal
+      ViewportSize = 0.100000001490116100
+    end
+  end
+  object TLayout
+    StyleName = 'comboboxstyle'
+    Position.Point = '(376,488)'
+    Width = 89.000000000000000000
+    Height = 26.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 89.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFF6F6F6
+        end
+        item
+          Color = xFFDFDFDF
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = claGray
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object TRectangle
+      Align = alRight
+      Position.Point = '(74,0)'
+      Locked = True
+      Width = 15.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC1CCDA
+        end
+        item
+          Color = xFF8793B1
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = claGray
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      Corners = [crTopRight, crBottomRight]
+      object TPath
+        Align = alCenter
+        Position.Point = '(3,10)'
+        Locked = True
+        Width = 8.000000000000000000
+        Height = 6.000000000000000000
+        HitTest = False
+        Fill.Color = xFF3A3A3A
+        Stroke.Kind = bkNone
+        Data.Path = {
+          04000000000000000000000000000000010000000000803F0000000001000000
+          0000003F0000803F030000000000000000000000}
+      end
+    end
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TContent
+      StyleName = 'content'
+      Align = alContents
+      Position.Point = '(2,2)'
+      Locked = True
+      Width = 64.000000000000000000
+      Height = 22.000000000000000000
+      Padding.Rect = '(2,2,23,2)'
+      HitTest = False
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'comboeditstyle'
+    Position.Point = '(376,488)'
+    Width = 89.000000000000000000
+    Height = 26.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 89.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFF6F6F6
+        end
+        item
+          Color = xFFDFDFDF
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = claGray
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object TRectangle
+      Align = alRight
+      Position.Point = '(74,0)'
+      Locked = True
+      Width = 15.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC1CCDA
+        end
+        item
+          Color = xFF8793B1
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = claGray
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      Corners = [crTopRight, crBottomRight]
+      object TPath
+        Align = alCenter
+        Position.Point = '(3,10)'
+        Locked = True
+        Width = 8.000000000000000000
+        Height = 6.000000000000000000
+        HitTest = False
+        Fill.Color = xFF3A3A3A
+        Stroke.Kind = bkNone
+        Data.Path = {
+          04000000000000000000000000000000010000000000803F0000000001000000
+          0000003F0000803F030000000000000000000000}
+      end
+    end
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TBrushObject
+      StyleName = 'selection'
+      Brush.Color = x80879BB1
+    end
+    object TContent
+      StyleName = 'content'
+      Align = alContents
+      Position.Point = '(4,3)'
+      Locked = True
+      Width = 62.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(4,3,23,3)'
+      HitTest = False
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'combotextstyle'
+    Position.Point = '(376,488)'
+    Width = 89.000000000000000000
+    Height = 26.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 89.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFF6F6F6
+        end
+        item
+          Color = xFFDFDFDF
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = claGray
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object TRectangle
+      Align = alRight
+      Position.Point = '(74,0)'
+      Locked = True
+      Width = 15.000000000000000000
+      Height = 26.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFC1CCDA
+        end
+        item
+          Color = xFF8793B1
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = claGray
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      Corners = [crTopRight, crBottomRight]
+      object TPath
+        Align = alCenter
+        Position.Point = '(3,10)'
+        Locked = True
+        Width = 8.000000000000000000
+        Height = 6.000000000000000000
+        HitTest = False
+        Fill.Color = xFF3A3A3A
+        Stroke.Kind = bkNone
+        Data.Path = {
+          04000000000000000000000000000000010000000000803F0000000001000000
+          0000003F0000803F030000000000000000000000}
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(5,5)'
+      Locked = True
+      Width = 64.000000000000000000
+      Height = 16.000000000000000000
+      Padding.Rect = '(5,5,5,5)'
+      HitTest = False
+      Fill.Color = xFF050505
+      Text = 'button'
+      WordWrap = False
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'listboxstyle'
+    Position.Point = '(363,436)'
+    Width = 116.999992370605500000
+    Height = 131.000000000000000000
+    DesignVisible = False
+    object TBrushObject
+      StyleName = 'AlternatingRowBackground'
+      Brush.Color = x20879BB1
+    end
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 116.999992370605500000
+      Height = 131.000000000000000000
+      Margins.Rect = '(1,1,1,1)'
+      HitTest = False
+      Fill.Color = xFFE6EDF7
+      Stroke.Color = xFF8E8E8E
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Position.Point = '(1,1)'
+        Width = 98.999992370605470000
+        Height = 113.000000000000000000
+        ClipChildren = True
+        object TRectangle
+          StyleName = 'selection'
+          Width = 50.000000000000000000
+          Height = 50.000000000000000000
+          HitTest = False
+          Fill.Color = x80879BB1
+          Stroke.Kind = bkNone
+        end
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(99.9999923706055,1)'
+        Width = 16.000000000000000000
+        Height = 113.000000000000000000
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(1,114)'
+        Width = 114.999992370605500000
+        Height = 16.000000000000000000
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'transparentlistboxstyle'
+    Position.Point = '(363,436)'
+    Width = 116.999992370605500000
+    Height = 131.000000000000000000
+    object TBrushObject
+      StyleName = 'AlternatingRowBackground'
+      Brush.Color = x20879BB1
+    end
+    object TLayout
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 116.999992370605500000
+      Height = 131.000000000000000000
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Width = 100.999992370605500000
+        Height = 115.000000000000000000
+        ClipChildren = True
+        object TRectangle
+          StyleName = 'selection'
+          Width = 50.000000000000000000
+          Height = 50.000000000000000000
+          HitTest = False
+          Fill.Color = x80879BB1
+          Stroke.Kind = bkNone
+        end
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(100.999992370605,0)'
+        Width = 16.000000000000000000
+        Height = 115.000000000000000000
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(0,115)'
+        Width = 116.999992370605500000
+        Height = 16.000000000000000000
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'colorlistboxitemstyle'
+    Position.Point = '(377,489)'
+    Width = 88.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TCheckBox
+      StyleName = 'check'
+      Align = alLeft
+      Width = 20.000000000000000000
+      Height = 24.000000000000000000
+      TabOrder = 0
+      IsChecked = False
+      CanFocus = False
+      DisableFocusEffect = True
+    end
+    object TRectangle
+      StyleName = 'color'
+      Align = alLeft
+      Locked = True
+      Padding.Rect = '(2,2,2,2)'
+      HitTest = False
+      Stroke.Color = xFF6A6A6A
+      Width = 16
+    end
+    object TText
+      BindingName = 'text'
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(23,1)'
+      Width = 62.000000000000000000
+      Height = 22.000000000000000000
+      Padding.Rect = '(3,1,3,1)'
+      HitTest = False
+      HorzTextAlign = taLeading
+      Text = 'Text'
+      WordWrap = False
+    end
+  end
+  object TLayout
+    StyleName = 'listboxitemstyle'
+    Position.Point = '(377,489)'
+    Width = 88.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TCheckBox
+      StyleName = 'check'
+      Align = alLeft
+      Width = 20.000000000000000000
+      Height = 24.000000000000000000
+      TabOrder = 0
+      IsChecked = False
+      CanFocus = False
+      DisableFocusEffect = True
+    end
+    object TText
+      BindingName = 'text'
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(23,1)'
+      Width = 62.000000000000000000
+      Height = 22.000000000000000000
+      Padding.Rect = '(3,1,3,1)'
+      HitTest = False
+      HorzTextAlign = taLeading
+      Text = 'Text'
+      WordWrap = False
+    end
+  end
+  object TLayout
+    StyleName = 'droptargetstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      Align = alContents
+      Width = 50.000000000000000000
+      Height = 50.000000000000000000
+      HitTest = False
+      Fill.Kind = bkNone
+      Stroke.Color = xFF484848
+      StrokeDash = sdDash
+      StrokeThickness = 4.000000000000000000
+      XRadius = 11.000000953674320000
+      YRadius = 11.000000953674320000
+      object TText
+        StyleName = 'text'
+        Align = alBottom
+        Position.Point = '(10,0)'
+        Width = 30.000000000000000000
+        Height = 50.000000000000000000
+        Padding.Rect = '(10,0,10,0)'
+        Fill.Color = xFF484848
+        Text = 'text'
+      end
+    end
+    object TFloatKeyAnimation
+      Duration = 0.599999964237213200
+      Loop = True
+      Trigger = 'IsDragOver=true'
+      PropertyName = 'Margins.Top'
+      Keys = <
+        item
+        end
+        item
+          Key = 0.500000000000000000
+          Value = -20.000000000000000000
+        end
+        item
+          Key = 1.000000000000000000
+        end>
+      StartFromCurrent = False
+    end
+    object TPath
+      Align = alCenter
+      Width = 50.000000000000000000
+      Height = 50.000003814697270000
+      HitTest = False
+      Fill.Color = xFF484848
+      Stroke.Kind = bkNone
+      Data.Path = {
+        100000000000000008EC8343F087A4430100000008EC8343083CFB4302000000
+        35BE7143504DF9430200000012835C43A8E6F54302000000F0674943F803F143
+        0100000008EC8343FC0116440100000008EC8343FC5116440100000000408443
+        FC5116440100000010689A43FC412B4401000000081CD043F803F14302000000
+        915DC64321E0F54302000000919DBB439643F94302000000087CB043F833FB43
+        01000000087CB043F087A4430100000008EC8343F087A4430300000000000000
+        00000000}
+    end
+  end
+  object TBrushObject
+    StyleName = 'scrollbtn'
+    Brush.Kind = bkGradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFFFAFAFA
+      end
+      item
+        Color = xFFDEDEDE
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.Style = gsLinear
+  end
+  object TBrushObject
+    StyleName = 'scrolltrack'
+    Brush.Kind = bkGradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFFC5C5C5
+      end
+      item
+        Color = xFFF2F2F2
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.Style = gsLinear
+  end
+  object TBrushObject
+    StyleName = 'thumb'
+    Brush.Kind = bkGradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFFC1CCDA
+      end
+      item
+        Color = xFF8793B1
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.Style = gsLinear
+  end
+  object TBrushObject
+    StyleName = 'vscroll'
+    Brush.Kind = bkGradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFFFAFAFA
+      end
+      item
+        Color = xFFDEDEDE
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.Style = gsLinear
+    Brush.Gradient.StartPosition.Point = '(0,0.5)'
+    Brush.Gradient.StopPosition.Point = '(1,0.5)'
+  end
+  object TLayout
+    StyleName = 'gridstyle'
+    Position.Point = '(362,435)'
+    Width = 116.999992370605500000
+    Height = 131.000000000000000000
+    ClipChildren = True
+    DesignVisible = False
+    object TBrushObject
+      StyleName = 'AlternatingRowBackground'
+      Brush.Color = x20879BB1
+    end
+    object TBrushObject
+      StyleName = 'linefill'
+      Brush.Color = xFF8E8E8E
+    end
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 116.999992370605500000
+      Height = 131.000000000000000000
+      Margins.Rect = '(1,1,1,1)'
+      HitTest = False
+      Fill.Color = xFFE6EDF7
+      Stroke.Color = xFF8E8E8E
+      object THeader
+        StyleName = 'header'
+        Align = alTop
+        Position.Point = '(1,1)'
+        Width = 114.999992370605500000
+        Height = 21.000000000000000000
+        TabOrder = 0
+        Sides = [sdBottom]
+      end
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Position.Point = '(1,22)'
+        Width = 98.999992370605470000
+        Height = 92.000000000000000000
+        ClipChildren = True
+        object TRectangle
+          StyleName = 'selection'
+          Width = 50.000000000000000000
+          Height = 50.000000000000000000
+          HitTest = False
+          Fill.Color = x80879BB1
+          Stroke.Kind = bkNone
+        end
+        object TRectangle
+          StyleName = 'focus'
+          Width = 50.000000000000000000
+          Height = 50.000000000000000000
+          Padding.Rect = '(0,1,0,1)'
+          HitTest = False
+          Fill.Color = claWhite
+          Stroke.Kind = bkNone
+        end
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(99.9999923706055,22)'
+        Width = 16.000000000000000000
+        Height = 92.000000000000000000
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(1,114)'
+        Width = 114.999992370605500000
+        Height = 16.000000000000000000
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(1,1,1,1)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+    end
+    object TGlowEffect
+      Trigger = 'IsFocused=true'
+      Enabled = False
+      Softness = 0.200000002980232200
+      GlowColor = xFF2080E0
+      Opacity = 1.000000000000000000
+    end
+  end
+  object TLayout
+    StyleName = 'headeritemstyle'
+    Position.Point = '(375,489)'
+    Width = 91.000000000000000000
+    Height = 24.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 91.000000000000000000
+      Height = 24.000000000000000000
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFFCFCFC
+        end
+        item
+          Color = xFFB8B8B8
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF8E8E8E
+      object TInnerGlowEffect
+        Trigger = 'IsPressed=true'
+        Enabled = False
+        Softness = 0.400000005960464400
+        GlowColor = xFF4F4848
+        Opacity = 0.899999976158142100
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(5,2)'
+      Locked = True
+      Width = 81.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(5,2,5,2)'
+      HitTest = False
+      Text = 'button'
+    end
+  end
+  object TLayout
+    StyleName = 'textcellstyle'
+    Position.Point = '(367,490)'
+    Width = 107.000000000000000000
+    Height = 22.000000000000000000
+    DesignVisible = False
+    object TBrushObject
+      StyleName = 'foreground'
+      Brush.Color = xFF373737
+    end
+    object TBrushObject
+      StyleName = 'selection'
+      Brush.Color = x80879BB1
+    end
+    object TContent
+      StyleName = 'content'
+      Align = alContents
+      Position.Point = '(3,3)'
+      Locked = True
+      Width = 101.000000000000000000
+      Height = 16.000000000000000000
+      Padding.Rect = '(3,3,3,3)'
+      HitTest = False
+    end
+  end
+  object TLayout
+    StyleName = 'checkcellstyle'
+    Position.Point = '(346,486)'
+    Width = 149.000000000000000000
+    Height = 30.000000000000000000
+    DesignVisible = False
+    object TLayout
+      Align = alCenter
+      Position.Point = '(64,0)'
+      Width = 20.000000000000000000
+      Height = 30.000000000000000000
+      object TLayout
+        Align = alCenter
+        Position.Point = '(2,7)'
+        Locked = True
+        Width = 15.000000000000000000
+        Height = 15.000000000000000000
+        object TPath
+          StyleName = 'checkmark'
+          Align = alCenter
+          Position.Point = '(3,-1)'
+          Locked = True
+          Width = 13.000000000000000000
+          Height = 13.000000000000000000
+          Padding.Rect = '(2,-3,-3,0)'
+          HitTest = False
+          Fill.Color = x00292929
+          Stroke.Kind = bkNone
+          Data.Path = {
+            2E00000000000000C73BB343505D8543010000003333B443FEB4864302000000
+            8941B0432B97894302000000D3DDAB4331088E4302000000D508A7436D079443
+            01000000D508A7436D079443020000001934A2432B079A4302000000B6839E43
+            68A19F430200000052F89B43C9D6A4430100000052F89B43C9D6A44301000000
+            08EC9943772EA643020000001D3A98435A54A74302000000F2129743D32DA843
+            02000000E9769643A6BBA84301000000E9769643A6BBA84302000000DB399643
+            BCE4A7430200000075B395439683A6430200000075E39443D598A44301000000
+            75E39443D598A44301000000501D9443FCD9A243020000002D029343F658A043
+            02000000C1FA9143987E9E43020000008D079143444B9D43010000008D079143
+            444B9D43020000005A14904373189C4302000000F8038F436A4C9B4302000000
+            E3D58D430AE79A4301000000E3D58D430AE79A4302000000F8D38F43EEDC9843
+            020000006DA79143AED7974302000000005093434CD797430100000000509343
+            4CD797430200000085BB9443AED79743020000005C4F9643C9B6994302000000
+            E10A984319749D4301000000E10A984319749D430100000066E6984360559F43
+            020000005A049C43853B9A4302000000BC04A04346469543020000008DE7A443
+            1F759043010000008DE7A4431F75904302000000C1CAA94339A48B4302000000
+            4891AE43AAF1874302000000C73BB343505D854301000000C73BB343505D8543
+            030000000000000000000000}
+          object TColorAnimation
+            Duration = 0.001000000047497451
+            Trigger = 'IsChecked=true'
+            StartValue = x00034E9E
+            StopValue = xFF111111
+            PropertyName = 'Fill.Color'
+          end
+          object TColorAnimation
+            Duration = 0.001000000047497451
+            Trigger = 'IsChecked=false'
+            StartValue = xFF111111
+            StopValue = x00034E9E
+            PropertyName = 'Fill.Color'
+          end
+        end
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'popupcellstyle'
+    Position.Point = '(367,490)'
+    Width = 107.000000000000000000
+    Height = 22.000000000000000000
+    DesignVisible = False
+    object TLayout
+      Align = alRight
+      Position.Point = '(92,0)'
+      Width = 15.000000000000000000
+      Height = 22.000000000000000000
+      object TPath
+        Align = alCenter
+        Position.Point = '(3,4)'
+        Width = 8.000000000000000000
+        Height = 5.000000000000000000
+        Padding.Rect = '(0,-9,0,0)'
+        HitTest = False
+        Fill.Color = xFF040404
+        Stroke.Kind = bkNone
+        Data.Path = {
+          0500000000000000000000000000803F010000000000803F0000803F01000000
+          0000003F0000000001000000000000000000803F030000000000000000000000}
+      end
+      object TPath
+        Align = alCenter
+        Position.Point = '(3,12)'
+        Width = 8.000000000000000000
+        Height = 5.000000000000000000
+        Padding.Rect = '(0,7,0,0)'
+        HitTest = False
+        Fill.Color = claBlack
+        Stroke.Kind = bkNone
+        Data.Path = {
+          04000000000000000000000000000000010000000000803F0000000001000000
+          0000003F0000803F030000000000000000000000}
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alClient
+      Position.Point = '(5,5)'
+      Locked = True
+      Width = 82.000000000000000000
+      Height = 12.000000000000000000
+      Padding.Rect = '(5,5,5,5)'
+      HitTest = False
+      Fill.Color = xFF050505
+      Text = 'button'
+      WordWrap = False
+    end
+  end
+  object TLayout
+    StyleName = 'progresscellstyle'
+    Position.Point = '(385,470)'
+    Width = 72.000000000000000000
+    Height = 60.999996185302730000
+    DesignVisible = False
+    object TLayout
+      StyleName = 'htrack'
+      Align = alContents
+      Position.Point = '(2,2)'
+      Locked = True
+      Width = 68.000000000000000000
+      Height = 56.999996185302730000
+      Padding.Rect = '(2,2,2,2)'
+      object TRectangle
+        StyleName = 'hindicator'
+        Align = alLeft
+        Position.Point = '(1,1)'
+        Locked = True
+        Width = 50.000000000000000000
+        Height = 54.999996185302730000
+        Padding.Rect = '(1,1,1,1)'
+        HitTest = False
+        Fill.Kind = bkGradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFFC1CCDA
+          end
+          item
+            Color = xFF8793B1
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.Style = gsLinear
+        Stroke.Color = xFF7A8593
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'imagecellstyle'
+    Position.Point = '(384,488)'
+    Width = 73.000000000000000000
+    Height = 26.000000000000000000
+    DesignVisible = False
+    object TImage
+      StyleName = 'image'
+      Align = alClient
+      Position.Point = '(3,3)'
+      Locked = True
+      Width = 67.000000000000000000
+      Height = 20.000000000000000000
+      Padding.Rect = '(3,3,3,3)'
+      HitTest = False
+      Bitmap.PNG = {
+        89504E470D0A1A0A0000000D49484452000000010000000108060000001F15C4
+        89000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+        00097048597300000EC300000EC301C76FA8640000000B494441541857636000
+        020000050001AAD5C8510000000049454E44AE426082}
+    end
+  end
+  object TLayout
+    StyleName = 'scrollboxstyle'
+    Position.Point = '(254,435)'
+    Width = 334.000000000000000000
+    Height = 131.000000000000000000
+    DesignVisible = False
+    object TLayout
+      StyleName = 'background'
+      Align = alContents
+      Locked = True
+      Width = 334.000000000000000000
+      Height = 131.000000000000000000
+      object TLayout
+        StyleName = 'content'
+        Align = alClient
+        Width = 318.000000000000000000
+        Height = 115.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'vscrollbar'
+        Align = alRight
+        Position.Point = '(318,0)'
+        Width = 16.000000000000000000
+        Height = 115.000000000000000000
+        TabOrder = 1
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TScrollBar
+        StyleName = 'hscrollbar'
+        Align = alBottom
+        Position.Point = '(0,115)'
+        Width = 334.000000000000000000
+        Height = 16.000000000000000000
+        TabOrder = 2
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'vsmallscrollbar'
+        Align = alRight
+        Position.Point = '(99,2)'
+        Width = 8.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(2,0,0,0)'
+        Visible = False
+        TabOrder = 3
+        Max = 100.000000000000000000
+        Orientation = orVertical
+        SmallChange = 1.000000000000000000
+      end
+      object TSmallScrollBar
+        StyleName = 'hsmallscrollbar'
+        Align = alBottom
+        Position.Point = '(2,113)'
+        Width = 150.000000000000000000
+        Height = 8.000000000000000000
+        Padding.Rect = '(0,2,0,0)'
+        Visible = False
+        TabOrder = 4
+        Max = 100.000000000000000000
+        Orientation = orHorizontal
+        SmallChange = 1.000000000000000000
+      end
+      object TLayout
+        Align = alContents
+        Width = 334.000000000000000000
+        Height = 131.000000000000000000
+        object TLayout
+          Align = alBottom
+          Position.Point = '(0,111)'
+          Width = 334.000000000000000000
+          Height = 20.000000000000000000
+          object TSizeGrip
+            StyleName = 'sizegrip'
+            Align = alRight
+            Position.Point = '(314,0)'
+            Locked = True
+            Width = 20.000000000000000000
+            Height = 20.000000000000000000
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  object TRectangle
+    StyleName = 'menubarstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    ClipChildren = True
+    HitTest = False
+    DesignVisible = False
+    Fill.Kind = bkNone
+    Stroke.Kind = bkNone
+    object TRectangle
+      Align = alClient
+      Position.Point = '(-1,-1)'
+      Width = 52.000000000000000000
+      Height = 51.000000000000000000
+      Padding.Rect = '(-1,-1,-1,0)'
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFFD7D7D7
+        end
+        item
+          Color = xFF979797
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Color = xFF9FAEC2
+    end
+    object TLayout
+      StyleName = 'content'
+      Align = alClient
+      Position.Point = '(2,2)'
+      Width = 46.000000000000000000
+      Height = 45.000000000000000000
+      Padding.Rect = '(2,2,2,3)'
+    end
+  end
+  object TLayout
+    StyleName = 'menuviewstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    Margins.Rect = '(0,0,8,8)'
+    DesignVisible = False
+    object TRectangle
+      Align = alClient
+      Width = 50.000000000000000000
+      Height = 50.000000000000000000
+      Padding.Rect = '(0,0,-8,-8)'
+      HitTest = False
+      Fill.Color = xFFE9E7EA
+      Stroke.Color = x90000000
+      XRadius = 4.000000000000000000
+      YRadius = 4.000000000000000000
+      object TShadowEffect
+        Distance = 4.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.200000017881393400
+        Opacity = 0.500000000000000000
+        ShadowColor = claBlack
+      end
+    end
+    object TLayout
+      StyleName = 'content'
+      Align = alClient
+      Position.Point = '(3,3)'
+      Width = 36.000000000000000000
+      Height = 36.000000000000000000
+      Padding.Rect = '(3,3,3,3)'
+    end
+  end
+  object TLayout
+    StyleName = 'menuitemstyle'
+    Position.Point = '(332,487)'
+    Width = 177.000000000000000000
+    Height = 28.000000000000000000
+    DesignVisible = False
+    object TRectangle
+      Align = alContents
+      Width = 177.000000000000000000
+      Height = 28.000000000000000000
+      Opacity = 0.000099999997473788
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF5E89F9
+        end
+        item
+          Color = xFF3870F7
+          Offset = 0.500000000000000000
+        end
+        item
+          Color = xFF0053F1
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Kind = bkNone
+      object TFloatAnimation
+        Duration = 0.000200000009499490
+        Trigger = 'IsSelected=true'
+        TriggerInverse = 'IsSelected=false'
+        StopValue = 1.000000000000000000
+        PropertyName = 'Opacity'
+      end
+    end
+    object TRectangle
+      StyleName = 'background'
+      Align = alContents
+      Width = 177.000000000000000000
+      Height = 28.000000000000000000
+      Opacity = 0.000099999997473788
+      HitTest = False
+      Fill.Kind = bkGradient
+      Fill.Gradient.Points = <
+        item
+          Color = xFF5E89F9
+        end
+        item
+          Color = xFF3870F7
+          Offset = 0.500000000000000000
+        end
+        item
+          Color = xFF0053F1
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.Style = gsLinear
+      Stroke.Kind = bkNone
+      object TFloatAnimation
+        Duration = 0.000200000009499490
+        Trigger = 'IsMouseOver=true'
+        TriggerInverse = 'IsMouseOver=false'
+        StopValue = 1.000000000000000000
+        PropertyName = 'Opacity'
+      end
+    end
+    object TLayout
+      StyleName = 'glyph'
+      Align = alLeft
+      Width = 25.000000000000000000
+      Height = 28.000000000000000000
+      object TLayout
+        StyleName = 'checkmark'
+        Align = alContents
+        Width = 25.000000000000000000
+        Height = 28.000000000000000000
+        Opacity = 0.001000000047497451
+        object TPath
+          Align = alCenter
+          Position.Point = '(7,8)'
+          Width = 11.000000000000000000
+          Height = 11.000000000000000000
+          HitTest = False
+          Fill.Color = claBlack
+          Stroke.Kind = bkNone
+          Data.Path = {
+            070000000000000056D9524391AE2C4301000000927666436502164301000000
+            9F3983432B7C3C43010000009E9AA64382D2B442010000006F1CB04375A4D142
+            0100000026DF8243263F67430300000056D9524391AE2C43}
+          object TColorAnimation
+            Duration = 0.000200000009499490
+            Trigger = 'IsMouseOver=true'
+            TriggerInverse = 'IsMouseOver=false'
+            StartValue = claBlack
+            StopValue = claWhite
+            PropertyName = 'Fill.Color'
+          end
+        end
+        object TFloatAnimation
+          Duration = 0.100000001490116100
+          Trigger = 'IsChecked=true'
+          TriggerInverse = 'IsChecked=false'
+          StopValue = 1.000000000000000000
+          PropertyName = 'Opacity'
+        end
+      end
+      object TImage
+        StyleName = 'bitmap'
+        Align = alContents
+        Position.Point = '(2,2)'
+        Width = 21.000000000000000000
+        Height = 24.000000000000000000
+        Padding.Rect = '(2,2,2,2)'
+      end
+    end
+    object TText
+      StyleName = 'text'
+      Align = alLeft
+      Position.Point = '(33,0)'
+      Locked = True
+      Width = 50.000000000000000000
+      Height = 28.000000000000000000
+      Padding.Rect = '(8,0,8,0)'
+      HitTest = False
+      HorzTextAlign = taLeading
+      object TColorAnimation
+        Duration = 0.000200000009499490
+        Trigger = 'IsMouseOver=true'
+        TriggerInverse = 'IsMouseOver=false'
+        StartValue = claBlack
+        StopValue = claWhite
+        PropertyName = 'Fill.Color'
+      end
+    end
+    object TText
+      StyleName = 'shortcut'
+      Align = alRight
+      Position.Point = '(101,0)'
+      Locked = True
+      Width = 50.000000000000000000
+      Height = 28.000000000000000000
+      Padding.Rect = '(12,0,6,0)'
+      HitTest = False
+      HorzTextAlign = taLeading
+      object TColorAnimation
+        Duration = 0.000200000009499490
+        Trigger = 'IsMouseOver=true'
+        TriggerInverse = 'IsMouseOver=false'
+        StartValue = claBlack
+        StopValue = claWhite
+        PropertyName = 'Fill.Color'
+      end
+    end
+    object TLayout
+      StyleName = 'submark'
+      Align = alRight
+      Position.Point = '(157,0)'
+      Width = 20.000000000000000000
+      Height = 28.000000000000000000
+      object TPath
+        Align = alCenter
+        Position.Point = '(6,10)'
+        Locked = True
+        Width = 7.000000000000000000
+        Height = 8.000000000000000000
+        HitTest = False
+        Fill.Color = claGray
+        Stroke.Kind = bkNone
+        Data.Path = {
+          0400000000000000000000000000000001000000000000000000803F01000000
+          0000803F0000003F030000000000000000000000}
+        object TColorAnimation
+          Duration = 0.000200000009499490
+          Trigger = 'IsMouseOver=true'
+          TriggerInverse = 'IsMouseOver=false'
+          StartValue = claBlack
+          StopValue = claWhite
+          PropertyName = 'Fill.Color'
+        end
+      end
+    end
+  end
+  object TLayout
+    StyleName = 'menuseparatorstyle'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    Padding.Rect = '(1,1,1,1)'
+    DesignVisible = False
+    object TLine
+      Align = alTop
+      Position.Point = '(1,2)'
+      Width = 48.000000000000000000
+      Height = 1.000000000000000000
+      Padding.Rect = '(1,2,1,0)'
+      Stroke.Color = xFFE7E7E7
+      LineType = ltTop
+    end
+  end
+  object TImage
+    StyleName = 'iconconfirmation'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    DesignVisible = False
+    Bitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      00097048597300000EC300000EC301C76FA8640000170449444154785EED5B77
+      5815F7B63D2FEFDDC4DC94EB4DB5F75EAEB160ECA808088211C51E2568A24129
+      02D2A41C7A15500431A868541415AC14E9822888808080620114BBD82BA2AEBB
+      F7CC19CF014DDECD77C1FC93F9BEFDCDC1336766D6DA6B975F5126FBEBF88B81
+      BF18F88B81266740FD63598B791D64ED7E529375379D20EB6F35FDBD81360B3E
+      186CBBF843353BB30F873998F1E7F7065A1BCBFA5B1BCABA2CD190B5335193B5
+      98D351261BF14993BF4E33DEF03D597BB3AEB25E96067F1FEAE0D26A8267743F
+      C3C0BC613FACB9AABF6CCBE3394EBBB134E010ECC3B3E01A9903EFAD27E0B32D
+      1F3E51F9F0DA9207E70D4761139A0113BF04CC75DC05AD85EB9F0C335A73B5CF
+      D495F95F4F708FF960A883A7ACBFCD6C594FCBFE3299E187CD88E30FDCBA1B01
+      1E683FAFE568978D3DA6AC2C535F145AB7D83701BE5105D8967A014905D770F4
+      F46D9C387F1F8595F7514076E2FC3DE49EBD8B6367EEE0087D9759568BF453B5
+      482DBE859422B29337915478038905D77120F732766556E19783E570DB948385
+      5E07A1BE50FEAA9BBE4FF5A7A39CF7BF3F64854D8B218E236483E57FFF036FFD
+      DF5DFAFE40DBDE2D863AD97C35DEE3F0A0D921CFE6BB1D40D0CE42C4E75E42FE
+      D95A94D7DCC7E9CB0F71AAFA1E0ACEDD41CEE95A6495DE447AC90DA4165D4772
+      E13524E65F455CDE15EC2780B1C72E6167D6256CCFB888AD6955F835B50A9B52
+      2A1199CCC69FABB12DE31276675FC6813CFADDF11AECCC3887C0E87C22240E6A
+      F3C2F0B9867BD5C7239CB6B4D2F4FABE83B667EBFF0EE16FFCBA8D96C7CC2FC6
+      7BA4F6FE46FEE27BD703088929445A610D4A2A6FA3FCE25D145F204F57DC424E
+      F90DB29BC2E722FAB7F28BF770EEEA7D54DF7888CBB71EE1EAEDC7B84676A5F6
+      116A6E3D44E5B5073853730F85E76F239B884A3C7105BBB22E6263D205841D3C
+      8B55FBCE2068EF1904C69E86DFEE72F89205EF3B8BCDA9D5A4902B483C7E099B
+      134AB08894D76766183AEBF9DFE9A4B732968898D4A44474D1F1A9B40DCFC6FE
+      ECB3C8AFB84E2F7C0BC7CF5C476ED9351C2BBD869CB2EB283A5F8B0B04F6E6DD
+      2778F4B40EF5F5F578F5EA0580976474E6CFC2DF2A67E13BC95EE0E5CB7A3C79
+      F65CB8C7E94BF770B8E43AB61FAEC66A22C2637B295CB79D222B81F3AFC5B0DB
+      580497ADA7B02EB10AC59577A06FB909DDA706A2FFBC4874D4F1CC6B5202FACD
+      083A9E9C5F83E3A7AF21B3E812B24A2E23ABF8328E965E4579F56DDCBAFB1875
+      CFEB092081217BF592C0BCA8C70B1563427ECB54AFE3DF8AA4BC12EC25FD5D7B
+      FFA9A0A8D8EC4BF0271530018E9B8B611F5904AB8893882725682E89200202D0
+      7FCE5A22C03BAE4909E8AEE7931E9D7E16D9A72E23BDF022D92592FD4DDC79F0
+      84C08A1EE4177DF142D57E8F80E7BF4986441293C2F7641309118F874FEB1149
+      21621551009B0D27E1B0A904713955186E1C8A9ED356A2EFECB5E8A4E3BDA349
+      0968AFE3B52732B11C47C8F3994535B872EB01C95BF45243D012014AF06FF73A
+      132091207D6E488AA88A86A48A64035B29599A87E70B24386F2DC59ECCB3F866
+      76307A1B060A0474D0F15ED7A404B41AE7BA29744F110E93FCCF5CAC155EE265
+      A3977B9308910425016F07FDFCF9DB09E0DF352641223DF46005CC88008B75F9
+      F0D8518E1DC9A5E841F2EF3B2388080847FB89DE7E4D4A40CB514E019E5B7271
+      B8B806E72EDFFE1DCFB3C71A0297A42CC4F42B31AE5FD199A5CD2A6002942448
+      84896A684C00E797FAFA17F0DB5506D3B5F9581A760201B11588D87B029D27FB
+      A2EFCC20F499450AD0F6B26D52025A0C75B0B55B9B2928E0F4C55B0A02DE7C41
+      490542DC2AC03290878F1EA2B6B61657AF5D13ECE6CD9B78F8F02191204A9A7F
+      278644C3B06848002559CA050F9FD4C1794B094CC3F2B168F57184C69DC7CA6D
+      59E830C91BFD665218CC08453B2DCF054D4A00F7EF5C6BD34F5E44C9851BC28B
+      2833B7D2EBD20BD73DAFC3ADDA5BA8A8388BDCBC3CA4651C4642E221EC3B7010
+      317BF662574C2C76D339312909A74ACB5057572710F1FF13F00AD7EF3C86F5FA
+      422C093D8105C1B9D8905409C7B04344808F40404FC310B49FE03EB9490990F5
+      B3D49DEEB01B29F9D5C83F7355A8E7527CAB9EF9334BFC7C65253232B390969E
+      8194D4341C4A4E413C11B03F2E0EB1FBF663674C0CB6EDD8810D9B36236CDD2F
+      D8B16B17AE5FBFFE9A042924DE54C02B9CBB721F2604DE644D1E8C56E6202AA3
+      1A8BBD62D149DF17FD66AD42778340B4D1701BDEB404F4321F3CC16423E2732E
+      20BBA44600CF75FE6D199EA57FA6A242F07A46662652D2D2C9D3C9389890F05A
+      01D1BB7663DBF61DD8BC752B36446EC2AA3561088F584FAAA915F243E39C20A9
+      8D19E22E7321797E71C871222097C60BD59866F32BBA4EF1230256A3B59EFCF9
+      97EAF26E4D4B4017F30E03BE0B7E1A4BE526ADA01ACFEA9E0B5540295925194C
+      40F9E933043C0DA9E9E982F719FC9E7DFBB073770CB6EFDC85EDD13BB1655B14
+      366EFE15BF6CD888B05F7E816FC04A2134382F88C4BED92B300149F957309F3C
+      FFE3AA5C18071D474CD6058C5BB44EA802FD6687A0B38E6F6D8751F6FF6C5A02
+      64D33FEE3DD5EFEA9643A538945B897B0FB901524D5C620263CFB1074BCBCA04
+      AFB3EC39EEF99C9691817452058741E4AF5B1049E0D793F7C32322B0666D3802
+      57AF86B77F006A6A6A1AE5031572E99BA88C2ACC0BA0D161F0710A857C44A79E
+      C6A039AB841EA0DFEC35E832C9FB8C4C5DFE7F4D4C804C46ED65C19AD8421C3C
+      7A1E576FDD17F28094B9A552261170B2A8983CBE1F5947B251595585070FEE13
+      397542E8D4D53DA3C4578A888D9182EC43C3D75108846265F02A38BBB923FB58
+      8E4040E3F228E597A03DA731D5230BBA2E19984B4444EC2B440F037FA107E837
+      3B8CBA40AF8C2607CF37FC629C7C9FDBA663D8977D0E1597B8197AF13A56C597
+      AD138C438301569CAD10FEE69010D5512780E7CF7CA4526E080E5983D5A16108
+      5CB51A7E2B03E1E8E28A0371F16F25E0150D94F8390B82723074D9217CB3341E
+      0B57E52160DB114A803E8A2648E80237350B019F8E700A360D4A11DACE13E554
+      09140428BD2F12C025EDE9B3A742A3C3809FD167F12C5A5DDD53016071490902
+      828211B43A04FE8141F0F6F3C70A17B95026450588F763134823C5DDA441971E
+      797E8455121190007B1A10398426A2831E97406E82C2D161A2A7BC5908F8F05B
+      7BF3198E7B11937106C979954215903CCFA0D92402F82C0266F04F85B3F4377F
+      E62337EF387CFC572280A4CFDEF7F4F58385B50DB842F0C1A449F71455F31265
+      D577A06E938251D64918B0241E0131E558E0B64BE802A526A8AD96E7FC6621E0
+      FD21B63A1A269B11955C2690F0F8C953BC50485B022E12A1F4B608BCA1498AD9
+      12B51D7E818194FD03E1ECEA06332B6B4C9B350707E3C5105025807FC3FD4552
+      C165A859241201C918627E08EBE24E43C76C03D57EAA00D404F5300842EB091E
+      A39A8500593FAB5E7D66C95FAC3F70125B124B71FD368D08292E452F89DE125F
+      5AF4FCDB8CBFE3E328253AF6B8DCC313CB96DB60D11253182DFC09DFFF608C2A
+      4A9A5C49940488D5858F88840A0C344D104260AC7D1A36C49DC2E0B9ABD06B1A
+      0D8466AE42573D9FA76D467BB46F1E02BEB6FEA8B38EE715FFA81C6C385882B2
+      4A6E8939CE95C095DE7F93803A85F40B8B6826C7CD03D676F6305D66899FCDCC
+      8980A5E4FDD9424214BD2FDE53CC0162896505386E3E89C16689184A2A30F43E
+      8AD0983C74FBCE077D0C9980D5E8A8EB73AE594AA0C4E8571AEE593661E98838
+      508CF4822A213149F12F79FFB7486060270A0AB0DCDE01E656CBC9ACB1D48208
+      3035C75CF2FC625333A11DE646484C964A0238DFD451F3353FE028813F24A860
+      E9DA02786C4845075D4F9180596BD049D73BA179BCAFB8EB67639CD719B91F24
+      028AB023B55CE12149F652EC37F4FED3A74F04AF7269B4B4B113C0B3EC4D9759
+      C1C4CC4294BEF1021415170BD729AB859200565ACD8D07D07448C370CB439400
+      13E0BEFD144CBC772B08F047EF99A13C1718D0AC047C3CCC71F1448B2884EF2D
+      44686C016AEFD290F6856AE27B53FA2FA8ADBD71E3061CE5AE30B3B482E5725B
+      3A5B6389F93218FFB418F3162CC4B1DCDC37C0AB2A80E57FE4D435A899270AF1
+      3F88C260CDBE724C328B40177D2F52803F8D0257D330D8636EB312D06284F3F0
+      C1734310B4239756767255F28058DF1B273EF63ECFE244454763D15253F23C83
+      B712C0FF68B204F38C17E2C8D1A30AF052A95495BF585AF9884C3A2794BE61A4
+      0075BB34ACDB5F8C41B302D0630AE58069FEE8AA2F7FD576BCD7BF9A9500D900
+      79CBCE3AF25AE788C3B4A49583C49CF38A44F8A6FC193CE787BB77EFC249EE46
+      F1BE0CA602780B2C263266CFFF01BB63F728929E6AAFD090807AA102BCA469F0
+      42A1FB6315CCF43D86A0A86C749EE4865E066212ECA4E57DB99D6160F32F9B7D
+      A5E19AF9B35F3CADEFE5601DF5E1CF150D8B14BBAC0206FFE4C913A12DAEAAAA
+      14E39D808B199F4ADE8F3F0984DCB9734768A8541BA586F5BF4E28B58F9E3CA3
+      FE3F936A7FA2D0015AD36CB0CDAAFD68A72D2702BCD17B7A50F32740495A9F8D
+      76F19B62BB133E5B8F41BEF1080D8CEE097940923F83978CE5CF6302E3458B85
+      64C7F13EC7E8074C9E369D12A2ADF01BB16B54868F32F625F9BF4469D56D927E
+      9220FF6FA80204C494C2D07A3D8176456F032FF4325C452DB0974BF3CA5F71F7
+      4F463AEB0F375E07B7C84C58AE49C3D1924B4218889E17BD2F19ABE2DEBDBB28
+      39750A05270B85E9318EF9E4D454E1AC1C27880448A554B5A5E618D99151897E
+      3FC7091560D4F25484ED2D82DA6C3F74D37727023CD17D4A00DA6AFA8C7F2704
+      FC5D4DDEAA8BBEFC917548129685503776B0884294EB7443F06218D08A91A2FB
+      1382BDD1D13869AACA9FF38718FFAFB07C4301FA9B88F13FC3E718FCB766A2D3
+      4467F4FCCE430881CE1AF23BFF18E5D3D49320BFCD676BCA0346EE7BB13C2C03
+      F6EB0EE3F6BD87342E5095B252054C02CF00F39901D7D375D2FC7E63E9371E50
+      71FCF3E48B8E73BA009EE3DF86D604CD7D7791C71DD173B2BBD006779AE899F8
+      4EBCFF3A0F8C7176D136DF029BB56930F28A4776F145210CC410501A033D77FE
+      3C8DF296C3CAD60EB62B1C61EFE40C1B8715C22C90AAEC25EFAB8E2CC5FA7F1D
+      DF50F91B4E3960300D80027797407BF16A9AF87046AFC96EE8490BA2EDB4BCAC
+      DF29019F0E77561B40E36FB3A0444C77D98FA0E83C2240CAE6CA5CC000CA4F97
+      63B2E10CE84F35849EC134E84C9E82D11A9AF8F1671385229EBF1EF8A8829706
+      407EBB4AD177711CBEA549106DA74C0447E7A2A7BE0BBAEBC949016EE8A2EEFD
+      B29D6640BF774A000F383A6ACBCFCE738DC51C6A8D8DBD1371F3F6FD06D5401A
+      F7979F3E0D8319333165FA4C1890710598A0334968833949F24047399E902641
+      686E51B154CEE56FB059020651F637092D806DF03EB4D5B0430F7D22608A373A
+      6A7996C864F89F774B003DEDCB71AE813A165B61E41D0F9DE531883F764E4858
+      8D273ECA58010AEFEB930274A74CC558AD894267C8B2E756F96D04F0BD78C305
+      373F2CFF41A689F0892E81DE921002BD023DF45C48FE01B40CE6E3F9CEC1F303
+      3F19E5F6EDC059C130F2D80F1D9B18D886678A13242AF3019CF4CBCACB04D94B
+      A6AD3719A3C6690821C0C055099086BF7C1F3EDCB615A32F953F96BF26C93F70
+      FB31F4D27342375D27F42402BAE879A1AD56E0803F8500994CFE5E476DB753D3
+      695797811393108BE2F3D75EF7045208F02870ACA636795D1BE3C8F3FC596DE4
+      68CCA7C64828750A053418FB53F2ACBDFF04131C5285ECCFC35FD3F00258F8ED
+      44EB71CBD17D92137A7CE7898E133DF2FF24F0E2633F5777B1196FB20933E5FB
+      31DA349A0648C785BE5D6C8F9F09333BBC4A346DE66C21F62791FCB54801C3C7
+      8C15DA61210484B945E5C487346B1C955E893E94FC86D3E84FCD2209FED14518
+      6BE44BF2B7470FDD15D4FCF8A39D8EB7E99F4AC08723FCDAD068ECF14CE75868
+      5AC7900AF6A0EA2A2D9F9307A59ACE4AB84BDD60EDED5A61C2A3E6720DCE5FB8
+      80AAEAEAD7D7A8EE11E0D2F9ACAE1E869E5942E2E3FEDFD0FB183CD627A383C6
+      72923FC7BF33DAEA78DC6F3571F5977F2A01FCF0D61A2E9B742DA3A0EFB0176A
+      8BA3E0BF834BA238AD2D9240CB6834CBC3C05811AA4743CF8B2B407CEC3B7651
+      F03E8FFD0752F273DD5A8C6916A1683BCE1ADD74ECD19DA6C13A68F984FDE9E0
+      F9053E1A25FFD78019F257531D6331CA6C27D42D76D32E12DE4320AAE0CD0CAF
+      2C758D174159398F9F3EC714F7C382F7BFA5E92F1D79167C3767A29BB60DBA6A
+      DBA1BBAE03CDFD79D677D45AD94B410097C03F624DCF5B5B0DF9AE4956DB290C
+      623160E1362C0BCD1408509D36572E74A8EE08512E808A4B5F40785C05FA2C3A
+      88910AEFAFD85C8439CBC3D146DD12DD26DAA2FB642FB4D7F2D8AA40F1373ABF
+      FF1F1A5FCB6B86EF3539031FA939F5ED3823B07EB27D0C862DD9897E0BA2B0EF
+      08F705CA35BE866B7D0D814BE04FD1B097677CD9F33CFFAFE79A0DEFC87474D5
+      B246172D1B41FE9FE9CA9F7DA9B6E41B05E89674FE3DFB077DFF29576D32DE52
+      CB64353D01CC68ABB14E21DA16DB30CE328654108511A631387B89F713493B3F
+      54B7C0A86EA1E36D70C09D87CFA0273F2C4C7BB1F7B9EF77DB7A12FA26B4E141
+      DD82E44FF13FD9076DC6AE08A1C77D40D6F677AC0DA727B2AFC93E5790C0B345
+      AC8066EA1ABF36F8AAD7779E57F46C63A066B213BD8C28313AC6D302CA230509
+      62926BB8B546047FEF511D2D74E660BC5D0AD46D533090467D464179B00BDE83
+      B6EA66E8AA694DB1EF8CF6DAEE17DFFFAC5B1F02D189AC6723EB417FB3F1E688
+      CE64EDC8B84AB0025A90FD6FF38157B0FA513FE3EF8719AD157281966D1C26D8
+      C4618AF321DA58754725F94BBB40C57FE2FDC4337D8ED094772A4C427284CCAF
+      B12213DEBF6663C0643B7418B74C48809D27C95FFDB3FF8C1F150007D379908A
+      0DA4CF3C21DA5BF13D8367CF7F44C6B26F26AF2BB32FB3CB71F6D997DFFEBC41
+      C3742B741D0E629A5B0A74572462BC4D3CC2F697E13CEDEF7940BBBCEE92DC0B
+      CEDD865774A9B0CE37C13E053FACCC1614F0AD552ADCB79C80F6021FB41E6D4A
+      F16F4533BEBEF87AE8E2F50AC03CF333966C0CD948B2A1644C0083A7FF6821FB
+      4AF12ECD17EF0A463999704CF18358629C703A900D683DD23C4D6BD94E029F00
+      03790A6679A663ECF2048CB3A5A6C6F3300CA8CCB1D4351D8820E734CCF0CAC4
+      189B640C23F08E91F930345F8556239790F429F353DCB71A619E42F7D526E3DD
+      5F6C13C99808DE0CC59EEF4AC6F1CE4E6856E0747F218B4AE587817376FD5841
+      004B8FC7E613DA8E363DA269110D2D3B0A05BB4418B8A6C2D0231DDFC9D330C7
+      278B3C7E144601D934DB9346C3DD43D070CC827D440EA62EA515DE918BD145D3
+      8AE6FC08FC7033DEF1319DCC906C2A990E197B9FC380F3003F93A7C3F83D9A7E
+      6B0C23563924AF73165605CF89A62519CB8F93901AD9C42F06FFB067D4C208E8
+      AF888706797F34ADEBB3A7C7D01AFF30AB640CB54CA155DEC3300ACC8165703C
+      C6CC7111C14F5C419B9D3CF0D510E35D749F696453C8741B01E755E02FC8F8D9
+      9CE1D9F3CD53E715047022E15867EF3301FC504E322C3B963F7B81130F979FEE
+      6443C8467FD051DDB5CF24B7AA89CBB6D3EC51020C5D9330DD3D1573BCD360EC
+      9B8C9F3C63306569207A682D433B0D5BDAE4E4491B1D9D2A3EEDAAE940BF1FAB
+      B06174A6FF2F24902B65F7968A67B3E7F95DF89DF8DD9AA7CE2B48681CF792FC
+      25054824703C7622EBAB78718D4F7A4FF3264C79030DE48F46CC0BC6C8F9C118
+      34DD87BCED4C43DC1554EE6CEFB71DE770E48BC1468EF49B11645CEE389C984C
+      CE2D4C2C7B9C9FC18433F1EC0006CF6A9414D06C195FC181C0B094FCDEA604F6
+      8C2A112C55CECEECB91EB27FF419FFB76E938D3FEE6F64DB72D04F2E5FA82DB2
+      FA7CC0F7735BB419C2A0192893C7D772A3C39FB9967FD608B82A78C9F3CD5AE7
+      25F0D2591A7C4821215502D5B0904243353CD8834C10274D49BA7C664FF2751C
+      421258BE4EB595E5DFBCCDE3EF14786322F86F890C4919528590122593228164
+      006C0CE6B74CBA462288E5CDF76292550734CD2EF5B781FD4FFF4D95142686BD
+      C461A36A0CA6B149DFF3F56CFC5B36E97EFFE9F3FFBAEE8F32F06F3E1003E9D8
+      8760D00000000049454E44AE426082}
+  end
+  object TImage
+    StyleName = 'iconinformation'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    DesignVisible = False
+    Bitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      00097048597300000EC300000EC301C76FA8640000184949444154785EED5B77
+      585557F6654A26BFC94C92D1FC3213A362AF600181D851543A168A2858011B11
+      5B6C8888489526222A0AB660EF82BD50A4AB281A351ABBC61E91DE44D6EC7D2E
+      97F7E8684CE69FF07DFB7BBC76EFD9EBACBDF63EFB9CA7A2F2C7DF1F08FC8E08
+      8CF8B74ADBA91A2A6A330DFEDC7DDEE88FB516D87DA2E36CFF596F17DB467D5C
+      8D1AF75BA4F345EF795FD380FEFC3B0EEA37BCD5A7A3DB7DACB3C8AEA589EF26
+      0DEB904B7DC6866799CC8A84E5A2FDB0768D821599D9FC0318307D2734C66F42
+      EB11216862B83CF7EB21BED79A1B79EF6866E0F5ED7F74DDD47FC311FE1697D6
+      FEA2515F9749DF8C0B3D33D231B4D8795D3282F75F47C4F13BD872EA1EB69E29
+      B7987BD81E2BDB5D6C39790BA187AEC265432A462D3B0EED29BBD0C67A235A0D
+      772B6B6D1670AE99BEF7DC46FD5C9AFF1623FE40D7D4FB4F1B335F8FE1B3B63C
+      768948C39AC3B7B1FED86DAC3C74033E3B7FC0D2C80CB86EBE08978DE958A464
+      2E9B2E62C9964BF0D8761941FBAE21FCD84FD81643609DB801F7CDA9305E7010
+      1DC746A2E3982D686F1A9CA56AE4B3FAFFFB2E6CFF8106FD412EF3D716061E73
+      CCE7ED78EEB1F53242A36FC36FCF75722A03CEE58EBA6C4AC7627274310150A3
+      D17B0C0403B330E2021690B97D9F81D5513F6247CC6D04ED4E87D1BC7DE84020
+      74B5DBCEA192D7DCD07B79A31E933FFF201EBCF745D4A669EB4D094F5DB0FE1C
+      02F6DFC4B2AD57E0BC215D38CE4EB3F1F3F9E117F0DDBAF39813760EB3CB8DFF
+      E7D7E6AD3F2F9C66E7E5EFC88FFCDECCB569C4A02BD81D7707EE9B92A1611F09
+      F5895BD19D8068312CE8D6D783DC4CDF7BFCBFE68BAA06EE33AC5D228B966DA7
+      D98EBC2C9C58B8E102397C41383C6BED3961EC98DFAE2B587F8466F3CC2DEC4F
+      B883838977B027FE36D1FC26420E5C857BE425CC6567D7A40950E4EBF0B5188C
+      D90482435012420E5EC7CE989B3099CF6CD8042DD2898EA3C2D0DCC0D3FFF7CC
+      1C7FED6611103125301E2E5B7E20BAA60BCA32003C78A7D56962D01B8FDF40D2
+      0F8FF0E0E92FC8CEC94671611EDE14E7A1B4381FA52564F47F49511E0AF273F1
+      E2D56B5CBDF30C51497705580C1C83215F9781602027F827607A682AA253EE63
+      5AC049B41BBD8140D881AE13B741D568F9F14FB5BFFDE2D74C6A03BEDBE4136D
+      DBE0A34EA169981B7E11F3C2CF8B41CE25C7BF5D9546717F118753EEE1F18B4C
+      E1EC5B72B4A83017F97939C8CDADD9F2E83D0681C1E0CFF3E72EDE7C8A3551D7
+      31630D03714E308A8D4198BA3219961EB13898F400AEE109044204B4266F8386
+      C34EA81AFB5F6EA435E7B7CA142DFE4F6774C8E9E9E4BCD31A2976D966D08CCF
+      A619DB13771B2F6926CBDE90D305B9B53A5C1B10F2EB0C16B3840149BFF104DE
+      DB33E018924AEC3A27C28499E6442C305C7412FB12EFC3637332DA8E9240D09C
+      B40BAD4CFC6F9417530D98D077F84877CBC00353835330450CE6BC18D0D49529
+      5846F17BEDEE73E178A192E3393939C8CF279A97149315D560C5282E2EAA9319
+      CC08BECEAE985B705C9552AE11CC08665C0AF4E61D4374EA433887C50B10B405
+      083BD1D2C4E752631DA7CFDEC1BDBA3FDAD6D83370C2F278D805A508419A1D96
+      86C92B92B1EAE055BC7A9D45D4CD2347B22B59093977292303BE7E01080C5E59
+      CDFC0283B03E62035EBFCE144055FD3E3FCF21635019DC842B8F0400DFD2ECF3
+      FD997D0E41890284D88C2798E07514ED6D365001B50DDDED7740D5C02BEA8300
+      D0B8D7422B4B97288C0F481602242B72C4D1EB34B81C12B75C31D0AA0EBC7D5B
+      8298B85858D98EC5788749D5CC66DC04CC9E371F99992F5150503300F235F3E8
+      FA20102EDF7A4A029926D8C08F0C8295470C462C3D83C41F9E40D76927BA8CDF
+      4C206CA7C7EFF1F5A0A5AEBF0E84E6765FEB4E8E78353E200576818922D6ED02
+      9310167D4D38CE00D43473FC1A03107FF62CC6DA3960B2E3F46A3671D214CC5F
+      B418AF327FA91700F91E0C42C6AD2782058E2129427F381CFBCF392232CFDEB8
+      9BE8402CD07488241076A0BD855BD97FFABA7EF3DE20741CEABD6B9C5F02467A
+      C66116D1CF9E9CF72151E2011591F33994DE6AB3D2D212C4C5C7C376BC1D1CA6
+      3A56B3F1F693306FE122FCF2EA171102755D4BF93D0621FED2435117B00E3008
+      9C19BA4D3D8843C90F3067558C0805AD495BD16332E981B1E7451515ABBFBC33
+      08FFD09C3DD06CEE1E5878C68B589B423761DA3DA4BC5E42B39F9D5DBBF33CE0
+      D2D237888D8BC368A2BADD94A9D56CAC9D3DBE5BB010BFFCF2F29D00C8A56BB3
+      38469EBA89F1FE8915E268B2F82486BA9D465CC6CFD09E144995E2F7248A140A
+      E3B670284C7B6700BA5A0526D9F8266298DB199176F866B1171FA08C6ECE854D
+      7D33C6009C898985E5281B0A03FB6A366ACC3838CDF9EE9D01E0FB16E4E78809
+      70DD9C2E429299303938196A93F6238216535EDFA7A02DD707C402AE165B1BF9
+      3FFEB2B3E33F1B0CC23FB4E60E36A5C587E992188C23F5E70ACC7F7786887BA1
+      CE0D00E0CD1B4903264C9A8C694E33AA99C3D46958B89834E0D5BB3180EF9D9D
+      23659EF33FFE2CC6362598414886FEC2E3A23E3873F111B1602B34040BB6A1EB
+      8448341BEC3EBDC100741CEE7768B4F7590C5E7882904D249413A8547D8A3745
+      A4F874F3861803954902F7F4E9633C7DF644D833614FF1EC39193D3E7FF1AC56
+      11ADEF1EB9348E92A21C04EDBD8C31BEF19816920C5B9F3874B0DB4B3D87DB98
+      B726AE5C0B22050B5A992EBFDE302D6869D742C7764391995B2C38AEC6F99D15
+      377917E7E5C133088585542055580195C605F45CF1587B65A848AD12E3AA03CF
+      63CAF8E9B11823EB144F540FC7432263ED8FBF858EB61BD1436484EDE86C138E
+      A67AAE03EB654113BD25332D969C40FFB9C7458E1DE7178FB4EB8FA83C6DF8EC
+      F360B3B35F232F8F6A7C51057235588C37CAF6467A8DD702F595C795434E0144
+      6E6E16A5E26CAA46D3C5EC4F5A2115469A04C2D1B487309EB797E8BF59680197
+      C9CD8CBCD6D50B80BA45C099915EF1F866C66101C082F073E44C16B818A98F96
+      CAEF73997BF1D2252C5AE286A59E5E70AF62AEEECBE0BF620585C92BC11006A2
+      AA29035313083CAE32D282A329772855C70A16189106B49FB8176BA36F60312D
+      9638254A2CA016DB509FFB2A6D0D3FAE1D84AF2CBFEC3D312C7BB87B1CBE718A
+      1615D6E6E33FE22DADECF8660D351EECDBB7A5888D8FC3606313988EB08099B9
+      652533341B8A3113EDF192D22083954F2B426563F648260123174332109C0578
+      3C859411EEFDFC826A940412C4B3226CD51CF663FAEA54449EB8AE04C07674B2
+      5E83AFFA2FD4AE15804F34E7EA1BCEDE038345A78801D1B0581683D4AB8F44FC
+      37DC79A62803F006671312604A8E5B8EB68195CD984A36DCCA1AF65420711D20
+      01905761797979E4349B0C820484C408390B4913C2ACCBCFCBC692CDE731DA3B
+      4E00A031ED208C5C4EE148EA7D68D1EC6BD87F2F568BDDA893D44C7FA953AD00
+      34D1739B3FC2F5387429FEB5A74789F8FFF919D5EA74038EE9BA4D8E4D49BCCA
+      CA4A71363101C6C3CC616E3D1A16540F28DB500B2B4C9C3CA54600AA83511B1B
+      2410589F361CBD2626CC70D109687D1B25EC70EA039852F7A8EB842D153AD0D2
+      C86B53AD00B433F6DC684917E93DEBA8282D9D429328F6B3909B539FF3AFCBF5
+      4156EE1C94510830038C860EC78891D604C2A84A66666E216A8457540AB31816
+      14E42B99820D0C8632137273E55E83742F660003703CED0ECCDD638408EAD0E4
+      A94F3A809D71773169F971741A2365831E9377D152D937B156003A8FF03B6DE5
+      41F14F02A846175818912AA97F3DB3AF9CF664E12A2B7B4B0C488481E9300CB3
+      1C09A6BCB2990C3707AF075804B968E2D428993210FCBF0C86221C14E2288543
+      098568FA8D9F05007D661D26FD8A4227FBFD587FF426F50AE2A86B140E4DFB2D
+      04C00EB41AEA7747A5B3D5DF6A04A19BD58A8B9604800E0960678703945ECE93
+      CA72FCD7CD0009001E8C22A5016F9140000C313613E2C794573666068BE0AB57
+      0CC01B72BC500984AA60540541BA0FDF8FEFCB6DB7DB0F9F63F8D2D344FD43E8
+      49FAD599843070EF55F84452C7C87A3D34ED381D6E43DBE181999FF59CDDB826
+      003ED2B409BE69B12C5600D0892FB0FB620300E038946642526A49B5813201C0
+      204313980CB7A04C6059C99819BC52AC0C4075100A0A0A2A4243D206851EC882
+      5848AF3D78F21206CEC74521C400F0BAC073FB1504EF3A873623C3A031719308
+      83762302F29BEACE6F5603006D3FEE6E1B72C79C00D09E4E00108556EEBB4429
+      301B5959AF6B3185122B3BCF839401D0333022211C41209857327D1333B152E4
+      10E085535151A192C90C60E7659342431904392BF0D2FCFEE31714FF4785F831
+      00EA04803BED4685EC398FD6566BA03181EA010A8376C3820A69BFB1650D0074
+      FE9BA64DC84FCC006D660001B062CF4594166551DBEA558D00706828C7BF94B3
+      399FE7110020062461A0BE0109E130026178251B42F581F5D871C8A49618D70C
+      9C0AD98A8AD82430E4B09059909F2F03200BA3140ADC84BDF3E81906CE5500C0
+      0CE0EDB6E05D6904C06A02208200D88C76FA6E054DFA2C50AD2904FED4CD2AF0
+      B21C02AC015E5BCFE34D619658D44820645632050032F5E56246062011FD070F
+      81BEA9190CA8F051363D43238CB41D43D7A54E3209266782E262A9515A1D08E5
+      30A80C8204400EAEDD798CBEB30F8BF42D428042D86FCF55F84626A2B56528BA
+      8F2721B4DB84B6A601595FF575FAB2461154B30888E79EBB9C05E68625A3B8E0
+      B500A02A0892304AB99FE92FCF3E1730CA0CE8A7379884D0144C79651BA86F48
+      05926D390065044049C59A410243064266830C82747DBE8F248459A2504BBDFA
+      50C4BF0E6500068019BCF6F04DB8AC3D83360CC0B8F54207548D7D1FAA349BFD
+      F71A016867E6BDCDD2FD0C7A511DD075CA418CF38DA5144833FF5A02401988AA
+      B3CFF959CED70A0012D167801E09A131061B995432DDC1FAB0A00289F585FF38
+      15CA262F9E944190D3A4AC037C2FB90E287B9387A8C45B509F7C40382F8BE0B6
+      337730C5371AEDAC42D16DEC3A749FB0092D4CBDCFD75A07341DE2B6D49C2A41
+      5E09F28A6AC8826378F098D6EC04823200FC3F8783C40045FA631648F57C7908
+      2425A197EE000C343004535ED9FA0D1A2C0AA4ACACAC7200DE8874C820486C90
+      18218583320B2AC73FDF1FA5F924D81962D6D9792EE379FC51C9F76136771B3A
+      8D620684A11B1DC25035F6D9592B009FF75C30C2E8BBBD18E27C52C492C6B443
+      48C8B84731A60803098857159A2033414A7F920670F122449000E8D97F00060C
+      31203134AC647D070E1205D2EB7A01282E17C4AA21A0A808B9109AB632A18201
+      3CF6410B4EE048CA5D684F0883BACD6A741FBB165DC644F046AA73EDAB41D10C
+      092B1AEA162300604443F7678854583504784343C10289090A101422A8D5BB0F
+      FA0D1A02DD21FAC2180C360E0D332A8E6406949696523A2CADC4025914A58C20
+      A546E51060C6710678448DDA41F38FA2477911D49DCA787BDAB8D971EA07B436
+      5F81AEB6AB2904D6A2A3D52A341DE8A657674FA0AB95FF792B12421DA7C34207
+      C6920E7008BC56D201CE0812005285280B615500B82BDCB6B33ABA6AE9A0BB4E
+      4F687CD3ABC2D434B43080582103F0F6ED5B01406510E410E030A81900941620
+      3A89E29F4A7739FE3BD9EFA3D326D7E111118396C302D0D546D28016665E2FEB
+      DD326BAEEFBECCD24DEA08310B7A50619176F53E8AF22B6783CA002857810A0D
+      888D8B479B4E6A50D3E801754DAD4AD65EBD1BFA5018C800702A944150688194
+      1AE5DA4099015245488B2EDA2798B5863BC20A0098018792EE63D8DCEFD1C192
+      1860B30A5DC786A38591F79E7A3B421F759FDD6D90E326982D392300E09A7AE9
+      E634BCA58248390B280050A4C26A0CA08D91369DD485E35D7A6857B20E5DBBA3
+      2FA5C82C1252FE2B2B2BAB00802B43490CEB06A0949CBF7EF799987939FF732F
+      803B5A51093769672810EAA3560A00B819D27488A755BD00F007BA5AFAA5D850
+      73418756855C5AF20AEBC6DDC7D4179058503D046A66405CFCD9BA012006C822
+      5837032AD70272390C14D282ED4285FA33101DEDF689FCBF74FD29A89AFAA2CB
+      A860A101AD4D3D9F7EA9EBD6B0BD812FFA3A8F315F14057DE753626DCD0B23D7
+      4D0A16345403E2685FA00D6940AD0C1000487540550DA89C068B2A89601EA5D9
+      B2D24271AA8497BEF2ECF3A3EEDC6388497F88DE76ABD1D13290005801359B30
+      A81A7A793768F6A50F197EAC6D1374DBD6F7AC581855A4C44B77CB4B635904E5
+      5AA0E62C5017001D29045803323325001A9205E43541112D8ADEBE2980E3CA44
+      2A790FA05779F1D391C4CF7FEF3584EE4C4433632FA85B07A1CBE810B43673CB
+      6BACE7D9F41D00505169DC7FD138ABC5D13074392D00E08C60BEF4946862E6E7
+      66D222465A1B284A62C55298EB01FEE39DA1DA182003C0CB61A912AC5A082967
+      00290D4A29309F3E5D82ADA76E086672D1C3D4E714A837FF38E2331EA1CFC450
+      7430F74317EB40A88D5A8BE6FA9ECBDFC9F9F20FFF4963A47FDAC48004BAC991
+      8AFA7A61788A60414EB65C07C86B024907E435810020A11E00A816E096987229
+      ACA0BEA20A946B00C9F962A4DF7C226A7E79ED2FC7FEE65377E0197E124D0D3D
+      A03ED25F08602B13DF279FEBBAFDEB7D0050F9A8CB8C1E9D67BA978EA46DB21E
+      8E51026DCE0A21541CA1841622540348B540F54CC04EC59D8D478B761DD0A14B
+      37F08C2B1BA7479D3EFD445394FFE4FABFAE85103B7FFFC92B18D01E203392A9
+      CFC66BFFC9747CE764EA4FE830DC079DCC97130001E8601142B3EF61FD5ECECB
+      5F521DE4B67882CF69110A9C11581439E7AE8FBE42A3A65C4CABB1AC8ABE8022
+      0C38AD25252743938A9F5EBA03D19B665BD9D87903D3A10200CE00CA4BE1EAF5
+      BF44FB87CF32316CC92951F4F49A29515F93CA7516BE842B4F6036633D353D69
+      F6AD96A3B3752895BD5E5B7F95F3F297BB59051C9D4A3BB07271C49AC02070CB
+      ACA490CF0052D7A80A0B385531339E3C9537449FE1F973B6E778F1E2396D8C3E
+      C7CB972F45D3A3AE66085780A410F8810E6219BB9C10AD2ED9791E0777AFA353
+      1F61FE8A83F85ADF0D6A96BE50B35E8996065ED71BEBB87DA88352268DFA8D0B
+      BD368D4E88F59E7D5488A2488FB45698119A487B072FC48A8C5BE87C76A0E2C8
+      5BC52931DA17A4C2A694848E8B1C36EE02B1556E8529BA401CF7B40811337F80
+      4E96F6A65AA40B2D7765E7652672DC876C8F4553FD25E86CEE0DB59141B413EC
+      FDAA89BE57C70F32FB1517511DD36AC8B488078E742092F70DB4CB7B6FAC09BC
+      2F7F20E12762023543696D2E1F8C546E913123947BFF8A36B8A2FF27BF56565A
+      2466FDFED34C3A129726669D97B772BAD326C5E7B5FFBA23B7B0E1403295B86E
+      E830CC036A560122E53531F4E8FB619D97AFD6CAA1BDBEE3BA3B4EABCF89DD23
+      56611E14979F1C12F6747CF6CC85BB0200941588038F05B45A937B04F28E4FE5
+      4D103E4D4A9F2D2914B3CDF6801C0FDE77451C7E6296F13E25C7BB7C2F4D12E4
+      4D276F236CF759B424E7DB992D23E703A9DAF3CF6AAAEF55FF16F8AF42A79175
+      73DD49EBD2F8D094099D20E19E015763A2134BB3C2EA3CDA3B06E187AFE20A9D
+      E8CAA29639A868016856CB948C145D72B85838FFF8C56B1C4BBB479B3169C2F1
+      8EE4B8729A93BB3C43A83ADD7BF61EBCD61FA5B3808BD1DECC1D9DAD5610ED7D
+      EE7F35C8BDF68DCF5FE574B52F37F944CB26788B63600C1D9E4C45CF99470445
+      45378666AB1B81C00EF0731BEF583A4B9C42339A41C5CB8F3898709B0E45D369
+      F1B89F107EE41A3C686FDF21F0ACE8E9F3B616671AF95AF2F25683848E819D15
+      7601D1D4FAB273E5834F0B89F69E54EE065308F89E6AAAEB5653AFFFC3BA5DF5
+      6ACD06BB39983BEFCC9C179E0E4B3A4DA64565330F9E19C1854A3F9A490BEA31
+      F286E5404A550C0ECF2AEB87DCBF67411D40EF8DF48CA1D3A74930743E214496
+      3FCBCB5A6695155D7BF349026C5F127ADBFAA2E9206774B2F0471353B71255C3
+      E54B685C7FFA6D3DADEBEA9FDBB4EE3D7EF5F6293E47303FE22246FB24884CD1
+      7DEA21519E329D872E390DDE74E515A6351D641849072F26D2E1263ED0C0CF8D
+      5D4E12034E881867A759EDB5BE8D86EDF244AC89FE115B8FA6639C7304548738
+      A38DA917DA8F08A0F37F3EA79B197AFF5E94AF1FDFBF687EA737D061CDB1495E
+      51E2774133E954A9251DB0ECFF1D1F59891280303B387DB1A3321BB8906187BB
+      D2FB7D08385ECBBBD04F6B228E5C45D89E244C5CBC917E2BE446BF07F044DB61
+      7E54DAFAA5A81AF959D43FA2FFD527D466F5D1B00E5E3F6C66E4D3194127B164
+      E3395A4AA7D3B9DE73E2ACB103D17C62402226D241A6C974F8927F12E3BA251D
+      01BB2E61F5BE0B58B12D1E73FCA9313B791539EB059A653435F6CA26C7773735
+      596EFCBF72EB3DEEABDFF8EF3ACE966DCDBCC2FB4D08B9AC6F1F5E3066F16E4C
+      F33D8C592B4EE0BB9527313BE8183D3F84B1AEBB60ECB4119AA383C54C7FA9EB
+      58FCEFC11E3748DC229B9BF88E6F6AE8FBFB0BDC7B785CF757FE65D742A5F32C
+      BD8F7ACCB7A75F8B2EF9672F97159FF6765EF769CF45EB3FEBB37865A3FE6ECB
+      BE1AE831ED2B7D6FC366FA816D557463FFFAC1C7F0C705FF40E00F04AA22F05F
+      84C93CD263D2DF1B0000000049454E44AE426082}
+  end
+  object TImage
+    StyleName = 'iconwarning'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    DesignVisible = False
+    Bitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      00097048597300000EC300000EC301C76FA864000012F149444154785EED5B79
+      5855E5F6FEB0B26C30CBCC9C4904E79B59A995E6D5BA96A62985A699965A697A
+      D5D42CB5C4C4312B2BB5FA19998A82A2395C339C4540059C7040C45004159099
+      7338F3D97BBFBFB5F63E1B0E937AEFD351FE683FCF72C339877DBEF5AE778DDF
+      A7107F5F7F23F037027F23F037029E47E0E073A2E5C13EA2477480E81EE92FBA
+      78FE1BABD1376C7950D4499AD038DB38FD41E48D17C818231017207A56A3257A
+      7629875E163371E21760C76838260BE07381E343458C67BFB59A3C7DB310752F
+      7CDE3E0FD68B90D376C2FCF93DB04F132A130EBC217A5793657A6E19875F1141
+      38FC0D60FA133024C3BE6110CC130594CF5416C47BEE9BABC193C385A8777EA6
+      6F018A12A064C742C93D0A396513B1A096CA82820902516F88FED560A99E59C2
+      E1DE62010E2D22CB9F8692190D25E300907F9C581000F347252C3841DFEEE599
+      15DCC6A7FEE73E51FFE227ED0C28880732F7C3694883947302C8D807F97C18CC
+      333516141110316F8841B771A99EF96AB2FE5738B8002820DA67C6C0EE90E030
+      664249DB0664D3EFE1FE2A0B648A0527878AC45942DCE99995DC86A76EAD2B1A
+      5EFCB85D31F20E42B9BC13CEA24BB03B1502C10139230A48FF1D72D24A62C1BD
+      B0110B8C9304A25F17C36EC3523DF395B17DC5B7383817C83DA82A6CB7DB60B3
+      DB6123101C8597A0A4AC2757D8452CE85FC28253C3C5F9596D444DCFACE8163E
+      754B43D12479B29F193914F0C8D20EB2BECD21C36623106C0402899C1E015C0C
+      877CE6279803351698A8403A1C2046DDC2A57AE6ABE2FB89658809223FDF0FF9
+      6AA44B7156DEAAFDEC2016E4254339479561FA16D8D7F72B61C1E9E122756577
+      718F6756760B9EBAA3BEF04E98D8C68A6B7BA0A46E56E96EA3E0A729AF8B0686
+      7CE13728C92B219FFC0EE659F7A92C307F2C7028408CBD054BF5CC571CEE2B96
+      236616A5BD5D90AEECD5FC5EA5BE3B00F433C7829C53904F2F81723114F6757D
+      60A640C81921F16D7179DB53E25ECFACD0834F8D68217CD202DBD8901901E542
+      38F97E5A25D67701C1C0584D909257434EFC01F2F185B0300B3E15B0120B0E0F
+      14933CB854CF3C3ABEBF5881E899C0956D902EEF86D5EE8095AC6FB56A4AEBF7
+      1236380147563CE4130B2127FF4C2C78B9840567DF15596B5E11B53DB3520F3C
+      754F2BE1971ED8C081ABFF81F2E75AD80BD3090049555A5164D03FD02F87C34E
+      AF5BC83D1CB0590C90CE10034E7E05F9C86C58BEB80F5662816DAA40EC4031CD
+      034BF5CC23E307881044CDA0A8FE1BA4F45DB0B0726475B3D9843F53529070F2
+      1462E3E2B06BEF5E64666642929C5A5C60165C3940CA074249FC0EF6B09760A6
+      7428712C182A72B6BF2A1EF2CC8AFFC2A7EE6E2B5A5FFAA29913E91B018AEABA
+      F5D9D20505F9F86EE932CC59B010B3E7CEC7B49981484A4A2232281A007602C2
+      5C00296111E4634190E3A6C332FB7E9505F64F28160C12542157F32BDE5F8421
+      EA5320351452DA0EA2BE53A5780900CB9661DE978B5499393B08E792CF9502C0
+      2048C4824B3B201F9E02E5E47CD8437B96B020798428887845D4ABB610EC6E29
+      DA27CE6A25E1521894A460D88A2E13FD4B01C827067CF3FDF7089A371FB3E72D
+      C07466C039370630005C2714E7AA6E20C74D837C7052090B1CC40462C1826A0B
+      C091D7C5061C980A5C5809675A0429CF81CF52C280FCFC3C2CFA7AB16A7996A9
+      D36720F16C39005C2C705ED80439EA4328473E83636DF712169C1A290CDBFB88
+      C7AA1D08BB9E101DA267B79291CAB9FC27588BAEC04251CD6A35C362D15C8001
+      60EAB3E559264DFD8400482CEB026A309461A756593E381972CC0415084B9016
+      0B9C24B183C4E26A07C09137C4161C980C9C5F4E3E1C013359DF6261E5CD2A08
+      0C405E5E1ED17F0159FE3355C64F9A8C338967D48C58B62EA06A916281F35C08
+      E4BDEF40393C198E35CFC33C45CB0829A38469672FD1A4DA80B0FB49F174C6EC
+      56404A3075744BC9FA19647D4709000C82837AFFBCBC5C0406CD21CB7FAACA87
+      E327E0D4E9D32A00E57B039B44E571513AE4C80F201F180D79FF2858E6D45659
+      20519F10F7A6F8A1DA007064A0F81D911381A4252EEBCB659467009C2E067C36
+      EB0B4C983405E3274FC17B1F8E25004E950340AB14ED541EDBA966729E5A0AF9
+      8F7E90F70D87635547B54172120B12DE13D65DFDC4E3B71D84DD1D4597AC392D
+      29E77305B798AC9F55C1FA0C002B545058801981B354CB8F9DF011DE1B331667
+      93CEBA01A0054CAD54A63BB9813DFB34A48DCF40FAAD0BA4CD5D291668D5A134
+      5D207EB0F8E5B60370F40DB103FBC601A717C191CABE5FD1FA1C04790A545C6C
+      40E0EC39183D6E3CC6FC7B02868D1CA5D6018A521A2FF8B37AE6503B476641CC
+      1448616D216D7D01F6E09630110B1CC482D4F7857DCF00E177DB40D8D35974CD
+      9E4BD63FFB0D35315FC26AB806B3D55E81FECC009DD673A90A1C30F04D74EDF9
+      129E79BE1B522EA440969DAEBF7157DEE50AD43638B28E410AEF404CE84C2C78
+      0E66628199FA038E0547878890DB06C0B100B1077B47030941B0A7FE01935D81
+      598DFCA60A207094E79277EC848968E6DB123EADDBAA20E4E464ABF141CB16A5
+      2EA04F8C7870CAB1403A308E58D006F296AE2A0B8C94116C33042EBD239CFBFA
+      89B6B71C84FD5D44F79C797E44FDF9D4BFCF83C5904DD6B7A9CA9BCD5AFAD385
+      9B2093A95805E0E369D3D1B4454BB468D30EFD5E0F505F67F7A854797A9DDF73
+      D05F3AAF1E2200DA110B3A41DAD40526AA0B8A3920120B8E0C11B4E9748BAFE3
+      834524F68C028ECE28B1BE851465E5750034C58DE4FB46F5CED7622A859BF8F8
+      E1F196AD31E2FDD16A7BAC07BDD25A40535C559ED8E170D21E82AC40DA371252
+      682BC89B9F2516F8A1885860A160B8EF03A144F6171D6E1904D1CF8A17F3E6FB
+      12F503211DA5BEDD98AB5A9F15D6E86F5295E6A0A7DD1900660010161E4E2ED0
+      0A4D7DFD30FD731A98A8455059EAEBCA73E650012037A04E19CECBFB09809690
+      363C4D59A1138A89050602C1412CA08CB0F5960170FC4D1183DDEF00B19361BB
+      C8BE0F55799DEA46A3012CEECAEB00EC8F8C54FDBF71735F7CBFEC871200F442
+      A852E59D048024C3294B9076BD05696D4BC89B3AC316EC8B029A17980880743A
+      6411354074F23808915DC52B050B5A10F53F8114371366634189F5D9E2466351
+      39E535EB9BCDC514ED65B5F66FFFD43368ECE38BDF366FAE50056A00B8599E95
+      57C5092A0B2051992DADF1A1ACD09158F0348C410FA09040E0F9E1B12122C2E3
+      0090EFC762E75B40CC58B2FE0ED5FAACA066755D79CDFAECF7FC9E068049A573
+      3645FDAE3D5E8437C580D8F8383700CAF9BD4E7D5D799A1A49140764C90129C2
+      9F58E0079900B005B7403E4D900D04C0950F69637580E8EA311022BB8BBE850B
+      7C88FA13211D9E0E7371218A4D66180CACF8F5956700749AF70F1888D64F3C89
+      D44B974A3AC12AA9CF9667E525A23F096544DA43D80C69753348EB9FA0ACD011
+      0662411E81C01522D5057B3D0640C210AF238818041C18055BEA0E18AD32295F
+      5841793DE8E996D783A39552235F6F8F1889B64F3EA5B28695BB9EF22AF575E5
+      C9858804509C3648BFF72657F085BCF14962810F720980222A8E32C6D2668ABF
+      070E5C45FD53F42F5AD81C383406CE435349713AE86164EA6B962F1BF44AFD5E
+      0F8E7A4DC00AEDA340B87EE346D525D4A6E77A7EEFB2BE4C01906308A74D9E29
+      CBE769E4B6B2915A22CB1B3AA08858904BDBEB669A1D9E1822A2DD58C0872D6A
+      5422FCFA4D1FC4F03A3ED4EB042206023B690737291C4516B6FECD51DFBD2862
+      8BBB5F1A08AE7C5F99DF33ED5DCA6B00282A008A833652B6F480B4AD9796117E
+      F6463601904FC551E63881FDFEE2551708BCC37C5739E1B30777B840B93108D1
+      3D45807111E5FDDDAFC1B1ED55188AF2612836DD94DFBB2BCFD6CBBA96856F97
+      2CC50C9A08EDD8B54BC582F37C49BE770F7AEED4D79567005C20C889CBA92AEC
+      0A697B5FC8EBDBA070F603C8A60357267285A36F89A3A4202B5F8BE40197DC4F
+      F7FB4878AB8D375D191806A26A10680E5D2361688D53D8D019CADAA6309F5D87
+      222AEB8D46F67D8EF615F37D29ED4B7B0289A87FEDDA35F47E6D00EA37698646
+      CD5BA0A1B70F4242C34A40D0D35D05BFD7A9AF2BAFB3C04623F4AD2F1200342F
+      D8D48958D00CD78805B9541C5D231684F612C34939B6F6A32E7984EE7549EAB8
+      00612018047691CA41887C590C290E7A884A386FB27E5F188C64F9623DEDB92B
+      5FB5DF73A5C7D74F3F07A37E536FB50E60E17EE0F91E3D695698AF5A9515D794
+      D7025F19BF7757DE9D0527BEA10EB11BE4EDAF425EE787028A055974DACC402C
+      3834589C25F33726E59A9278BBEEFC3B0F55190866C6DD55B280CFE99C1CE675
+      1621CDA184348229790B0CAAF56F9CF24AE7815A99CBD71773E7AA96D70168D7
+      F129F8B5FB07ED149D54DFAF4CF912BFAF0200C57C8D0078419B1A6DF807B1A0
+      2932C90DB2A938CAFEB7C0926E622A29C8F3C37624AD497C499AB9406026B08B
+      304B2A3220BA8F18669AC3D66F0AFB767F184C16B2BEB10CF5CB173B5ACAD33B
+      41BDBFE75618D8B67D3B1A346B8E3694021904DFB6EDD1A15317646464A8EF97
+      C9F79CF2CAFB7D552C38364F9D15C8BFBF0225CC17F9C482ABA47C219F2F1824
+      2ED6BA532D919F22E948D2DE050233E1611276838A002C27DF383EBC4632567B
+      93F51BC294B2BDC4FA37EBF7EE4D0E0739F6F11981816A37D8E8711FB5235CB1
+      6AF5FFAEBC1E0B8C97A92C7E16F2EEA12E1634C1D5095EC8A278C02C58F09C58
+      484A7620799EE46992362E77603760002A06C2437DC508F3DC3A406823D8A9F1
+      3150C96B34DB61241670F5576CD27A7CF762C7DDFA95F5F75A0A5410151D8D95
+      AB4370FC049D13542DCF55DE4DFA7D552C88FD8C40784E054209F5411E6584CB
+      14080B2820460D1657EFBD433D87DC9DE459170BD80D98019C0D1880D2EB7B0A
+      0C09EFD4B8002A379590C6B024FC0863EE2514E7A4A2B8300BC5540499A8EF37
+      D1D452ED0568626122DDCC54A79AA963A1120156BAB3F06093777DEDB4D9C1DB
+      5E4EA2B5FB5599F23745FDF219A1E802A475ED292BBC4429B12DC582C6B8422C
+      B84AF120870E62CFEBA28ED19F23E9E60280E3421D120E8265FD3FAA8F186D99
+      4FD60FF78514429D17959C2CCEB0F6706E78068ECD3DD48CE0D831188E7DEFC3
+      1E3D05F6381A8B9DA02DEDC45F61FF73136C697B60CF88833D27917688D360A7
+      FD3EBBB558CBF93CE8E4A0C7D67713B5CE5739721DE152B82A16C44CD658B0B5
+      07A56C6FE4512C48A3D238974F9C0D12D9756AAAE79019040E888D48380B701A
+      2C05801A9E47CE8CB8A310EB9A02BF51E3134EB2FE71126F351822B431B0A621
+      10F2189455F5A0FCFA08E4150F43FEA58E2AD22F0F435AF108A45F1F85B48A4A
+      556E5DC35A53FBFAA49AAEA46D54C3EF0880B47704A4988F20C5CFA2EDF0C590
+      CEAE500F4AC997F740BE160F25FF2C14633A142BA54887190A5583D7058641E3
+      5840233379EF70C8617EC48286481FEF85CB94169905DF74133FBAACCFD9A0BE
+      9BFF97D23F3E403C9B34D26B5FCAC49AB129136B9D3B3FF5FEAC4B1FDF5B9C18
+      58472A98FF30AC8BEB415E561F58DE00F8B51101D104A0020961CD349054B05C
+      B28E41A3D7D7D267D63482B2BA0181F628641768120316FC20A49F6B93D03DF8
+      2102B02E81575FEBF6A8E55569BD91F60488DAD21F0320ED7E9BF60AC7418E9D
+      41B3C82FD5B385F29F61F47F0F2220671FD5C065D0431EA758D01CB934354AA5
+      36399B9AA5B8B7444E93FBD57699EB02F67FA63F1741555E353F14E2A1850D44
+      D3151DC4131B9F17FFDCFA2FE1BFF355F17EE4EB627AF410AFAFE386DDB1F2E8
+      883BB79D1A53F360E2F87B4E274FBA37FDDC2777175E9D58DB9AF5451D18BFAC
+      0BC777F5801F09B460028D588135C4A250026D9D0E1A03E79232A035563390BC
+      EA3102AD1E318BC0F98540D2415B7E3F01F780F67B30338F5817E2AD316F7553
+      C86BBC5516A4110BD28801CC8275BDD58DD5072BA5FFF590B8C17B9C47B9A0A8
+      DB908A8E5E3545ABD18D45A759AD44AFEF3A8981AB5E101F6CF89798FEFB6BE2
+      AB7D6F7A0547BDEDB5397EC45D91A7C7DC7D3C697CAD94A40977655F98769F29
+      F1F3DA521E651ECBD7A4E81202EDFF08B41504DA6A1D346212BB2603E72ECC32
+      069498A8ACD1440E21211010EAADB2E002B180C7673441CEEAF68868E0B27ED9
+      E87F0325F5B69295E52683D3072BCD79949B0CBDE1A8ACF1E0CFE9C2CD085B80
+      29C80BF121876CDBABB6E834B6A97871EE13C27F4967F1EEAA1E62D2E63E2228
+      C25F2C3D30C46B4DDCF03BFF481859F3D09971779F49FEA856FAF98FEE2EB832
+      F1016BE6AC076158F810ECDFD685F20381F63381F62B8146CCC15A026E3D8140
+      3F177C5C03C7DF16F91BFB88415401F15A58871B77825580A283C10872147507
+      84156440F8581B2B5A87840F3771D1C1C20D091F73E10685EF2CFC3A03C29FE5
+      BFD3BB365E2803AD83CCEFD7A742BE597762D9FB8F896766B7162F2EED22FCD7
+      F614EF6EE92DA6EC7C5DCC8B1AECF563ECB03BC28F8DBA6B4FE2E89A475227D7
+      4A3935B2C691F99D4567973E7AFD5F857AFFFDCBFA7081034A65A0B0023A30CC
+      101D1C778018241606A2BCE8EFB903A4B7B495D7F19A0EBC1E06909FC7DFCF17
+      1BABEAEEEFBFD7FDBA7F511E185EACCE18B6028BEE4ABA8BB0623712FDB3FCB7
+      2CFC1C564C1F7EB80F3CDC17F83F53FE2FC6A5CCE37490DCC1D24758CC2677B9
+      DE68EB2F51EEFF01CB8D51916DB1AFF40000000049454E44AE426082}
+  end
+  object TImage
+    StyleName = 'iconerror'
+    Position.Point = '(396,476)'
+    Width = 50.000000000000000000
+    Height = 50.000000000000000000
+    DesignVisible = False
+    Bitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      00097048597300000EC300000EC301C76FA8640000198F49444154785EED5B77
+      5C966517BEEDAB343F4D6D9865E5C895DA729595990D2D2D47E69EB9F7C445EE
+      95A6969956965A8E341B8E14072A8A224310044441041170CB56868AE7BBAEFB
+      796F7840501CF5D7F7FC7EE7F7C2B3DEFB5C679F73BF4AFDFFF83F02FF1A0215
+      952AFD8152AFB450AA491BA53AB457AA4747A57A7656AA133E3FFC54A97ACD95
+      7A0A0BBAEF5F5BD43FF945AF2A55B90B981C56A4C8CFE39F78226076E5CA890B
+      5F784196D7A9236B5E7D557EAB5B5756BFF8A22C7DF6595950AC984C534A9C94
+      4A19A654C820A5D6F4516A605BA56AFE936BBCE7EF2EAED4A3DD94EA3DB97CF9
+      5D0BEBD5CB70F9F043F16AD3460E75EC2887BB76B5A84B1709EED4495310CE07
+      7FF6991C1E385082070F9603B8B6BD766D59F5E083F22D0099A4D4758072A0AF
+      524ED09C67EEF982EFD50B4B2BF5C490471F9DF6559D3AA7B6356D2A01EDDAC9
+      D11E3D247CD83089983C594ECC992327BFFB4EA27FFA4962962E95933FFC2091
+      73E74AD8840912D4BBB7F87EFCB178BEF596F834692241FDFA49E8D4A9E2D7B7
+      AF6C2C5F5E960388EF4013944A1CA8D4A2764A55B957EBBE17EFB9BF7F891223
+      E6D7A9736EEF471F4908241A3E7CB89CFCE61B39FBE79F72C1D5552EEEDC2917
+      77EC900BDBB6C9F9AD5BE5FC962DFAF3C2F6EDFA5ADCEEDDFAF3CCEFBF4BD8A4
+      49E2FDFEFBB2BB6A553900ED39366B961C1A3B56D6C34C5600846596565CEAA7
+      D4ECDA4A95B8170CDCF13BE0D0EA7E51BDBAF70E2CF830D4FC38167A6AD52A39
+      4F465D5CE4ECFAF572062090B1D3BFFD66D19A35D9C4FFD7AE95337FFC2167FE
+      FA4BCE6ED8A09F2518B1CB97CB416891EB934F8AD7BBEF4AC4C285E2D5A78FAC
+      BAEF3EF915202CB1FC45387CCC4777CCC0DD3CD8BB78F1214BEAD64DF787BA87
+      C17E4FAD58A1992623A7D7FC26A756AED4741ACC9FC3F98B9072BC979724F8F9
+      49C2C183127FE080C479EC93F3D01002757AF56AEB197C1294B3EBD6690DE139
+      9F66CD646BC992DA34C261467F55AAA4CD620D681608CE72CEBF1939EE772A53
+      66C9DF6FBE29C12D5AC889D9B3B5E4B8E8588010B3749996F0853DBB25F95898
+      A4C65D94F4B434B992794DAE5CCF942B72DDA2EBA44CC9B87245D25292E5526C
+      8CC40398B37FFF2DB1BFFC22B13FFFACB589009EDFBC5922BEFC525CCB9615F7
+      975E92685C77FDE0036D0E6B418B418395DAF62E1CF0DD08B520CF161DFBF4D3
+      5BDCE0AC8EC0D663962CD10B8CC162A3172FD6D28B3FE827A909F19AB9AB64F4
+      DA553099211919E97913AF5DBDE20047F43D29274EC839F808ED30410484DF43
+      2DF17CFB6DD95AA2849CFCF147D9D7AD9B2C05F3BF817E010D572AF09F8C1445
+      9CCB96DDE90EE68F226C51DAB4D393DF7FAF99BFE8E12169C9C9902E9800D3E9
+      60243DFDF68960514332A031C911115AB34EC2FE090681A0BF084028DD8C3019
+      B5689178C22FD01FD01CE824472815EA48A60A22D082DF33F2B1C7D6BBBDF186
+      1CEDD95333CE059D983F5F62A1A629D12725838C4392E9E969F786002081484F
+      4B950BEE7B246AC102390986A321793AD3E0FEFDC5E5FEFB251A5AE8DEA14316
+      08F40D48A402E0A01F2E3877B7B8B36FD1A2F336236B3B8224852AC9781E89B8
+      7E06CE2BED528AB5D07BC578AEF768F300B88987833508049D92A7730C82F4B7
+      162E2CA7A1155B5E7F3DCB1CE81B0628F5F73D0100397A9BE5D5AB4B70AB5612
+      F5EDB772028B383E73A69CD9B4494B3CE3DA35EDE4FE2900ACF7521B44926012
+      0480E0F33366D93239D8BAB5EC7AFA693905E7F9DB638F695F409FB010F49952
+      C89DEEE2781D85C98CC71F8F3BF8DE7B12317DBAFED2706468A7D6FD25E9B473
+      00900615BDD794916139CDDCEFA599258687EB88108104899924FDCFBE5AB5E4
+      2022521834934E71A50304A6D128B85092DCE131A858B1B56E50FDB0418334F3
+      C790A54523CCA551E29AF9CB598BCC84D3CACCBC7A5760A4A65E96AB786F5252
+      925CA269C121F29C1D088210E77F50C2915E53130946E4BC79E2FAE8A35A43DD
+      9A37D720AC06AD020D55CA1FECFFE7B621F844A9468B2B5694E0962D2502B19E
+      CC1F07EA97CE9F930C8438B328AA28190F0A0E9223478FCA755CE3B93BD10A82
+      78E1E20559BEEA57F91D09550A40B8762D9796E1DD04E1CCE64D12366E9C844F
+      9BA64D221849D29EE79E93183CB7B248111D116CA6D0FFB601707AF8E1FD1E28
+      59C350CCF04B42478D928B077CF497532A46320207E81F102073E77F235F2FF8
+      5602838270C7750D80B9AF209FD7605209C81F9623AAF03D5F7DB34083606985
+      A50959DF4BCDB87C5922A195A148BF8F4D9CA84170AF514342C78CD129334323
+      3580E11151E15443A58A15180448FFBD9F508505419DC2A74C91A323464814C2
+      4F1A16996A638C8C1E0A0CD4CCCFFF761168A1CCC3DFFE870EDD1608643E2929
+      514B7ECE57F3E5DBEFBE9705A02FE77D257FAE5B6F6592F009972F5FB240C067
+      3ABE3B3E38588E3A394998B3B3062164E850D953B9B244234CAE4274305AF03D
+      40E8AE145A0C053C86152DBA71F7CB2F4B48AF5EFAE5042031FC98A443BD8D14
+      C8FCE190C358F0D732F7EBF95A6A24FE3D1B0BF7F3F72F1008649EF6BEF2D7D5
+      F2C59773E46B8068DEC5CF9938B76EE3C6AC2893A50910447A66A644212C1F19
+      324442478FD6C2DAF3FCF3720CFE6137A203B5800E91FE0009D29102F982FA4A
+      959BF4C823E9BEC8F58F8E1C2987070C9028785A3BF3745447428FCAECB95FC9
+      ACB9F334D3769A8D7333667F29BE7EBE370581EFA1A9AC5ABD46A6CDFCE286F7
+      F09D73405366CC944D28A8AE5C49B79902B40002893F12222168A41C41094EF5
+      0F4052E459BFBE84214325004C8C0800AA2541486F744B1D80AA0CFD13CECF1F
+      C506D52B18F67431C05FD2F06554412E38393949ABFAE4E9333400B3E6CCBD81
+      66CC9AAD17EE0DBF91974F20F30C75ABA1AE13A74ECBF31DE6BD13264F951530
+      0FDE4F0DE03A34D11CE00F8ED309629D21D0046AEBCEA79ED29AF13BF2032645
+      D4829FADE40875D32D0EA762C576B955A922019F7C2287916EB26373192A7A19
+      8C1B1BCC8027DE8252F5F3899364DA17B3643A98CD4D04602A00983065AA787A
+      7B0104D1E13335355587B7AB50FDB5C8E09C274ECEF379BE8FEF183F698A2CFA
+      61B1C4C5C739C2A283790708E98C083B5C25108511D77B0400ECC1FAA9117B3A
+      77D695229323F610462B155549A9C2F942F0B2528FCF285D3AC903DD9843E8D7
+      0522F58D8657E69764A1EE7044B45D17546C633E1F2F93A7CDD0D2CE8B285DE7
+      099364BFA7A706E12A9867B8A3731BEDFCB94C999EF7737CD7B809137534B888
+      D0C867AC35D834806B4184488C89D6B54110EA9410E42C5EA818BD51B4052351
+      FAC1217D468419203459EBE60B406BA51AFF88D693071A0E4494209C870A5BEA
+      0F2D70109D1693A04C80B019B6E934669C8C9F3C45ABF2C429B908E73E9F3459
+      33EBB17FBF36870D485B47E2196AC70DF7F3793C33DA79BC7C01D53E7BF6ACCE
+      2DC8B87180D9C2C09A52014A469A84C101B2F1CAFEA21F72975D65CA4824AAC7
+      A5FFF98F4E8C4C5FB19752681DE47320771E4DFBDF5BAE9C1C82FA04220A249E
+      8AC517A46B4F9D9BB8206AC2DF9B5D64E8C8513276FC04A8F4242DF11C8473D4
+      149E5BBC64A98C1EF7B9966E7EF78E1C33165A355D62D024E1913B8FB06BA316
+      06EE89FA197501EA150ACE1FED3917B4CEA2502BAC81407F7468018100F77007
+      F91C831E7C70D91600B0FB8927C4FFD34F25044EF012A47E098CE60500CF7171
+      D4848D288E060E1B21A3C63A6BE9E5A63138376A9CB30C751AA5B521CF7B00D2
+      305C27389127221DCC67D71A7620EC5A9006AD3A0D9FE487CE32B5E020FCD746
+      301B81147953C386C23C80CCD317201C7AE40BC0C862C576EE00003BD071F145
+      1FEED8CC19928A34578370096DAB7C880BBB7EFD9A6C0008FD060D91E1A3C668
+      15A7240B4EE364F0F091FAFED0B030CD7C7A3A623DC8A4D574A016084C882C67
+      78E912FE660A8D4E941F0AA280B66DC5177DCAF560366CFC78D989B0B8087F33
+      241200345223AA2BF5609E2038972AE5BFAB4205D90ABBF186238958B4505225
+      5352D0B3BB19199F20B055DA77EFFE0365C888915A9A05A3D13270E87019040D
+      0A427667319F5D62DBEB8A6C3F609C21B41021351EFD474ADE1F099027729875
+      603604CDDA7DC8633860A1191080714AC53756EA91BC0078607CC99261BB01C0
+      66DCB80F23AC13B0AB542CE6E6CC53332CFFC085D2C9AD47E6F6599FBE3260E8
+      3019347C04182373F910AEF71B3C44FA0C1C84C4C94F336FF50FED00B0B83205
+      96E50C8D0950032E23B2244447E9DE00CB6286C1BFC003274E5EA86116E06F86
+      43E6043081CBAD947A3A2F000A7FFEC823110460136E742D554AA2562C770090
+      0410F222631604C05249AA2C0F86486A42DF41833583F91119EF3F78A8F8F832
+      6B24F3391BA84613F232832C3F00C012E130FDA0013EE85D6CFBEF7FB50604C2
+      917BA362B40380F2380D93A5F27901F0E08452A58EB9C1075003D04F9270747F
+      E861F3669E80D0342CE95B21D28AD33C025024F5EA37407AF6EB2FBD070CCC97
+      7AF4ED07E7394C6263636DD2B73AC8D94D554B1BB241B06B014C00297202FA92
+      04604FB56A7AEDF4014188085E488FBFC1DFCC07E8089D954AC564FAD9BC0028
+      041F10E8869ADAC5F1824383066A0098FAE64504808E91CC5FB2317F003540F7
+      DE7DA46BCF5E42067BF4B909E17AA7EE9F6953893D754A83C04CD1AE09161076
+      100C009629A4A267107F3C5CBCE1F15D1E78406B3001084172B41775C27CFCCD
+      484047081F908886E9E3793A41A7E2C5DD77C07EB6E0C60D20AF8F3F12F87749
+      86FA272727E6204B2BB24D800BE1E1EDE303867A48872EDDA45BCFDEA05EB7A6
+      5EBDA54D874EDA719E3D772E0B040B886C7F90ED07AC68604C200D4396F38802
+      DB1E7E584B9F1AACA3002A595764B306809F700EE970341CC043790230B870E1
+      5FB7220DDE861B1947F7BCF28A2480D1A43C00A04618E74813E0E189D157BBCE
+      5DA44DC74E5AAA1DBB159C787F8B4FDBEAA811171F6FF307160896065821313B
+      1C128414DDA489F8E567CD34993700442093DC80B92501E0749991004ED037DF
+      3CA067A14293D7C3867660E84024B7611E773E225C122F274B6262BC6E5A18B2
+      0060EF2E592F96696EEBF61DA555DBF6D2BE7357007123B5EDD405F774D020E5
+      75BD7D97AED2ACE5273A1748C6908507D5DF9843B61FB0998023130C44E96E07
+      80EB8FC2187E05349A3E8000D00C9009A25396CF810E6AAB65A803762111A21D
+      E997B86C9624DA58FC45DDB24A4A4AD020D02408000FF77DFBA425A4D7BC751B
+      ADCA9F76E8988B3A697078BD7BAF3EF2F1279FE27A5EF775D4CF37F9A8B93073
+      340E35A733345A6065A7294CCE90AC79206FA1D952FA3A8AC11C22313B5884FE
+      20F300024020B0D1026E209F03DD02DD0CD98D21A471248163C708159C0018A2
+      36500378EC7177978F5AB5D692A3F45BB5699793DAB693966DDA4AA3C61FE896
+      D9F90B17745DF0CE074DADFB713DC733FC1FE7799D4514D5FF3A6C5C77A2B533
+      B4EC5F334F1F043F11772242B6DAEC9FE6EB857E6610466A73F13701A0F4A783
+      B01FE99D7C01E085D1254BFAEE82DA3012683F80696C02508E07D3D920C421DF
+      C9D45D9A86EF3791C6CD9A6BFB6D010953CA94B02182D3E09DF7747F2F132D2C
+      1E6C7B0F40E6D7F0BDC639EEB53FC7F7F0DD5366CC40C1754D5784A6D16AA5C0
+      883C0080518AF66FA46FECFF08BCFF4E440176829807100038C00BB71C99F52A
+      5468EA4674575D1DE1849A10EDB6539250771B00D81059BF718354AEF18254A9
+      F9A2D47AB5BEBCF6D6DB9AA1F73E6C264D3E6E2E4D5BB4D2F47AC346689DCDD5
+      526496C8EA91C7C5B8389D2D3678F7FD2C0DE2FD1F366FA94DE0DD0F9BCA5BB8
+      56A5E64BE234761C3AC357B3E60496F767E8B52A41AF0F9AE400409B2E6686CB
+      D11FFCCAA101AC07B0BDE68F9B4A9F179B29F5D27C24437B504F1B33F0EDD239
+      871964C2278C183D461E2BFB8CBC58A79ED4AC55476ABC525B13FF7EA9EEABF2
+      0A4079EEF91A689B4DD7CC5F87F4752708793B99E17106B53ECDA346ADDAF25A
+      838652E7F537F573F677567FB9963C59BEA2EE1B5013A8050600F629CEF9FBC9
+      6687B0287D6AED5E7486C330C0A5FA3302704CC68D143D31E6BB2500BCC1A944
+      092FB79A35753E40105CE048CE04064812F2736A013D7F4C6CB45EFCB395AAEA
+      05BF50BB6E1611082E9A652F17CD6E0E3D3801B8820D110480E779841F3F2EF5
+      1BBE2DE5AA54D3E01932EFE3BB9FC2BB3A74EDA6C1638BDC00C04ED5C16E5D73
+      787FA6C0C7302B70458F904C1B0090029F01F7059B0D201A74FE15FBF7DC1CD1
+      80E1E54087F6C2C064CCE02AD24F8240752F57B95A160864A06CC54ABA3942BB
+      A5CA536A56426300B8A2CF1B103851AAFB4603A958AD460E30C97CB9CA55E163
+      3E96E89818FD8C4E8060FF64FE9CAF8F6CB2499FC2621D108D81CA428CCAA801
+      F4FC34036CAA9A5920E93B6E2A3CB64C99E3EEA808E90CB343E226808081848E
+      08717A2416090F4C0F5FBEEAF35A03C8BC331A1A649E12E382297DB343C46E06
+      7610384C7919A653A97A4D0D0289EFA45F391115A5B525AB21C2BA0026B5FFED
+      86396C9FD23F821199078624ECFF91713A4038BF4B5D952A7B3B0028848BAEAB
+      3175DD8DAA9000D0B676224788C36C3011FDC004009090C068700D0D8CA3F2FA
+      DB8DA45499A774A798CC9351D346B742980542B61958A6609983E5139849D27C
+      2AC3B156AC565D3BD6D063C7F435F620B5F4392AC3FF6173E7DC90F86C87C6C6
+      A01FB1B07469F9D2A1FED4026CA29A7D5BCC3B6E2E34F2F1C77DF6D4AB275BF1
+      12135EBC51732783E94484A0C4C4389D21B21B1470284096A209C9384D464DBB
+      8C692B4DC0CCF9ED2058FE209BC8E84E37376D0A2FD77B2DAB39925505C2FB73
+      9FC0196CC0DAE4C8564DEA4BE9476086E98A2608B7DCCE73A83F52DFD3D83754
+      F24E006044A83DA97AF56B1EF0AAD4020342E0E851C2D287350201484C4CD053
+      1B1E943A131453A8D8C7DB7653B0FC416E227B086BDEDE36E6AD32982D305E8D
+      C7446A3BF60E5223ED79BF37A641E19833CC42378BD2FF1A34D5F2FC28FFEFE2
+      E851A4C8F80D0D1A6853607C25104C3A82312ED7202016273133D4E9F18D15A2
+      7D929C5B138C63B472FDEC46884641AB7D76DA4BB54F40DB6B27CA757BD2A36B
+      166481A7D18FFC09918BB64FE93301C24C1CE3807B700C2F5D7ACBEE468D6407
+      26AE04C0807068F83049810AA7202F48821698FAC02A934D83C431D1CDDAE860
+      DF4E63353D8C83CC59F73B1A20302706CCF3F00FAE6871DB0B1EE39B623106DB
+      88EECF1407E30400A3E023B7CCFA0A8A0DDA27A5C657A810B21F05C736ECCC32
+      2070319ECD9ACA45B4B0D9084B06D3D4047B996C3785DCBB3DF2DA5764AFF9A9
+      F2947CE44F3F8A4BD1A239246F841009BB77C7F86E32D642D5A7E747E7370E3B
+      D6AB1594BF02DDD740A90AD36AD438C9B1D3760708C627D026C3972DD585896E
+      A2C25E73374BB266FBB6CD15F9ED22617D4FA9278486CA010C3908B469749876
+      1DCD201C0D0F2F6C91A1E499F450F20C7918F0BC5920A66EF726BCB5CAACE79F
+      8FF042E371C7430F652D8A0E890BDADBE04D89C206AA14BD8101711B2D750E55
+      AD765936E59CF4C0CED9ECD03B4B2D892720F405A39BBBA578F11C2A6F52DD4D
+      850A4904366B79A05022F35F8018EE86A0DDD5A32023F0DB65DC7E7F0DFC6861
+      4AB56A3EFB30387147BD601C2317471048BB9145864C9B2A677DBC2509B9020B
+      16BD91D24646BDF949E6132323E504BAD0073091DA825F8FE496BAD1B61D985A
+      45A1CCDD86462AD59ECCD3E121D58D02F375EE86B7DB79B6E8A8679E59F93740
+      F0C1CF5FB642227615A54668678590E48E64CABB650B0984C30C85BA1EFF71B1
+      44A0520BC78EAE10646C073FEB2EFB5E7B4D5C01E62ECC24B9FBD31EE28CD479
+      EE20263EC7916BACC42736006AB5A7D747976757A7EC5EFF7D60A4D0ED3073AB
+      7BF932BEF4011067EB6C28DECF873A3FF4D0C0F96FBC91E88D69AC87A39B6C34
+      42E7E550612F8CA9F7D6A8296E606E6B918774ECE6E0D205E06C83A4B720B2EC
+      840FF17EE71D09ECDE5DD8963760669916DA74E1D812E785DD6AF3D0ACA1E491
+      DA091CDD55D83B73FCA28E35E1173BEABFA022208EBFB8CE3B06830F727F1D19
+      27D37C31F7DF9604715B3AE9FEE7902C3955A8B07E0D7E2DE28BE9EC7ED4E0DB
+      C09C0182317A2F9A2A9ED8CAEAD3B8B178239C12140E5F397EE7FF9CE4B86153
+      96913ECD884079E0B95038BA00EC065B0EBF838D8F5AE2FC448CF768825F9F39
+      98659BFB09D063208EBDF84B12824160283402412116F820F37CC8489C65245F
+      5ACAF125FC32FEBC8D3F62E2973E0A07D9615CD5AAEEAB00843726B47E60761F
+      B462BBA35A3380B8C05C28756A803DA7A0B4B742FDF7A22BCDDF1B85A08FE005
+      47B712EF616A4B6737DE62FC10465BE86DE8F1167EAAA4A73C1C74B0D829E338
+      47E194748060348282A4400B74102D0300513400105D326C07A01CFEAFE038F7
+      0CBC50BB7EA54BFF31AF7EFD0BEB20650FA8B51F01C196BB0390B6376A0B4FEC
+      40F344CB9DE9AB2F180C68DF5E02D1C20AC034D703939CF50060210A2F328D49
+      0E5BD929BD94DADE5429F4345555D093A04A0EE2771B00789EA010000A8B1A6B
+      378902034094EC5A4010A852D4023B08FC424A820BE0422A3A165706E8D57B57
+      A9213D8B16FD7DDCB3CF864DAA552B7D0900580B203602984D60722362FC9F98
+      E9AFC444E73B98CE4C98CB18876D6343D30978F54D90B633386E6463928C5776
+      7C17C1A716E696BE9D799A2FFD0199BF237F60D706E30B0846491B18449DEA67
+      CCC2488492A07D56024A0DEBA1C486D13AE3070D0BB057E71754296B3B80D080
+      59816ECDA2D64A4DC6F55EB5957A1F2BC6185FBF93CF13E4F20EE2BBF93FBFCB
+      5C3712B7DB3E1DA151FB3B621CCFDF70D81D2351E5971813310E921A62182730
+      34177EF2BCF1D2E619FECFE7CC799A1AFFE7BD065463D70442FB1B5049906196
+      CF1867673CFF3D0F85798161CE99304915A3DF20EA5C8871A0D41A2E90B6C8C5
+      92C8F0CDC8DCC767F82CDF41B0F94EC324BFEF5F65F46620DCCE3502762BBA9D
+      F7DDD5BDFF03D2A0C079264C241C0000000049454E44AE426082}
+  end
+end

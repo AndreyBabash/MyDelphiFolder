@@ -1,0 +1,38 @@
+inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited PaintBox1: TPaintBox
+    Size.Width = 450.000000000000000000
+    Size.Height = 624.000000000000000000
+  end
+  inherited ToolBar1: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 406.000000000000000000
+    end
+    inherited Switch1: TSwitch
+      Position.X = 406.000000000000000000
+    end
+  end
+  inherited Label2: TLabel
+    Position.Y = 672.000000000000000000
+    Size.Width = 450.000000000000000000
+  end
+  inherited GestureManager1: TGestureManager
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiRight
+          end
+          item
+            GestureID = sgiCircle
+          end
+          item
+            GestureID = sgiLeft
+          end>
+      end>
+  end
+end

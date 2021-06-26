@@ -1,0 +1,314 @@
+unit Main;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Maps,
+  FMX.StdCtrls, FMX.Controls.Presentation, FMX.MultiView, FMX.ListBox,
+  FMX.Layouts, System.Sensors, System.Sensors.Components
+  {$IFDEF ANDROID}
+  , FMX.Platform.Android, Androidapi.JNI.Widget, FMX.Helpers.Android, AndroidApi.Helpers
+  {$ENDIF};
+
+type
+  TMyForm = class(TForm)
+    ToolBar1: TToolBar;
+    ToolBar2: TToolBar;
+    DrawerBtn: TButton;
+    Label1: TLabel;
+    MyMap: TMapView;
+    ButtonAddMarker: TButton;
+    ButtonDeleteMarker: TButton;
+    MyMultiView: TMultiView;
+    ScrollBox1: TScrollBox;
+    Label2: TLabel;
+    ListBox1: TListBox;
+    ListBoxGroupHeader1: TListBoxGroupHeader;
+    ListBoxItem1: TListBoxItem;
+    TrackBarRotate: TTrackBar;
+    ListBoxGroupHeader2: TListBoxGroupHeader;
+    ListBoxItem2: TListBoxItem;
+    TrackBarTilt: TTrackBar;
+    ListBoxGroupHeader3: TListBoxGroupHeader;
+    ListBoxItem3: TListBoxItem;
+    ListBoxItem4: TListBoxItem;
+    ListBoxItem5: TListBoxItem;
+    ListBoxGroupHeader4: TListBoxGroupHeader;
+    ListBoxItem6: TListBoxItem;
+    LocationSwitch: TSwitch;
+    MyLocationSensor: TLocationSensor;
+    ButtonDrawLine: TButton;
+    DeleteLineBtn: TButton;
+    procedure LocationSwitchSwitch(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure MyLocationSensorLocationChanged(Sender: TObject;
+      const OldLocation, NewLocation: TLocationCoord2D);
+    procedure MyMapMarkerClick(Marker: TMapMarker);
+    procedure ButtonAddMarkerClick(Sender: TObject);
+    procedure ButtonDeleteMarkerClick(Sender: TObject);
+    procedure MyMultiViewStartHiding(Sender: TObject);
+    procedure MyMultiViewStartShowing(Sender: TObject);
+    procedure ListBoxItem3Click(Sender: TObject);
+    procedure ListBoxItem4Click(Sender: TObject);
+    procedure ListBoxItem5Click(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
+    procedure TrackBarRotateChange(Sender: TObject);
+    procedure TrackBarTiltChange(Sender: TObject);
+    procedure ButtonDrawLineClick(Sender: TObject);
+    procedure DeleteLineBtnClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    // Маркер местоположения
+    MyLocationMarker:TMapMarker;
+    // Маркер пользователя
+    MyMarker:TMapMarker;
+    // Координаты маркеров местоположения и пользователя
+    MyLocationPoint:TPointF;
+    MyMarkerPoint:TPointF;
+    // Описание линии
+    MyLineDescriptor:TMapPolylineDescriptor;
+    // Линия
+    MyLine:TMapPolyline;
+    // Точки координат линии
+    Points:TArray<TMapCoordinate>;
+  end;
+
+var
+  MyForm: TMyForm;
+
+implementation
+
+{$R *.fmx}
+
+
+// Подтверждение выхода из приложения
+
+procedure ExitConfirm;
+begin
+
+// Вывод диалогового окна
+
+    MessageDlg('Хотите выйти!', System.UITypes.TMsgDlgType.mtInformation,
+    [
+      System.UITypes.TMsgDlgBtn.mbYes,
+      System.UITypes.TMsgDlgBtn.mbNo
+    ], 0,
+
+      procedure(const AResult: TModalResult)
+      begin
+        case AResult
+          of
+
+          mrYES:
+
+          begin
+
+            {$IFDEF ANDROID}
+              MainActivity.finish;    // Выход из приложения
+            {$ENDIF}
+
+            {$IFDEF MSWINDOWS}
+              Application.Terminate;
+            {$ENDIF}
+
+
+          end;
+
+          mrNo:
+
+            begin
+
+            end;
+
+        end;
+      end
+    )
+
+end;
+
+// Добавляем пользовательский маркер на карту
+procedure TMyForm.ButtonAddMarkerClick(Sender: TObject);
+var MarkerLocation: TMapCoordinate; // координаты маркера
+    MyMarkerDescr: TMapMarkerDescriptor; // описание внешнего вида маркера
+begin
+// Проверяем, есть ли уже маркер на карте (проверяем на "пустоту")
+  if MyMarker=nil then
+  begin
+	  MarkerLocation := TMapCoordinate.Create(MyMarkerPoint);  // Переводим координаты из TPointF в TMapCoordinate
+    MyMarkerDescr := TMapMarkerDescriptor.Create(MarkerLocation, 'Это мой маркер)');  // Создаем описание маркера
+    MyMarkerDescr.Draggable := True;  // Маркер можно перемещать на карте
+    MyMarker := MyMap.AddMarker(MyMarkerDescr); // Присваиваем маркеру описание и добавляем на карту
+  end;
+end;
+
+// Удаляем маркер
+procedure TMyForm.ButtonDeleteMarkerClick(Sender: TObject);
+begin
+// Проверяем, есть ли маркер на карте
+      if MyMarker<>nil then
+      begin
+        MyMarker.Remove;  // Удаляем маркер
+        MyMarker:=nil;    // присваиваем маркеру "пустоту"
+      end;
+end;
+
+// Рисуем линию
+procedure TMyForm.ButtonDrawLineClick(Sender: TObject);
+begin
+// Проверяем, есть ли уже линия на карте
+  if MyLine=nil then
+  begin
+    // Устанавливаем размер динамического массива (для построения линии нужно две точки)
+    SetLength(Points,2);
+    //  Линия будет соединять маркер местоположения и пользовательский маркер
+    //
+    Points[0] := TMapCoordinate.Create(MyLocationPoint);
+    Points[1] := TMapCoordinate.Create(MyMarkerPoint);
+    MyLineDescriptor := TMapPolylineDescriptor.Create(Points);
+    MyLineDescriptor.StrokeWidth := 20;
+    MyLineDescriptor.StrokeColor := TAlphaColors.YellowGreen;
+    MyLine := MyMap.AddPolyline(MyLineDescriptor);
+  end
+  else
+  begin
+    Myline.Remove;
+    Myline := nil;
+  end;
+end;
+
+procedure TMyForm.DeleteLineBtnClick(Sender: TObject);
+begin
+  if MyLine<>nil then
+  begin
+    Myline.Remove;
+    Myline := nil;
+  end;
+end;
+
+procedure TMyForm.FormCreate(Sender: TObject);
+begin
+  MyMarkerPoint.X:=41.2;
+  MyMarkerPoint.Y:=40.5;
+end;
+
+procedure TMyForm.FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+  Shift: TShiftState);
+begin
+  if Key = vkHardwareBack then ExitConfirm;
+end;
+
+procedure TMyForm.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+  Shift: TShiftState);
+begin
+  if Key = vkHardwareBack then Key := 0;
+end;
+
+procedure TMyForm.ListBoxItem3Click(Sender: TObject);
+begin
+  MyMap.MapType := TMapType.Normal;
+end;
+
+procedure TMyForm.ListBoxItem4Click(Sender: TObject);
+begin
+  MyMap.MapType := TMapType.Satellite;
+end;
+
+procedure TMyForm.ListBoxItem5Click(Sender: TObject);
+begin
+  MyMap.MapType := TMapType.Hybrid;
+end;
+
+procedure TMyForm.LocationSwitchSwitch(Sender: TObject);
+begin
+	if LocationSwitch.IsChecked then
+  begin
+		MyLocationSensor.Active:=true;
+    {$IFDEF ANDROID}
+			TJToast.JavaClass.makeText(TAndroidHelper.Context, StrToJCharSequence('Location Sensor On'), TJToast.JavaClass.LENGTH_LONG).show;
+		{$ENDIF}
+  end
+	else
+	begin
+		MyLocationSensor.Active:=false;
+    {$IFDEF ANDROID}
+			TJToast.JavaClass.makeText(TAndroidHelper.Context, StrToJCharSequence('Location Sensor Off'), TJToast.JavaClass.LENGTH_LONG).show;
+		{$ENDIF}
+	end;
+end;
+
+procedure TMyForm.MyLocationSensorLocationChanged(Sender: TObject;
+  const OldLocation, NewLocation: TLocationCoord2D);
+var MyMarkerLocationDescr: TMapMarkerDescriptor; MyLocation: TMapCoordinate;
+begin
+	      MyMap.Repaint;
+	      MyLocationPoint.X := NewLocation.Latitude;
+        MyLocationPoint.Y := NewLocation.Longitude;
+
+    if MyLocationMarker=nil then
+    begin
+	      MyLocation := TMapCoordinate.Create(MyLocationPoint);
+        MyMap.Location := MyLocation;
+        MyMarkerLocationDescr := TMapMarkerDescriptor.Create(MyLocation,'Я здесь!)));');
+
+          with MyMarkerLocationDescr do
+          begin
+            Draggable := False;
+            Visible := True;
+            Appearance := TMarkerAppearance.Billboard;
+            Snippet := Format('Lat/Lon: %s,%s',[FloatToStrF(MyLocationPoint.X,ffGeneral,4,2),FloatToStrF(MyLocationPoint.Y,ffGeneral,4,2)]);
+          end;
+
+        MyLocationMarker := MyMap.AddMarker(MyMarkerLocationDescr);
+        MyMap.Zoom:=30;
+    end
+    else
+    begin
+        MyLocationMarker.Remove;
+        MyLocationMarker := nil;
+    end;
+end;
+
+
+procedure TMyForm.MyMapMarkerClick(Marker: TMapMarker);
+var MyDistance:Extended; MarkerTitle:string;
+begin
+	  MarkerTitle:=Marker.Descriptor.Title;
+{$IFDEF ANDROID}
+	if MarkerTitle<>'Я здесь!)));' then
+    TJToast.JavaClass.makeText(TAndroidHelper.Context, StrToJCharSequence('Координаты: '+Marker.Descriptor.Position.Latitude.ToString+' '+Marker.Descriptor.Position.Longitude.ToString), TJToast.JavaClass.LENGTH_LONG).show
+  else
+    TJToast.JavaClass.makeText(TAndroidHelper.Context, StrToJCharSequence('Мой маркер!)))'), TJToast.JavaClass.LENGTH_LONG).show;
+{$ENDIF}
+end;
+
+// При скрытии VultiView показываем карту
+procedure TMyForm.MyMultiViewStartHiding(Sender: TObject);
+begin
+  if not MyMap.Visible then MyMap.Visible:=true;
+end;
+
+// При появлении VultiView скрываем карту
+procedure TMyForm.MyMultiViewStartShowing(Sender: TObject);
+begin
+  if MyMap.Visible then MyMap.Visible:=not MyMap.Visible;
+end;
+
+// Поворот карты
+procedure TMyForm.TrackBarRotateChange(Sender: TObject);
+begin
+  MyMap.Bearing := TrackBarRotate.Value;
+end;
+
+// Наклон карты
+procedure TMyForm.TrackBarTiltChange(Sender: TObject);
+begin
+  MyMap.Tilt := TrackBarTilt.Value;
+end;
+
+end.

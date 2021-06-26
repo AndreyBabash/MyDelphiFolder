@@ -1,0 +1,263 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 437
+  ClientWidth = 476
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 476.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claSteelblue
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 380.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      TextSettings.VertAlign = Leading
+      Text = 'Graph'
+      object ComboEdit1: TComboEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Bottom
+        TabOrder = 0
+        ItemHeight = 19.000000000000000000
+        ItemIndex = -1
+        TextSettings.FontColor = claCrimson
+        Position.Y = 16.000000000000000000
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 380.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Button3: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'searchtoolbutton'
+      TabOrder = 1
+      Text = 'Button3'
+      OnClick = Button3Click
+    end
+    object Button1: TButton
+      Align = Right
+      Position.X = 428.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'donetoolbutton'
+      TabOrder = 2
+      Text = 'OK'
+      OnClick = Button1Click
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 476.000000000000000000
+    Size.Height = 389.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      476s
+      340s
+      476s
+      340s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 238.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #1053#1072#1095#1072#1083#1100#1085#1099#1077' '#1091#1089#1090#1072#1085#1086#1074#1082#1080
+      ExplicitSize.cx = 238.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Image1: TImage
+        MultiResBitmap.Height = 1200
+        MultiResBitmap.Width = 1920
+        MultiResBitmap = <
+          item
+          end>
+        Align = Client
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Size.Width = 476.000000000000000000
+        Size.Height = 340.000000000000000000
+        Size.PlatformDefault = False
+        WrapMode = Stretch
+        object Label2: TLabel
+          Align = Top
+          StyledSettings = [Family, Size, Style]
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 466.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.FontColor = claFuchsia
+          Text = #1053#1072#1095#1072#1083#1100#1085#1086#1077' '#1079#1085#1072#1095#1077#1085#1080#1077
+        end
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 1
+          Text = '-10'
+          TextSettings.FontColor = claOrangered
+          Position.X = 5.000000000000000000
+          Position.Y = 28.000000000000000000
+          Size.Width = 466.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Size, Style]
+        end
+        object Label3: TLabel
+          Align = Top
+          StyledSettings = [Family, Size, Style]
+          Position.X = 5.000000000000000000
+          Position.Y = 60.000000000000000000
+          Size.Width = 466.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.FontColor = claCrimson
+          Text = #1050#1086#1085#1077#1095#1085#1086#1077' '#1079#1085#1072#1095#1077#1085#1080#1077
+        end
+        object Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 3
+          Text = '10'
+          TextSettings.FontColor = claCrimson
+          Position.X = 5.000000000000000000
+          Position.Y = 83.000000000000000000
+          Size.Width = 466.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Size, Style]
+        end
+        object Label4: TLabel
+          Align = Top
+          Position.X = 5.000000000000000000
+          Position.Y = 115.000000000000000000
+          Size.Width = 466.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          Text = #1064#1072#1075
+        end
+        object TrackBar1: TTrackBar
+          Align = Top
+          CanParentFocus = True
+          Max = 1.000000000000000000
+          Min = 0.001000000047497451
+          Orientation = Horizontal
+          Position.X = 5.000000000000000000
+          Position.Y = 138.000000000000000000
+          Size.Width = 466.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Value = 0.009999999776482582
+          OnChange = TrackBar1Change
+        end
+        object Label5: TLabel
+          Align = Top
+          StyledSettings = [Family, Size, Style]
+          Position.X = 5.000000000000000000
+          Position.Y = 170.000000000000000000
+          Size.Width = 466.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.FontColor = claCrimson
+          Text = #1047#1085#1072#1095#1077#1085#1080#1077' '#1096#1072#1075#1072': '
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 238.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #1043#1088#1072#1092#1080#1082' '#1092#1091#1085#1082#1094#1080#1080
+      ExplicitSize.cx = 238.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Chart1: TChart
+        Foot.Font.StyleExt = {00040000000200000004000000}
+        Legend.Title.Font.StyleExt = {00070000000000000004000000}
+        Legend.Visible = False
+        SubFoot.Font.StyleExt = {00040000000200000004000000}
+        Title.Text.Strings = (
+          #1043#1088#1072#1092#1080#1082' '#1092#1091#1085#1082#1094#1080#1080)
+        ClipPoints = False
+        View3D = False
+        View3DOptions.Orthogonal = False
+        Zoom.Brush.Kind = None
+        Zoom.Pen.Fill.Color = claSilver
+        Align = Client
+        TabOrder = 0
+        Size.Width = 476.000000000000000000
+        Size.Height = 296.000000000000000000
+        Size.PlatformDefault = False
+        ColorPaletteIndex = 13
+        object ProgressBar1: TProgressBar
+          Align = Top
+          Orientation = Horizontal
+          Size.Width = 476.000000000000000000
+          Size.Height = 10.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Series1: TLineSeries
+          SeriesColor = xFFA35844
+          Brush.BackColor = x00FFFFFF
+          DrawStyle = dsCurve
+          InflateMargins = False
+          LinePen.Color = x983417E8
+          LinePen.Width = 3.488372087478638000
+          LinePen.Fill.Color = x983417E8
+          Pointer.Dark3D = False
+          Pointer.Draw3D = False
+          Pointer.InflateMargins = True
+          Pointer.Style = psRectangle
+          XValues.Name = 'X'
+          XValues.Order = loNone
+          YValues.Name = 'Y'
+          YValues.Order = loNone
+        end
+      end
+      object Button4: TButton
+        Align = Bottom
+        Position.Y = 296.000000000000000000
+        Size.Width = 476.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = #1055#1086#1089#1090#1088#1086#1080#1090#1100' '#1075#1088#1072#1092#1080#1082' '#1092#1091#1085#1082#1094#1080#1080
+        OnClick = Button4Click
+      end
+    end
+  end
+  object NotificationCenter1: TNotificationCenter
+    Left = 336
+    Top = 264
+  end
+end

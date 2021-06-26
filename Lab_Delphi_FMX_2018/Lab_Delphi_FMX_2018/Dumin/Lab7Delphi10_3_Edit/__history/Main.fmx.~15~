@@ -1,0 +1,232 @@
+object MyForm: TMyForm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 526
+  ClientWidth = 536
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 536.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claYellowgreen
+    object DrawerBtn: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'drawertoolbutton'
+      TabOrder = 0
+      Text = 'DrawerBtn'
+    end
+    object Label1: TLabel
+      Align = Client
+      StyledSettings = [Family]
+      Size.Width = 488.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claBlue
+      TextSettings.HorzAlign = Center
+      Text = 'Lab7LocationExample'
+      TabOrder = 1
+    end
+  end
+  object ToolBar2: TToolBar
+    Align = Bottom
+    Position.Y = 478.000000000000000000
+    Size.Width = 536.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    TintColor = claYellowgreen
+    object ButtonAddMarker: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'addtoolbutton'
+      TabOrder = 0
+      Text = 'ButtonAddMarker'
+      OnClick = ButtonAddMarkerClick
+    end
+    object ButtonDeleteMarker: TButton
+      Align = Left
+      Position.X = 48.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'trashtoolbutton'
+      TabOrder = 1
+      Text = 'ButtonDeleteMarker'
+      OnClick = ButtonDeleteMarkerClick
+    end
+  end
+  object MyMap: TMapView
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 526.000000000000000000
+    Size.Height = 420.000000000000000000
+    Size.PlatformDefault = False
+    OnMarkerClick = MyMapMarkerClick
+  end
+  object MyMultiView: TMultiView
+    MasterButton = DrawerBtn
+    Mode = Drawer
+    OnStartShowing = MyMultiViewStartShowing
+    OnStartHiding = MyMultiViewStartHiding
+    Size.Width = 177.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object ScrollBox1: TScrollBox
+      Align = Client
+      Size.Width = 177.000000000000000000
+      Size.Height = 430.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 177.000000000000000000
+      Viewport.Height = 430.000000000000000000
+      object Label2: TLabel
+        Align = Top
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 177.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claBrown
+        TextSettings.HorzAlign = Center
+        Text = #1052#1077#1085#1102
+        TabOrder = 0
+      end
+      object ListBox1: TListBox
+        Align = Client
+        Size.Width = 177.000000000000000000
+        Size.Height = 365.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 172.000000000000000000
+        Viewport.Height = 365.000000000000000000
+        object ListBoxGroupHeader1: TListBoxGroupHeader
+          Size.Width = 172.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = #1055#1086#1074#1086#1088#1086#1090' '#1082#1072#1088#1090#1099
+        end
+        object ListBoxItem1: TListBoxItem
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Position.Y = 30.000000000000000000
+          TabOrder = 1
+          object TrackBarRotate: TTrackBar
+            Align = Client
+            CanParentFocus = True
+            Max = 360.000000000000000000
+            Orientation = Horizontal
+            Size.Width = 162.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnChange = TrackBarRotateChange
+          end
+        end
+        object ListBoxGroupHeader2: TListBoxGroupHeader
+          Position.Y = 74.000000000000000000
+          Size.Width = 172.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = #1053#1072#1082#1083#1086#1085' '#1082#1072#1088#1090#1099
+        end
+        object ListBoxItem2: TListBoxItem
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Position.Y = 104.000000000000000000
+          TabOrder = 0
+          object TrackBarTilt: TTrackBar
+            Align = Client
+            CanParentFocus = True
+            Max = 90.000000000000000000
+            Orientation = Horizontal
+            Size.Width = 162.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnChange = TrackBarTiltChange
+          end
+        end
+        object ListBoxGroupHeader3: TListBoxGroupHeader
+          Position.Y = 148.000000000000000000
+          Size.Width = 172.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = #1058#1080#1087' '#1082#1072#1088#1090#1099
+        end
+        object ListBoxItem3: TListBoxItem
+          Position.Y = 178.000000000000000000
+          TabOrder = 5
+          Text = #1054#1073#1099#1095#1085#1072#1103
+          OnClick = ListBoxItem3Click
+        end
+        object ListBoxItem4: TListBoxItem
+          Position.Y = 222.000000000000000000
+          TabOrder = 6
+          Text = #1057#1087#1091#1090#1085#1080#1082
+          OnClick = ListBoxItem4Click
+        end
+        object ListBoxItem5: TListBoxItem
+          Position.Y = 266.000000000000000000
+          TabOrder = 7
+          Text = #1057#1084#1077#1096#1072#1085#1085#1072#1103
+          OnClick = ListBoxItem5Click
+        end
+        object ListBoxGroupHeader4: TListBoxGroupHeader
+          Position.Y = 310.000000000000000000
+          Size.Width = 172.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          Text = #1042#1082#1083'/'#1042#1099#1082#1083' LocationSensor'
+        end
+        object ListBoxItem6: TListBoxItem
+          Position.Y = 340.000000000000000000
+          TabOrder = 9
+          object LocationSwitch: TSwitch
+            Align = Center
+            IsChecked = False
+            Size.Width = 44.000000000000000000
+            Size.Height = 26.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnSwitch = LocationSwitchSwitch
+          end
+        end
+      end
+    end
+  end
+  object MyLocationSensor: TLocationSensor
+    OnLocationChanged = MyLocationSensorLocationChanged
+    Left = 437
+    Top = 85
+  end
+end

@@ -1,0 +1,38 @@
+inherited Form1_GGlass: TForm1_GGlass
+  ClientHeight = 215
+  ClientWidth = 427
+  DesignerMasterStyle = 3
+  inherited PaintBox1: TPaintBox
+    Size.Width = 427.000000000000000000
+    Size.Height = 144.000000000000000000
+  end
+  inherited ToolBar1: TToolBar
+    Size.Width = 427.000000000000000000
+    inherited Label1: TLabel
+      Size.Width = 383.000000000000000000
+    end
+    inherited Switch1: TSwitch
+      Position.X = 383.000000000000000000
+    end
+  end
+  inherited Label2: TLabel
+    Position.Y = 192.000000000000000000
+    Size.Width = 427.000000000000000000
+  end
+  inherited GestureManager1: TGestureManager
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiRight
+          end
+          item
+            GestureID = sgiCircle
+          end
+          item
+            GestureID = sgiLeft
+          end>
+      end>
+  end
+end

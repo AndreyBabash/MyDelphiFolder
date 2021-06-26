@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.788,C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\TIGER\Desktop\XE8_Labs\Lab4\Lab_4.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.426,C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit2.fmx=C:\Users\TIGER\Desktop\XE8_Labs\Lab4\Main.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.198,E:\КИТ\XE8_Labs\Lab4\Lab_4.dproj=C:\Users\TIGER\Desktop\ППИМС_лаб\Lab_3\Lab_3.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.797,=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.426,C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\TIGER\Desktop\XE8_Labs\Lab4\Main.pas</Transaction>
+    <Transaction>2017.04.22 21:54:15.316,C:\Users\TIGER\Desktop\labsxe8\lab3\Lab_3.dproj=E:\КИТ\ППИМС_лаб\Lab_3\Lab_3.dproj</Transaction>
+    <Transaction>2017.04.22 21:54:28.462,C:\Users\TIGER\Desktop\labsxe8\lab3\Main.fmx=E:\КИТ\XE8_Labs\Lab4\Main.fmx</Transaction>
+    <Transaction>2017.04.22 21:54:28.462,C:\Users\TIGER\Desktop\labsxe8\lab3\Main.pas=E:\КИТ\XE8_Labs\Lab4\Main.pas</Transaction>
+  </Transactions>
+	<MobileDevice>20080411413fc082-Android</MobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile Android="20080411413fc082"/>
+	</ActiveMobileDevice>
+</BorlandProject>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.168,E:\КИТ\XE8_Labs\MultiTouch_2\Touch.dproj=C:\Users\TIGER\Desktop\ППИМС_лаб\Lab_6\Lab_6.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.675,=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.952,C:\Users\TIGER\Desktop\MultiTouch\Main.pas=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.622,C:\Users\TIGER\Desktop\labsxe8\lab6\Lab_6.dproj=E:\КИТ\ППИМС_лаб\Lab_6\Lab_6.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.897,C:\Users\TIGER\Desktop\MultiTouch\Touch.dproj=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.952,C:\Users\TIGER\Desktop\MultiTouch\Main.fmx=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit2.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.911,C:\Users\TIGER\Desktop\labsxe8\lab6\Lab_6.dproj=C:\Users\TIGER\Desktop\labsxe8\lab6\Lab_6.dproj</Transaction>
+  </Transactions>
+	<MobileDevice>20080411413fc082-Android</MobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile Android=""/>
+	</ActiveMobileDevice>
+</BorlandProject>

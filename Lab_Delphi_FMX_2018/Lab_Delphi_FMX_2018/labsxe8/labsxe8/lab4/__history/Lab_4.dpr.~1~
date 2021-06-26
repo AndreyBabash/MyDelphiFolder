@@ -1,0 +1,14 @@
+program Lab_4;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Main in 'E:\ »“\œœ»Ã—_Î‡·\Lab_4\Main.pas' {MyForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMyForm, MyForm);
+  Application.Run;
+end.

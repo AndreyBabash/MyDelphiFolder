@@ -1,0 +1,181 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 429
+  ClientWidth = 603
+  Fill.Kind = Solid
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  Touch.GestureManager = GestureManager1
+  OnGesture = FormGesture
+  DesignerMasterStyle = 3
+  object PaintBox1: TPaintBox
+    Align = Client
+    Size.Width = 603.000000000000000000
+    Size.Height = 358.000000000000000000
+    Size.PlatformDefault = False
+    OnPaint = PaintBox1Paint
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 603.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claSilver
+    object Label1: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 559.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claBlue
+      TextSettings.HorzAlign = Center
+      Text = 'Firemonkey '#1075#1088#1072#1092#1080#1082#1072
+    end
+    object Switch1: TSwitch
+      Align = Right
+      IsChecked = False
+      Position.X = 559.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnSwitch = Switch1Switch
+    end
+  end
+  object Label2: TLabel
+    Align = Bottom
+    Position.Y = 406.000000000000000000
+    Size.Width = 603.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = #1058#1086#1083#1097#1080#1085#1072' '#1083#1080#1085#1080#1080': '
+  end
+  object Layout1: TLayout
+    Align = Contents
+    Size.Width = 603.000000000000000000
+    Size.Height = 429.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Rectangle1: TRectangle
+      Align = Contents
+      Fill.Color = claGray
+      HitTest = False
+      Padding.Left = 5.000000000000000000
+      Padding.Top = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Padding.Bottom = 5.000000000000000000
+      Opacity = 0.600000023841857900
+      Size.Width = 603.000000000000000000
+      Size.Height = 429.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF3BA8E1
+    end
+    object Button2: TButton
+      Align = Top
+      Position.Y = 333.000000000000000000
+      Size.Width = 603.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'OK'
+      TintColor = claGreen
+      OnClick = Button2Click
+    end
+    object ColorPicker1: TColorPicker
+      Align = Top
+      Position.Y = 92.000000000000000000
+      Size.Width = 603.000000000000000000
+      Size.Height = 112.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+    object Label4: TLabel
+      Align = Top
+      Position.Y = 204.000000000000000000
+      Size.Width = 603.000000000000000000
+      Size.Height = 37.000000000000000000
+      Size.PlatformDefault = False
+      Text = #1042#1099#1073#1086#1088' '#1090#1080#1087#1072' '#1083#1080#1085#1080#1080
+      TabOrder = 3
+    end
+    object Label5: TLabel
+      Align = Top
+      Position.Y = 48.000000000000000000
+      Size.Width = 603.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      Text = #1042#1099#1073#1086#1088' '#1094#1074#1077#1090#1072' '#1092#1080#1075#1091#1088#1099
+      TabOrder = 4
+    end
+    object ToolBar2: TToolBar
+      Size.Width = 603.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      TintColor = claSteelblue
+      object Label3: TLabel
+        Align = Client
+        Size.Width = 603.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = #1058#1080#1087' '#1083#1080#1085#1080#1080' '#1080' '#1077#1077' '#1094#1074#1077#1090
+      end
+    end
+    object RadioButton1: TRadioButton
+      Align = Top
+      IsChecked = True
+      Position.Y = 241.000000000000000000
+      Size.Width = 603.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = #1057#1087#1083#1086#1096#1085#1072#1103
+    end
+    object RadioButton2: TRadioButton
+      Align = Top
+      Position.Y = 269.000000000000000000
+      Size.Width = 603.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Text = #1058#1086#1095#1077#1095#1085#1072#1103
+    end
+    object RadioButton3: TRadioButton
+      Align = Top
+      Position.Y = 301.000000000000000000
+      Size.Width = 603.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = #1064#1090#1088#1080#1093#1086#1074#1072#1103
+    end
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 512
+    Top = 72
+    GestureData = <
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiRight
+          end
+          item
+            GestureID = sgiCircle
+          end
+          item
+            GestureID = sgiLeft
+          end>
+      end>
+  end
+end

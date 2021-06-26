@@ -1,0 +1,304 @@
+unit Main;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.TabControl, FMX.Controls.Presentation, FMX.Edit, FMX.ListBox, FMX.Layouts,
+  {$IFDEF ANDROID}
+  	AndroidApi.Helpers, FMX.Platform.Android, Androidapi.JNI.Widget, FMX.Helpers.Android,
+ 	{$ENDIF}
+  FMX.ScrollBox, FMX.Memo, MainAbout, IniFiles;
+
+type
+  TMainForm = class(TForm)
+    ToolBar1: TToolBar;
+    Label1: TLabel;
+    Button1: TButton;
+    TabControl1: TTabControl;
+    StatusBar1: TStatusBar;
+    Button2: TButton;
+    Button3: TButton;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    ListBox1: TListBox;
+    ListBoxItem1: TListBoxItem;
+    ListBoxItem2: TListBoxItem;
+    ListBoxItem3: TListBoxItem;
+    ListBoxItem4: TListBoxItem;
+    ListBoxItem5: TListBoxItem;
+    ListBoxItem6: TListBoxItem;
+    ListBoxItem7: TListBoxItem;
+    ListBoxItem8: TListBoxItem;
+    RadioButton1: TRadioButton;
+    Label3: TLabel;
+    RadioButton2: TRadioButton;
+    RadioButton3: TRadioButton;
+    RadioButton4: TRadioButton;
+    RadioButton5: TRadioButton;
+    ListBoxItem9: TListBoxItem;
+    ListBoxItem10: TListBoxItem;
+    Label4: TLabel;
+    Edit2: TEdit;
+    Label2: TLabel;
+    Button4: TButton;
+    Dumin_Button5: TButton;
+    Dumin_Memo: TMemo;
+    CheckBox1: TCheckBox;
+    ListBoxItem11: TListBoxItem;
+    Dumin_Button6: TButton;
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Dumin_Button5Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Dumin_Button6Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+  ColorSelected:integer; // выбранный цвет
+  MyAddString:string;   // дополнительная строка
+  Check:integer;  // переменная для хранения значения, какой переключатель нажат
+
+implementation
+
+{$R *.fmx}
+// Показ формы о программе
+procedure TMainForm.Button1Click(Sender: TObject);
+begin
+  AboutActivity.Show;
+end;
+
+procedure TMainForm.Button2Click(Sender: TObject);
+begin
+  TabControl1.ActiveTab:=TabItem2;
+end;
+
+procedure TMainForm.Button3Click(Sender: TObject);
+begin
+  TabControl1.ActiveTab:=TabItem1;
+end;
+
+procedure TMainForm.Dumin_Button5Click(Sender: TObject);
+var str:string;  // переменная строки, которая выводится в поле
+    fontsize:string;  // переменная размера шрифта
+    textcolor:TAlphaColor;  // Цвет текста
+begin
+
+ //Очищаем поле
+
+Dumin_Memo.Lines.Clear;
+
+// Строка для вывода
+
+str:='Hello))))';
+
+
+
+//Опрос переключателя Если установлен - Вывод дополнительного текста
+
+
+if Checkbox1.IsChecked then
+
+  begin
+    str:=str+edit2.Text;
+    Check:=1;
+  end
+
+ else
+
+ begin
+    Check:=0;
+    str:=str;
+ end;
+
+// текстовая переменная для Ini файла
+
+MyAddString:=Edit2.Text;
+
+// Ввод размера шрифта
+
+ InputQuery('Размер шрифта', ['Введите размер шрифта'], ['10'],
+
+    procedure(const AResult: TModalResult; const AValues: array of string)
+      begin
+        case AResult of
+
+          mrOk:
+          begin
+
+           fontsize:=AValues[0];
+
+            if fontsize<>'' then
+
+             Dumin_Memo.Font.Size:=StrToInt(fontsize)
+
+              else
+
+              Dumin_Memo.Font.Size:=20;
+
+          //Устанавливаем цвет шрифта
+
+          if Radiobutton1.IsChecked then
+            begin
+              textcolor:=TAlphaColors.Red;
+              ColorSelected:=1;
+            end
+          else
+
+          if Radiobutton2.IsChecked then
+            begin
+              textcolor:=TAlphaColors.Green;
+              ColorSelected:=2;
+            end
+
+          else
+
+          if Radiobutton3.IsChecked then
+            begin
+              textcolor:=TAlphaColors.Blue;
+              ColorSelected:=3;
+            end
+
+          else
+
+          if Radiobutton4.IsChecked then
+            begin
+              textcolor:=TAlphaColors.Yellow;
+              ColorSelected:=4;
+            end
+
+           else
+
+          if Radiobutton5.IsChecked then
+            begin
+              textcolor:=TAlphaColors.Black;
+              ColorSelected:=5;
+            end;
+
+
+          Dumin_Memo.FontColor:=textcolor;
+
+          //Выводим строку в текстовое поле
+
+              Dumin_Memo.Lines.Add(str);
+
+          end;
+
+          mrCancel:
+          begin
+
+          end;
+        end;
+      end
+
+    );
+
+
+end;
+
+procedure TMainForm.Dumin_Button6Click(Sender: TObject);
+var MyIni:TIniFile;
+begin
+
+  // Сохраняем настройки в Ini
+
+{$IFDEF ANDROID}
+    MyIni:=TIniFile.Create('/mnt/sdcard/Lab1Conf.ini');       // Создание файла
+{$ENDIF}
+
+{$IFDEF MSWINDOWS}
+    MyIni:=TIniFile.Create('c:\Lab1Conf.ini');       // Создание файла
+{$ENDIF}
+
+    MyIni.WriteString('AddText','Value',MyAddString);
+    MyIni.WriteInteger('ColorSelect','Value',ColorSelected);
+    MyIni.WriteInteger('Check','Value',Check);
+
+    MyIni.Free;
+
+{$IFDEF ANDROID}
+		TJToast.JavaClass.makeText(TAndroidHelper.Context, StrToJCharSequence('Настройки успешно сохранены!!!!'), TJToast.JavaClass.LENGTH_LONG).show;
+{$ENDIF}
+
+{$IFDEF MSWINDOWS}
+    Showmessage('Настройки успешно сохранены!');
+{$ENDIF}
+
+
+end;
+
+procedure TMainForm.FormCreate(Sender: TObject);
+begin
+   // Выбор цвета главной формы интерфейса
+
+   MainForm.Fill.Kind:=TBrushKind.bkSolid;  // Заливка формы сплошная
+   MainForm.Fill.Color:=TAlphaColors.Aqua;  // Установка цвета формы Aqua
+
+end;
+
+procedure TMainForm.FormShow(Sender: TObject);
+var MyIni:TIniFile; IniPath:string;
+begin
+// Всегда первая вкладка
+  TabControl1.ActiveTab:=TabItem1;
+
+// Путь к файлу конфигурации
+{$IFDEF ANDROID}
+    IniPath:='/mnt/sdcard/Lab1Conf.ini';
+{$ENDIF}
+
+{$IFDEF MSWINDOWS}
+    IniPath:='c:\Lab1Conf.ini';
+{$ENDIF}
+
+  // Загружаем настройки из Ini
+
+  if FileExists(IniPath) then
+  begin
+
+     MyIni:=TIniFile.Create(IniPath);       // Создание файла
+
+     MyAddString:=MyIni.ReadString('AddText','Value','Delphi XE8 Droid');
+     ColorSelected:=MyIni.ReadInteger('ColorSelect','Value',1);
+     Check:=MyIni.ReadInteger('Check','Value',1);
+
+ // Устанавливаем настройки интерфейса
+ // Устанавливаем флажок
+
+      Edit2.Text:=MyAddString;
+
+    if Check=1 then
+
+    CheckBox1.IsChecked:=true
+
+    else
+
+    CheckBox1.IsChecked:=false;
+
+    // Установка переключателя выбора цвета
+
+  case ColorSelected of
+
+     1: RadioButton1.IsChecked:=true;
+     2: RadioButton2.IsChecked:=true;
+     3: RadioButton3.IsChecked:=true;
+     4: RadioButton4.IsChecked:=true;
+     5: RadioButton5.IsChecked:=true;
+
+     end;
+
+    MyIni.Free;
+
+ end;
+
+end;
+
+end.

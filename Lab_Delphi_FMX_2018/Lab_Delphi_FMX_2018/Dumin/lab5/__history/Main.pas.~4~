@@ -1,0 +1,148 @@
+unit Main;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.ListBox, FMX.StdCtrls, FMX.Controls.Presentation, System.IOUtils, FMX.Helpers.Android, Androidapi.Helpers,
+  Androidapi.JNI.GraphicsContentViewText, FMX.Edit, FMX.Gestures, FMX.ComboEdit,
+  FMX.ScrollBox, FMX.Memo;
+
+type
+  TIntentForm = class(TForm)
+    ToolBar1: TToolBar;
+    Button1: TButton;
+    Label1: TLabel;
+    ListBox1: TListBox;
+    Button2: TButton;
+    Label2: TLabel;
+    TrackBar1: TTrackBar;
+    TrackBar2: TTrackBar;
+    TrackBar3: TTrackBar;
+    Label3: TLabel;
+    ScrollBox1: TScrollBox;
+    Label4: TLabel;
+    GestureManager1: TGestureManager;
+    Label5: TLabel;
+    Edit2: TEdit;
+    Button3: TButton;
+    ComboEdit1: TComboEdit;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+    procedure TrackBar1Change(Sender: TObject);
+    procedure ListBox1Gesture(Sender: TObject;
+      const EventInfo: TGestureEventInfo; var Handled: Boolean);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  IntentForm: TIntentForm;
+
+implementation
+
+{$R *.fmx}
+
+// Функция изменения цвета по каналам RGB
+
+Function ARGB(const A,R,G,B:byte):TAlphaColor;
+begin
+ Result:=B + G SHL 8 + R SHL 16+ A SHL 24;
+end;
+
+// Поиск файлов и добавление их в ListBox
+
+procedure TIntentForm.Button1Click(Sender: TObject);
+var f:TSearchRec;
+begin
+    // Очистка списка
+
+     ListBox1.Items.Clear;
+
+     // Поиск первого файла
+
+ // if FindFirst('/mnt/sdcard/*.jpg',faAnyFile,f)<>0 then exit;
+
+ // Вывод пути /Pictures
+
+    Label3.Text:=TPath.GetSharedPicturesPath;
+
+ if FindFirst(TPath.GetSharedPicturesPath+'/*.jpg',faAnyFile,f)<>0 then exit;
+
+     Listbox1.Items.Add(f.name);      // Добавляем найденный файл в список
+
+  while FindNext(f)=0 do   // ищем остальные файлы
+
+  begin
+
+     Listbox1.Items.Add(f.name);
+
+  end;
+
+     FindClose(f);      // Закрываем файловую переменную
+end;
+
+// Позвонить по номеру
+procedure TIntentForm.Button2Click(Sender: TObject);
+var  Intent: JIntent;  t,d:TDateTime;
+begin
+  t:=Time;
+  d:=Date;
+  Memo1.Lines.Add('Исходящий '+ComboEdit1.Text+' '+DateToStr(d)+' '+TimeToStr(t));
+  Intent:=TJIntent.Create;
+  Intent.setAction(TJIntent.JavaClass.ACTION_CALL);
+  Intent.setData(StrToJUri('tel:'+ComboEdit1.Text));
+  SharedActivity.startActivity(Intent);
+
+end;
+
+// Открыть URL в браузере
+
+procedure TIntentForm.Button3Click(Sender: TObject);
+var Intent:JIntent;
+begin
+  Intent := TJIntent.Create;
+  Intent.setAction(TJIntent.JavaClass.ACTION_VIEW);
+  Intent.setData(StrToJURI(Edit2.Text));
+  SharedActivity.startActivity(Intent);
+end;
+
+// Открытие изображений через Интент
+
+procedure TIntentForm.ListBox1Gesture(Sender: TObject;
+  const EventInfo: TGestureEventInfo; var Handled: Boolean);
+var
+  Intent: JIntent;
+begin
+
+// Для вызова приложения для просмотра изображения в списке ListBox
+// нужно нажать и удерживать єлемент списка ListBox с именем изображения
+
+case EventInfo.GestureID of
+// Долгое нажатие
+  igiLongTap:
+// Вызываем намерение для открытия изображения
+  begin
+    Intent := TJIntent.Create;
+    Intent.setAction(TJIntent.JavaClass.ACTION_VIEW);
+    //Intent.setDataAndType(StrToJURI('file:' + '/mnt/sdcard/'+ListBox1.Selected.Text), StringToJString('image/jpg'));
+    //Intent.setDataAndType(StrToJURI('file:' + TPath.GetSharedPicturesPath+'/'+ListBox1.Selected.Text), StringToJString('image/jpg'));
+    Intent.setDataAndType(StrToJURI(TPath.GetSharedPicturesPath+'/'+ListBox1.Selected.Text), StringToJString('image/jpg'));
+    SharedActivity.startActivity(Intent);
+  end;
+end;
+end;
+
+
+// Меняем цвет ToolBar
+procedure TIntentForm.TrackBar1Change(Sender: TObject);
+begin
+  ToolBar1.TintColor:=ARGB(255,Round(Trackbar1.Value),Round(Trackbar2.Value),Round(Trackbar3.Value));
+end;
+
+end.

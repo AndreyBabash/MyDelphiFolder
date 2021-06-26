@@ -1,0 +1,47 @@
+object AboutActivity: TAboutActivity
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 394
+  ClientWidth = 507
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 507.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      TabOrder = 0
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      #1051#1072#1073#1086#1088#1072#1090#1086#1088#1085#1072#1103' '#1088#1072#1073#1086#1090#1072' '#8470'1'
+      ''
+      #1057#1086#1079#1076#1072#1085#1080#1077' '#1080#1085#1090#1077#1088#1092#1077#1081#1089#1072' '#1072#1085#1076#1088#1086#1080#1076' '#1087#1088#1080#1083#1086#1078#1077#1085#1080#1103' ')
+    ReadOnly = True
+    Align = Client
+    Padding.Left = 10.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Padding.Bottom = 10.000000000000000000
+    Size.Width = 507.000000000000000000
+    Size.Height = 346.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 499.000000000000000000
+    Viewport.Height = 338.000000000000000000
+  end
+end

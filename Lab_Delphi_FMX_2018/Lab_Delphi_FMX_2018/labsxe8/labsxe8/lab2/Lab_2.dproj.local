@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.587,=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.092,C:\Users\TIGER\Desktop\CanvasXE8\Main.fmx=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.007,C:\Users\TIGER\Desktop\ППИМС_лаб\Lab_2\Lab_2.dproj=E:\КИТ\XE8_Labs\Lab2\Mycanvas.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.092,C:\Users\TIGER\Desktop\CanvasXE8\Main.pas=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.563,C:\Users\TIGER\Desktop\CanvasXE8\Mycanvas.dproj=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2017.04.22 21:49:29.409,C:\Users\TIGER\Desktop\labsxe8\lab2\Lab_2.dproj=E:\КИТ\ППИМС_лаб\Lab_2\Lab_2.dproj</Transaction>
+  </Transactions>
+	<MobileDevice>20080411413fc082-Android</MobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile Android="20080411413fc082"/>
+	</ActiveMobileDevice>
+</BorlandProject>

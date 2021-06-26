@@ -1,0 +1,16 @@
+program Lab_1;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Main in 'E:\ »“\XE8_Labs\Lab1\Main.pas' {MainForm},
+  MainAbout in 'E:\ »“\XE8_Labs\Lab1\MainAbout.pas' {AboutActivity};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TAboutActivity, AboutActivity);
+  Application.Run;
+end.

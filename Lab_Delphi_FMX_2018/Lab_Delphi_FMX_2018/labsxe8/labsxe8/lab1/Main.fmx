@@ -1,0 +1,346 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 484
+  ClientWidth = 485
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 485.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    TintColor = claPapayawhip
+    object Button1: TButton
+      Align = Right
+      Position.X = 437.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'infotoolbutton'
+      TabOrder = 1
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 437.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = #1051#1072#1073#1086#1088#1072#1090#1086#1088#1085#1072#1103' '#1088#1072#1073#1086#1090#1072' '#8470'1'
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 5.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 5.000000000000000000
+    Size.Width = 485.000000000000000000
+    Size.Height = 388.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      StyledSettings = []
+      IsSelected = True
+      Size.Width = 243.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #1059#1089#1090#1072#1085#1086#1074#1082#1080
+      object ListBox1: TListBox
+        Align = Client
+        Size.Width = 475.000000000000000000
+        Size.Height = 329.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 455.000000000000000000
+        Viewport.Height = 325.000000000000000000
+        object ListBoxItem1: TListBoxItem
+          Padding.Left = 5.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label3: TLabel
+            Align = Client
+            Size.Width = 450.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            Text = #1042#1099#1073#1086#1088' '#1094#1074#1077#1090#1072
+          end
+        end
+        object ListBoxItem2: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Position.Y = 44.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object RadioButton1: TRadioButton
+            Align = Client
+            StyledSettings = [Family, Size, Style]
+            IsChecked = True
+            Size.Width = 445.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #1050#1088#1072#1089#1085#1099#1081
+            TextSettings.FontColor = claRed
+          end
+        end
+        object ListBoxItem3: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Position.Y = 88.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object RadioButton2: TRadioButton
+            Align = Client
+            StyledSettings = [Family, Size, Style]
+            Size.Width = 435.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #1047#1077#1083#1077#1085#1099#1081
+            TextSettings.FontColor = claGreen
+          end
+        end
+        object ListBoxItem4: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Position.Y = 132.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object RadioButton3: TRadioButton
+            Align = Client
+            StyledSettings = [Family, Size, Style]
+            Size.Width = 435.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #1057#1080#1085#1080#1081
+            TextSettings.FontColor = claBlue
+          end
+        end
+        object ListBoxItem5: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Position.Y = 176.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object RadioButton4: TRadioButton
+            Align = Client
+            StyledSettings = [Family, Size, Style]
+            Size.Width = 435.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #1046#1077#1083#1090#1099#1081
+            TextSettings.FontColor = claYellow
+          end
+        end
+        object ListBoxItem6: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Position.Y = 220.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          object RadioButton5: TRadioButton
+            Align = Client
+            Size.Width = 435.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #1063#1077#1088#1085#1099#1081
+          end
+        end
+        object ListBoxItem7: TListBoxItem
+          Padding.Left = 5.000000000000000000
+          Position.Y = 264.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          object Label4: TLabel
+            Align = Client
+            Padding.Left = 5.000000000000000000
+            Size.Width = 450.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            Text = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1099#1081' '#1090#1077#1082#1089#1090
+          end
+        end
+        object ListBoxItem8: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Padding.Bottom = 10.000000000000000000
+          Position.Y = 308.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 53.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          object Edit2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Bottom
+            TabOrder = 0
+            Text = 'Delphi Android'
+            Position.X = 10.000000000000000000
+            Position.Y = 11.000000000000000000
+            Size.Width = 435.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object ListBoxItem9: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Position.Y = 361.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+          object Label2: TLabel
+            Align = Client
+            Size.Width = 435.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            Text = #1042#1099#1074#1086#1076' '#1090#1077#1082#1089#1090#1072
+          end
+        end
+        object ListBoxItem10: TListBoxItem
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Padding.Bottom = 10.000000000000000000
+          Position.Y = 405.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 9
+          object CheckBox1: TCheckBox
+            Align = Client
+            Size.Width = 435.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #1042#1099#1074#1086#1076#1080#1090#1100' '#1090#1077#1082#1089#1090
+          end
+        end
+        object ListBoxItem11: TListBoxItem
+          Padding.Left = 2.000000000000000000
+          Padding.Top = 2.000000000000000000
+          Padding.Right = 2.000000000000000000
+          Padding.Bottom = 2.000000000000000000
+          Position.Y = 465.000000000000000000
+          Size.Width = 455.000000000000000000
+          Size.Height = 61.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+          object Button6: TButton
+            Align = Client
+            Size.Width = 451.000000000000000000
+            Size.Height = 57.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1085#1072#1089#1090#1088#1086#1081#1082#1080' '#1074' Ini'
+            OnClick = Button6Click
+          end
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      StyledSettings = []
+      IsSelected = False
+      Size.Width = 240.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #1042#1099#1074#1086#1076' '#1090#1077#1082#1089#1090#1072
+      object Button4: TButton
+        Position.X = 48.000000000000000000
+        Position.Y = 336.000000000000000000
+        TabOrder = 0
+        Text = 'Button4'
+      end
+      object Button5: TButton
+        Align = Bottom
+        Position.Y = 285.000000000000000000
+        Size.Width = 475.000000000000000000
+        Size.Height = 44.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = #1042#1099#1074#1086#1076' '#1090#1077#1082#1089#1090#1072
+        OnClick = Button5Click
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        StyledSettings = []
+        Align = Client
+        Size.Width = 475.000000000000000000
+        Size.Height = 285.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Viewport.Width = 471.000000000000000000
+        Viewport.Height = 281.000000000000000000
+      end
+    end
+  end
+  object StatusBar1: TStatusBar
+    Position.Y = 436.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 485.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Button2: TButton
+      Align = Right
+      Position.X = 437.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowrighttoolbutton'
+      TabOrder = 0
+      Text = 'Button2'
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      TabOrder = 1
+      Text = 'Button3'
+      OnClick = Button3Click
+    end
+  end
+end

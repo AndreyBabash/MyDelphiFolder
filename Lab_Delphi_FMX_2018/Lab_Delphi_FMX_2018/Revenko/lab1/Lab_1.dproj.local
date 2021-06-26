@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.527,C:\Users\TIGER\Desktop\XE8_Labs\Lab1\Unit2.pas=C:\Users\TIGER\Desktop\XE8_Labs\Lab1\MainAbout.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.074,=C:\Users\TIGER\Desktop\XE8_Labs\Lab1\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.157,C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\TIGER\Desktop\XE8_Labs\Lab1\Lab_1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.527,C:\Users\TIGER\Desktop\XE8_Labs\Lab1\Unit2.fmx=C:\Users\TIGER\Desktop\XE8_Labs\Lab1\MainAbout.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.007,E:\КИТ\XE8_Labs\Lab1\Lab_1.dproj=C:\Users\TIGER\Desktop\labsxe8\Lab_1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.384,C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\TIGER\Desktop\XE8_Labs\Lab1\Main.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.748,=C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.384,C:\Users\TIGER\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\TIGER\Desktop\XE8_Labs\Lab1\Main.pas</Transaction>
+  </Transactions>
+	<MobileDevice>20080411413fc082-Android</MobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile Android=""/>
+	</ActiveMobileDevice>
+</BorlandProject>
